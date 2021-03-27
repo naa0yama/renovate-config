@@ -7,14 +7,14 @@
 
 ## How to use
 
-`renovate.json` を作成して下記を追加
+`renovate.json` をレポジトリーからコピーして配置してください
 
-```json
-{
-  "extends": [
-    "github>naa0yama/renovate-config:python"
-  ]
-}
+レポジトリールートで下記コマンドでも可
+
+```shell
+curl -sfSL https://raw.githubusercontent.com/naa0yama/renovate-config/main/renovate.json \
+    -o renovate.json
+
 ```
 
 ## 設定
