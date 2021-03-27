@@ -12,19 +12,6 @@
     {
       "addLabels": ["github-actions"],
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["patch"],
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
-    },
-    {
-      "addLabels": ["github-actions"],
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor"],
-      "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
-    },
-    {
-      "addLabels": ["github-actions"],
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["major"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     }
   ]
