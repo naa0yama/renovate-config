@@ -1,5 +1,6 @@
 {
   "extends": [
+    "config:base",
     "github>naa0yama/renovate-config//extends/docker-compose",
     "github>naa0yama/renovate-config//extends/dockerfile",
     "github>naa0yama/renovate-config//extends/github-actions",
@@ -16,7 +17,6 @@
   },
   "labels": ["renovate", "datasource:{{datasource}}", "depType:{{depType}}"],
   "timezone": "Asia/Tokyo",
-  "schedule": ["before 3am"],
   "packageRules": [
     {
       "addLabels": ["update-patch"],
