@@ -1,8 +1,5 @@
 {
   "extends": ["config:base"],
-  "labels": ["renovate"],
-  "timezone": "Asia/Tokyo",
-  "schedule": ["before 3am"],
   "enabledManagers": ["python"],
   "lockFileMaintenance": {
     "enabled": true
