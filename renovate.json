@@ -1,7 +1,7 @@
 {
   "extends": [
     "github>naa0yama/renovate-config//extends/python",
-    "github>naa0yama/renovate-config//extends/github-actions.json"
+    "github>naa0yama/renovate-config//extends/github-actions"
   ],
   "labels": ["renovate"],
   "timezone": "Asia/Tokyo",
