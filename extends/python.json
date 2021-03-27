@@ -3,14 +3,14 @@
   "enabledManagers": ["python"],
   "packageRules": [
     {
-      "addLabels": ["update-patch", "Dependencies"],
+      "addLabels": ["Dependencies"],
       "matchDepTypes": ["Dependencies"],
       "matchLanguages": ["python"],
       "matchManagers": ["python"],
       "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
     },
     {
-      "addLabels": ["update-patch", "devDependencies"],
+      "addLabels": ["devDependencies"],
       "matchDepTypes": ["devDependencies"],
       "matchLanguages": ["python"],
       "matchManagers": ["python"],

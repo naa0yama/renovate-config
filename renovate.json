@@ -6,6 +6,25 @@
   "patch": {
     "automerge": true
   },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 5am on monday"]
+  },
   "labels": ["renovate"],
-  "timezone": "Asia/Tokyo"
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "addLabels": ["update-patch", "Dependencies"],
+      "matchUpdateTypes": ["patch", "digest"]
+    },
+    {
+      "addLabels": ["update-minor", "Dependencies"],
+      "matchUpdateTypes": ["minor", "digest"]
+    },
+    {
+      "addLabels": ["update-major", "Dependencies"],
+      "matchUpdateTypes": ["major", "digest"]
+    }
+  ]
 }
