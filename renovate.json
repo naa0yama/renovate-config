@@ -1,4 +1,5 @@
 {
+  "assigneesFromCodeOwners": true,
   "extends": [
     "github>naa0yama/renovate-config//extends/python",
     "github>naa0yama/renovate-config//extends/github-actions"
