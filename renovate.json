@@ -12,7 +12,7 @@
     "automerge": true,
     "schedule": ["before 5am on monday"]
   },
-  "labels": ["renovate"],
+  "labels": ["renovate","datasource:{{datasource}}"],
   "timezone": "Asia/Tokyo",
   "schedule": ["before 3am"],
   "packageRules": [
