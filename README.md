@@ -24,7 +24,7 @@ Ref: [コードオーナーについて \- GitHub Docs](https://docs.github.com/
 
 ```
 
-* @FumiyaShibusawa
+* @naa0yama
 
 ```
 
