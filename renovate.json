@@ -1,5 +1,7 @@
 {
   "extends": [
+    "github>naa0yama/renovate-config//extends/docker-compose",
+    "github>naa0yama/renovate-config//extends/dockerfile",
     "github>naa0yama/renovate-config//extends/github-actions",
     "github>naa0yama/renovate-config//extends/python",
     "github>naa0yama/renovate-config//extends/terraform"
@@ -12,9 +14,8 @@
     "automerge": true,
     "schedule": ["before 5am on monday"]
   },
-  "labels": ["renovate","datasource:{{datasource}}"],
+  "labels": ["renovate", "datasource:{{datasource}}", "depType:{{depType}}"],
   "timezone": "Asia/Tokyo",
-  "schedule": ["before 3am"],
   "packageRules": [
     {
       "addLabels": ["update-patch"],

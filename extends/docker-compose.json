@@ -1,0 +1,10 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["docker-compose"],
+  "packageRules": [
+    {
+      "addLabels": ["docker-compose"],
+      "matchManagers": ["docker-compose"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["dockerfile"],
+  "packageRules": [
+    {
+      "addLabels": ["dockerfile"],
+      "matchManagers": ["dockerfile"]
+    }
+  ]
+}
