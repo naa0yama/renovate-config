@@ -3,15 +3,7 @@
   "enabledManagers": ["python"],
   "packageRules": [
     {
-      "addLabels": ["Dependencies"],
-      "matchDepTypes": ["Dependencies"],
-      "matchLanguages": ["python"],
-      "matchManagers": ["python"]
-    },
-    {
-      "addLabels": ["devDependencies"],
-      "matchDepTypes": ["devDependencies"],
-      "matchLanguages": ["python"],
+      "addLabels": ["python"],
       "matchManagers": ["python"]
     }
   ]
