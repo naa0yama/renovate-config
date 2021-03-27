@@ -1,0 +1,10 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["terraform"],
+  "packageRules": [
+    {
+      "addLabels": ["terraform"],
+      "matchManagers": ["terraform"]
+    }
+  ]
+}
