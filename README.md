@@ -17,6 +17,17 @@ curl -sfSL https://raw.githubusercontent.com/naa0yama/renovate-config/main/renov
 
 ```
 
+`.github/CODEOWNERS` ファイルを作成する、各プロジェクトで `assignees` を書いてもいいが、面倒なので `CODEOWNERS`
+を利用する
+
+Ref: [コードオーナーについて \- GitHub Docs](https://docs.github.com/ja/github/creating-cloning-and-archiving-repositories/about-code-owners)
+
+```
+
+* @FumiyaShibusawa
+
+```
+
 ## 設定
 
 SemVer の考え方
