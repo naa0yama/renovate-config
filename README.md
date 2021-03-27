@@ -7,12 +7,12 @@
 
 ## How to use
 
-`renovate.json` をレポジトリーからコピーして配置してください
+`renovate.exsample.json` をレポジトリーからコピーして配置してください
 
 レポジトリールートで下記コマンドでも可
 
 ```shell
-curl -sfSL https://raw.githubusercontent.com/naa0yama/renovate-config/main/renovate.json \
+curl -sfSL https://raw.githubusercontent.com/naa0yama/renovate-config/main/renovate.exsample.json \
     -o renovate.json
 
 ```
@@ -40,14 +40,12 @@ SemVer の考え方
     * automerge する
     * ラベル: `update-patch` をつける
 
-### Dependencies
-
-* `Dependencies` ラベルをつける
-* 
-
-### dev-Dependencies
-
-* `dev-Dependencies` ラベルをつける
+* パッチ(patch)
+    * ラベル: `update-patch` をつける
+* ミラー(minor)
+    * ラベル: `update-minor` をつける
+* メジャー(major)
+    * ラベル: `update-major` をつける
 
 ### パッケージごとの個別設定
 
