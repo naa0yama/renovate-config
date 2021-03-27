@@ -11,6 +11,5 @@
     "automerge": true
   },
   "labels": ["renovate"],
-  "timezone": "Asia/Tokyo",
-  "schedule": ["before 3am"]
+  "timezone": "Asia/Tokyo"
 }
