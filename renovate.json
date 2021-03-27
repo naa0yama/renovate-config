@@ -4,6 +4,5 @@
     "github>naa0yama/renovate-config//extends/github-actions"
   ],
   "labels": ["renovate"],
-  "timezone": "Asia/Tokyo",
-  "schedule": ["before 3am"]
+  "timezone": "Asia/Tokyo"
 }
