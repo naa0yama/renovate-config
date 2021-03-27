@@ -16,6 +16,7 @@
   },
   "labels": ["renovate", "datasource:{{datasource}}", "depType:{{depType}}"],
   "timezone": "Asia/Tokyo",
+  "schedule": ["before 3am"],
   "packageRules": [
     {
       "addLabels": ["update-patch"],
