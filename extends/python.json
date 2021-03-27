@@ -1,0 +1,26 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["python"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "addLabels": ["update-patch", "Dependencies"],
+      "matchDepTypes": ["Dependencies"],
+      "matchLanguages": ["python"],
+      "matchManagers": ["python"],
+      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+    },
+    {
+      "addLabels": ["update-patch", "devDependencies"],
+      "matchDepTypes": ["devDependencies"],
+      "matchLanguages": ["python"],
+      "matchManagers": ["python"],
+      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+    }
+  ]
+}
