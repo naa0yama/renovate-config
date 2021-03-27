@@ -1,0 +1,29 @@
+{
+  "extends": ["config:base"],
+  "labels": ["renovate"],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["before 3am"],
+  "enabledManagers": ["python"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "patch": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "addLabels": ["update-patch", "Dependencies"],
+      "matchDepTypes": ["Dependencies"],
+      "matchLanguages": ["python"],
+      "matchManagers": ["python"],
+      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+    },
+    {
+      "addLabels": ["update-patch", "devDependencies"],
+      "matchDepTypes": ["devDependencies"],
+      "matchLanguages": ["python"],
+      "matchManagers": ["python"],
+      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+    }
+  ]
+}
