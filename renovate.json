@@ -1,0 +1,3 @@
+{
+  "extends": ["github>naa0yama/renovate-config:python"]
+}
