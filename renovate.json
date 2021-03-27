@@ -15,16 +15,16 @@
   "timezone": "Asia/Tokyo",
   "packageRules": [
     {
-      "addLabels": ["update-patch", "Dependencies"],
-      "matchUpdateTypes": ["patch", "digest"]
+      "addLabels": ["update-patch"],
+      "matchUpdateTypes": ["patch"]
     },
     {
-      "addLabels": ["update-minor", "Dependencies"],
-      "matchUpdateTypes": ["minor", "digest"]
+      "addLabels": ["update-minor"],
+      "matchUpdateTypes": ["minor"]
     },
     {
-      "addLabels": ["update-major", "Dependencies"],
-      "matchUpdateTypes": ["major", "digest"]
+      "addLabels": ["update-major"],
+      "matchUpdateTypes": ["major"]
     }
   ]
 }

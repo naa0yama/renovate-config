@@ -10,18 +10,21 @@
   ],
   "packageRules": [
     {
+      "addLabels": ["github-actions"],
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["patch", "digest"],
+      "matchUpdateTypes": ["patch"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     },
     {
+      "addLabels": ["github-actions"],
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "digest"],
+      "matchUpdateTypes": ["minor"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     },
     {
+      "addLabels": ["github-actions"],
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["major", "digest"],
+      "matchUpdateTypes": ["major"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     }
   ]

@@ -6,15 +6,13 @@
       "addLabels": ["Dependencies"],
       "matchDepTypes": ["Dependencies"],
       "matchLanguages": ["python"],
-      "matchManagers": ["python"],
-      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+      "matchManagers": ["python"]
     },
     {
       "addLabels": ["devDependencies"],
       "matchDepTypes": ["devDependencies"],
       "matchLanguages": ["python"],
-      "matchManagers": ["python"],
-      "matchUpdateTypes": ["patch", "digest", "lockFileMaintenance"]
+      "matchManagers": ["python"]
     }
   ]
 }
