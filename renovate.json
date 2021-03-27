@@ -3,10 +3,6 @@
     "github>naa0yama/renovate-config//extends/python",
     "github>naa0yama/renovate-config//extends/github-actions"
   ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 3am on Monday"]
-  },
   "patch": {
     "automerge": true
   },
