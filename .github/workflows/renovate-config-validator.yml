@@ -46,11 +46,14 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const vaildate_summary_tmp = `${{ steps.renovate-config-validator.outputs.vaildate_stdr }}`
+            const vaildate_summary = vaildate_summary_tmp.match(/^\s+?[\w]+:(.*)$/);
+
             const output = `#### Renovate Format and Style 🖌\`${{ steps.renovate-config-validator.outcome }}\`
             \`$ npx 'renovate-config-validator'\`
 
             \`\`\`json
-            ${{ steps.renovate-config-validator.outputs.vaildate_summary }}
+            nolg
             \`\`\`
 
             <details><summary>Show Outputs.</summary>
@@ -65,5 +68,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: output
+              body: output + vaildate_summary
             })
