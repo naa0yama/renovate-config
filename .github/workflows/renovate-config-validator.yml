@@ -34,16 +34,13 @@ jobs:
         run: |
           set -x
           vaildate_stdr=$(npx 'renovate-config-validator')
-          echo "${vaildate_stdr}" | grep -E '^\s+?[\w]+:(.*)$' > ${vaildate_summary}
+
           # エスケープ処理
           vaildate_stdr="${vaildate_stdr//$'%'/%25}"
           vaildate_stdr="${vaildate_stdr//$'\n'/%0A}"
           vaildate_stdr="${vaildate_stdr//$'\r'/%0D}"
-          vaildate_summary="${vaildate_summary//$'%'/%25}"
-          vaildate_summary="${vaildate_summary//$'\n'/%0A}"
-          vaildate_summary="${vaildate_summary//$'\r'/%0D}"
+
           echo "::set-output name=vaildate_stdr::${vaildate_stdr}"
-          echo "::set-output name=vaildate_summary::${vaildate_summary}"
 
       - uses: actions/github-script@v3
         with:
