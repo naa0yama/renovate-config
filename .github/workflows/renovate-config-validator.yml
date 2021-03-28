@@ -39,7 +39,7 @@ jobs:
             const output = `#### Renovate Format and Style 🖌\`${{ steps.renovate-config-validator.outcome }}\`
             \`$ npx --package renovate -c 'renovate-config-validator'\`
             <details><summary>Show Outputs.</summary>
-            \`\`\`${{ steps.renovate-config-validator.outputs.stdout }}\`\`\`
+            \`\`\`${{ steps.renovate-config-validator.outputs.std_out }}\`\`\`
             </details>
             *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
             github.issues.createComment({
