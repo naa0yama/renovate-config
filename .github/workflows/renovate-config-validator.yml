@@ -85,4 +85,6 @@ jobs:
 
       - name: Vaildate failed
         if: steps.renovate-config-validator.outcome != 'success'
-        run: echo ${{ steps.renovate-config-validator.outcome }}
+        run: |
+          echo ${{ steps.renovate-config-validator.outcome }}
+          exit 1
