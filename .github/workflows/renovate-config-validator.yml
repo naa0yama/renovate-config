@@ -25,7 +25,7 @@ jobs:
         id: renovate-config-validator
         run: |
           vaildate_stdr=$(npx --package renovate -c 'renovate-config-validator')
-          validate_comment="\`$ npx --package renovate -c 'renovate-config-validator'\` outputs.\n\`\`\`\n${vaildate_stdr}\`\`\`"
+          validate_comment="\\`$ npx --package renovate -c 'renovate-config-validator'\\` outputs.\n\\`\\`\\`\n${vaildate_stdr}\\`\\`\\`"
           # エスケープ処理
           validate_comment="${validate_comment//$'\n'/\\n}"
           echo ${validate_comment}
