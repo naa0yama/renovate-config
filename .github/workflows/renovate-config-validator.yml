@@ -33,7 +33,6 @@ jobs:
           echo "::set-output name=std_out::${validate_comment}"
 
       - uses: actions/github-script@v3
-        env:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
