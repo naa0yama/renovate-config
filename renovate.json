@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "config:base",
-    "github>naa0yama/renovate-config//extends/docker",
-    "github>naa0yama/renovate-config//extends/github-actions",
-    "github>naa0yama/renovate-config//extends/python",
-    "github>naa0yama/renovate-config//extends/terraform"
-  ],
+  "extends": ["config:base"],
   "prHourlyLimit": 7,
   "separateMinorPatch": true,
   "patch": {
