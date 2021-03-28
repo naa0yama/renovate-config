@@ -1,0 +1,13 @@
+{
+  "name": "renovate-config",
+  "version": "0.1.0",
+  "description": "Renovate config sets",
+  "main": "None",
+  "repository": "None",
+  "author": "@naa0yama",
+  "license": "AGPL-3.0",
+  "private": true,
+  "devDependencies": {
+    "renovate": "^24.96.3"
+  }
+}
