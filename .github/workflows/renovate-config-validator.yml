@@ -41,7 +41,7 @@ jobs:
             <details><summary>Show Outputs.</summary>
             \`\`\`${{ steps.renovate-config-validator.outputs.stdout }}\`\`\`
             </details>
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ matrix.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
