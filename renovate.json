@@ -12,10 +12,10 @@
     "automerge": true,
     "packageRules": [
       {
-        "depTypeList": ["dependencies", "devDependencies"],
-        "packagePatterns": ["*"],
-        "updateTypes": ["patch"],
-        "groupName": "All patch update {{depType}}"
+        "groupName": "All patch update {{depType}}",
+        "matchDepTypes": ["dependencies", "devDependencies"],
+        "matchPackagePatterns": ["*"],
+        "matchUpdateTypes": ["patch"]
       }
     ]
   },
