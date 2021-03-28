@@ -9,7 +9,7 @@
   ],
   "packageRules": [
     {
-      "addLabels": ["github-actions"],
+      "addLabels": ["managers:github-actions"],
       "matchManagers": ["github-actions"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     }

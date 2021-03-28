@@ -1,14 +1,23 @@
 {
   "extends": [
     "config:base",
-    "github>naa0yama/renovate-config//extends/docker-compose",
-    "github>naa0yama/renovate-config//extends/dockerfile",
+    "github>naa0yama/renovate-config//extends/docker",
     "github>naa0yama/renovate-config//extends/github-actions",
     "github>naa0yama/renovate-config//extends/python",
     "github>naa0yama/renovate-config//extends/terraform"
   ],
+  "prHourlyLimit": 5,
+  "separateMinorPatch": true,
   "patch": {
-    "automerge": true
+    "automerge": true,
+    "packageRules": [
+      {
+        "depTypeList": ["dependencies", "devDependencies"],
+        "packagePatterns": ["*"],
+        "updateTypes": ["patch"],
+        "groupName": "All patch update {{depType}}"
+      }
+    ]
   },
   "lockFileMaintenance": {
     "enabled": true,

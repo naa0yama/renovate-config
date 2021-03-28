@@ -1,9 +1,0 @@
-{
-  "enabledManagers": ["dockerfile"],
-  "packageRules": [
-    {
-      "addLabels": ["dockerfile"],
-      "matchManagers": ["dockerfile"]
-    }
-  ]
-}

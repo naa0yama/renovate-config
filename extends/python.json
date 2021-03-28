@@ -1,9 +1,9 @@
 {
-  "enabledManagers": ["python"],
+  "enabledManagers": ["poetry"],
   "packageRules": [
     {
-      "addLabels": ["python"],
-      "matchManagers": ["python"]
+      "addLabels": ["managers:poetry"],
+      "matchManagers": ["poetry"]
     }
   ]
 }
