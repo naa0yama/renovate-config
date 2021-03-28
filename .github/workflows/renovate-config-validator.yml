@@ -34,7 +34,9 @@ jobs:
         run: |
           vaildate_stdr=$(npx --package renovate -c 'renovate-config-validator')
           # エスケープ処理
-          vaildate_stdr="${vaildate_stdr//$'\n'/\\n}"
+          vaildate_stdr="${vaildate_stdr//$'%'/%25}"
+          vaildate_stdr="${vaildate_stdr//$'\n'/%0A}"
+          vaildate_stdr="${vaildate_stdr//$'\r'/%0D}"
           echo "::set-output name=std_out::${vaildate_stdr}"
 
       - uses: actions/github-script@v3
