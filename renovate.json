@@ -6,7 +6,7 @@
     "github>naa0yama/renovate-config//extends/python",
     "github>naa0yama/renovate-config//extends/terraform"
   ],
-  "prHourlyLimit": 5,
+  "prHourlyLimit": 6,
   "separateMinorPatch": true,
   "patch": {
     "automerge": true,

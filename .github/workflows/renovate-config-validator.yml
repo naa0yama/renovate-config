@@ -1,6 +1,11 @@
 name: Renovate Validate
 
-on: [push]
+on:
+  pull_request:
+    paths:
+      - 'extends/**.json'
+      - 'renovate.exsample.json'
+      - 'renovate.json'
 
 jobs:
   validator:
@@ -20,7 +25,7 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node-version }}
-      - name: run renovate-config-validator
+      - name: Run renovate-config-validator
         id: renovate-config-validator
         run: |
           vaildate_stdr=$(npx --package renovate -c 'renovate-config-validator')
