@@ -31,6 +31,7 @@ jobs:
 
       - name: Run renovate-config-validator
         id: renovate-config-validator
+        continue-on-error: true
         run: |
           set -x
 
@@ -53,6 +54,8 @@ jobs:
 
           echo "::set-output name=vaildate_stdr::${vaildate_stdr}"
           echo "::set-output name=vaildate_summary::${vaildate_summary}"
+
+          ! grep --quiet -E '^\s+WARN:\s(.*)$' ${tmp_file}"
 
       - uses: actions/github-script@v3
         with:
