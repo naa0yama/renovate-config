@@ -1,6 +1,9 @@
 {
   "extends": ["config:base"],
-  "prHourlyLimit": 7,
+  "assigneesFromCodeOwners": true,
+  "prHourlyLimit": 99,
+  "prConcurrentLimit": 20,
+  "separateMajorMinor": true,
   "separateMinorPatch": true,
   "patch": {
     "automerge": true,
