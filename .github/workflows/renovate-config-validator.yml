@@ -33,7 +33,7 @@ jobs:
         id: renovate-config-validator
         run: |
           vaildate_stdr=$(npx 'renovate-config-validator')
-          vaildate_summary=$(grep -E '^\s+?[\w]+:(.*)$' ${vaildate_stdr})
+          vaildate_summary=$(grep -E '^\s+?[\w]+:(.*)$' "${vaildate_stdr}")
 
           # エスケープ処理
           vaildate_stdr="${vaildate_stdr//$'%'/%25}"
