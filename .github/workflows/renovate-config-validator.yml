@@ -36,6 +36,10 @@ jobs:
 
           tmp_file="${{ runner.temp }}/vaildate_raw"
           vaildate_stdr=$(npx 'renovate-config-validator' | tee ${tmp_file})
+          vaildate_summary=$(cat ${vaildate_stdr} | grep -E '^\s+\w+:\s(.*)$')
+          cat "${vaildate_summary}"
+
+          # summary 用のファイルを作る
           tmp_summary="${{ runner.temp }}/vaildate_summary"
           grep -E '^\s+\w+:\s(.*)$' ${tmp_file} | tee "${tmp_summary}"
           cat "${tmp_summary}"
