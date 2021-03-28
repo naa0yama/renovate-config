@@ -27,16 +27,7 @@
   "timezone": "Asia/Tokyo",
   "packageRules": [
     {
-      "addLabels": ["update-patch"],
-      "matchUpdateTypes": ["patch"]
-    },
-    {
-      "addLabels": ["update-minor"],
-      "matchUpdateTypes": ["minor"]
-    },
-    {
-      "addLabels": ["update-major"],
-      "matchUpdateTypes": ["major"]
+      "addLabels": ["update-{{updateType}}"]
     }
   ]
 }
