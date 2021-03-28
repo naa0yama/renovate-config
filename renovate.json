@@ -3,7 +3,7 @@
   "assigneesFromCodeOwners": true,
   "prHourlyLimit": 99,
   "prConcurrentLimit": 20,
-  "separateMajorMinor": true,
+  "separateMajorReleases": true,
   "separateMinorPatch": true,
   "patch": {
     "automerge": true,
