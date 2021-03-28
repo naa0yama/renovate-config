@@ -25,19 +25,27 @@ jobs:
         id: renovate-config-validator
         run: |
           vaildate_stdr=$(npx --package renovate -c 'renovate-config-validator')
-          validate_comment="\`$ npx --package renovate -c 'renovate-config-validator'\` outputs.\n\`\`\`\n${vaildate_stdr}\`\`\`"
+          validate_comment="${vaildate_stdr}"
           # エスケープ処理
           validate_comment="${validate_comment//$'%'/%25}"
           validate_comment="${validate_comment//$'\n'/%0A}"
           validate_comment="${validate_comment//$'\r'/%0D}"
           echo "::set-output name=std_out::${validate_comment}"
+
       - uses: actions/github-script@v3
+        env:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const output = `#### Renovate Format and Style 🖌\`${{ steps.renovate-config-validator.outcome }}\`
+            \`$ npx --package renovate -c 'renovate-config-validator'\`
+            <details><summary>Show Outputs.</summary>
+            \`\`\`${{ steps.renovate-config-validator.outputs.stdout }}\`\`\`
+            </details>
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ matrix.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '${{ steps.renovate-config-validator.outputs.std_out }}'
+              body: output
             })
