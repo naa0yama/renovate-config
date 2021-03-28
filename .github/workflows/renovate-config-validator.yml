@@ -30,7 +30,6 @@ jobs:
           validate_comment="${validate_comment//$'\n'/\\n}"
           echo ${validate_comment}
           echo "::set-output name=std_out::${validate_comment}"
-      - run: echo "${{ steps.renovate-config-validator.outputs.std_out }}"
       - uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
