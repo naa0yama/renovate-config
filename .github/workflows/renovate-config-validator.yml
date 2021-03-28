@@ -3,12 +3,16 @@ name: Renovate Validate
 on: [push]
 
 jobs:
-  build:
+  validator:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: ['14']
+
+    # ステップの出力をジョブの出力にマップ
+    outputs:
+      output1: ${{ steps.step1.outputs.std_out }}
 
     steps:
       - uses: actions/checkout@v2.3.4
@@ -17,5 +21,27 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: run renovate-config-validator
+        id: renovate-config-validator
         run: |
-          npx --package renovate -c 'renovate-config-validator'
+          vaildate_stdr$(npx --package renovate -c 'renovate-config-validator')
+          validate_comment="\`$ npx --package renovate -c 'renovate-config-validator'\` outputs.\n\`\`\`\n${vaildate_stdr}\`\`\`"
+          # エスケープ処理
+          validate_comment="${validate_comment//$'\n'/\\n}"
+          echo ${validate_comment}
+          echo "::set-output name=std_out::${validate_comment}"
+
+  GitHubActihons:
+    runs-on: ubuntu-latest
+    needs: validator
+    if: ${{ github.event.issue.pull_request }}
+    steps:
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '${{ needs.job1.outputs.output1 }}'
+            })
