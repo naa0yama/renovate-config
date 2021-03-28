@@ -3,9 +3,9 @@ name: Renovate Validate
 on:
   pull_request:
     paths:
-      - 'extends/**.json'
-      - 'renovate.exsample.json'
-      - 'renovate.json'
+    #  - 'extends/**.json'
+    #  - 'renovate.exsample.json'
+    #  - 'renovate.json'
 
 jobs:
   validator:
@@ -14,10 +14,6 @@ jobs:
     strategy:
       matrix:
         node-version: ['14']
-
-    # ステップの出力をジョブの出力にマップ
-    outputs:
-      output1: ${{ steps.step1.outputs.std_out }}
 
     steps:
       - uses: actions/checkout@v2.3.4
@@ -34,11 +30,7 @@ jobs:
           validate_comment="${validate_comment//$'\n'/\\n}"
           echo ${validate_comment}
           echo "::set-output name=std_out::${validate_comment}"
-
-  GitHubActihons:
-    runs-on: ubuntu-latest
-    needs: validator
-    steps:
+      - run: echo "${{ steps.renovate-config-validator.outputs.std_out }}"
       - uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -47,5 +39,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '${{ needs.validator.outputs.output1 }}'
+              body: '${{ steps.renovate-config-validator.outputs.std_out }}'
             })
