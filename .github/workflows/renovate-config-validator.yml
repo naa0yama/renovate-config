@@ -82,3 +82,7 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
+
+      - name: Vaildate failed
+        if: steps.renovate-config-validator.outcome != success
+        run: echo ${{ steps.renovate-config-validator.outcome }}
