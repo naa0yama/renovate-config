@@ -25,9 +25,11 @@ jobs:
         id: renovate-config-validator
         run: |
           vaildate_stdr=$(npx --package renovate -c 'renovate-config-validator')
-          validate_comment="\\`$ npx --package renovate -c 'renovate-config-validator'\\` outputs.\n\\`\\`\\`\n${vaildate_stdr}\\`\\`\\`"
+          validate_comment="\`$ npx --package renovate -c 'renovate-config-validator'\` outputs.\n\`\`\`\n${vaildate_stdr}\`\`\`"
           # エスケープ処理
-          validate_comment="${validate_comment//$'\n'/\\n}"
+          validate_comment="${validate_comment//'%'/'%25'}"
+          validate_comment="${validate_comment//$'\n'/'%0A'}"
+          validate_comment="${validate_comment//$'\r'/'%0D'}"
           echo ${validate_comment}
           echo "::set-output name=std_out::${validate_comment}"
       - uses: actions/github-script@v3
