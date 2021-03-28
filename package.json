@@ -8,6 +8,6 @@
   "license": "AGPL-3.0",
   "private": true,
   "devDependencies": {
-    "renovate": "^24.96.3"
+    "renovate": "24.96.3"
   }
 }
