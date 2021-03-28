@@ -22,12 +22,9 @@
     "renovate",
     "datasource:{{datasource}}",
     "depType:{{depType}}",
-    "versioning:{{versioning}}"
+    "versioning:{{versioning}}",
+    "update-{{updateType}}"
   ],
   "timezone": "Asia/Tokyo",
-  "packageRules": [
-    {
-      "addLabels": ["update-{{updateType}}"]
-    }
-  ]
+  "packageRules": []
 }
