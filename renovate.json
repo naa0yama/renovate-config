@@ -18,7 +18,12 @@
     "automerge": true,
     "schedule": ["before 5am on monday"]
   },
-  "labels": ["renovate", "datasource:{{datasource}}", "depType:{{depType}}"],
+  "labels": [
+    "renovate",
+    "datasource:{{datasource}}",
+    "depType:{{depType}}",
+    "versioning:{{versioning}}"
+  ],
   "timezone": "Asia/Tokyo",
   "packageRules": [
     {
