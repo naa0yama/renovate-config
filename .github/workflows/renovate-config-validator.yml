@@ -40,7 +40,7 @@ jobs:
 
           # summary 用のファイルを作る
           tmp_summary="${{ runner.temp }}/vaildate_summary"
-          grep -E '^\s+\w+:\s(.*)$' ${tmp_file} | tee "${tmp_summary}"
+          grep -E '^\s+?\w+:\s(.*)$' ${tmp_file} | tee "${tmp_summary}"
           vaildate_summary=$(cat "${tmp_summary}")
 
           # エスケープ処理
@@ -55,7 +55,7 @@ jobs:
           echo "::set-output name=vaildate_stdr::${vaildate_stdr}"
           echo "::set-output name=vaildate_summary::${vaildate_summary}"
 
-          ! grep --quiet -E '^\s+WARN:\s(.*)$' "${tmp_file}"
+          ! grep --quiet -E '^\s+?\w+:\s(.*)$' "${tmp_file}"
 
       - uses: actions/github-script@v3
         with:
