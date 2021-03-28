@@ -37,7 +37,7 @@ jobs:
           tmp_file="${{ runner.temp }}/vaildate_raw"
           vaildate_stdr=$(npx 'renovate-config-validator' | tee ${tmp_file})
           tmp_summary="${{ runner.temp }}/vaildate_summary"
-          grep -E '^\s+?INFO' ${tmp_file} | tee "${tmp_summary}"
+          grep -e 'INFO' ${tmp_file} | tee "${tmp_summary}"
           cat "${tmp_summary}"
 
           # エスケープ処理
