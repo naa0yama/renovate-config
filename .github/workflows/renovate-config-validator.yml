@@ -62,7 +62,7 @@ jobs:
             \`$ npx 'renovate-config-validator'\`
 
             \`\`\`json
-            nolg
+            ${{ steps.renovate-config-validator.outputs.vaildate_summary }}
             \`\`\`
 
             <details><summary>Show Outputs.</summary>
@@ -77,5 +77,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: output + vaildate_summary
+              body: output
             })
