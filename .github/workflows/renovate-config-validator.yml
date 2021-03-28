@@ -34,11 +34,9 @@ jobs:
         run: |
           set -x
 
-          tmp_file="${{ runner.temp }}/vaildate_summary"
+          tmp_file="${{ runner.temp }}/vaildate_raw"
           vaildate_stdr=$(npx 'renovate-config-validator' | tee ${tmp_file})
-
-          echo "${tmp_file}"
-          cat "${tmp_file}"
+          vaildate_summary=$(grep -E '^\s+?[\w]+:(.*)$' ${tmp_file})
 
           # エスケープ処理
           vaildate_stdr="${vaildate_stdr//$'%'/%25}"
@@ -51,9 +49,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const vaildate_summary_tmp = "${{ steps.renovate-config-validator.outputs.vaildate_stdr }}"
-            const vaildate_summary = vaildate_summary_tmp.match(/^\s+?[\w]+:(.*)$/);
-
             const output = `#### Renovate Format and Style 🖌\`${{ steps.renovate-config-validator.outcome }}\`
             \`$ npx 'renovate-config-validator'\`
 
