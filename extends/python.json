@@ -1,17 +1,17 @@
 {
   "packageRules": [
     {
-      "groupName": "flake8",
+      "groupName": "group:flake8",
       "matchPackageNames": ["flake8"],
       "matchPackagePatterns": ["^flake8-"]
     },
     {
-      "groupName": "jupyter",
+      "groupName": "group:jupyter",
       "matchPackageNames": ["jupyter"],
       "matchPackagePatterns": ["^jupyter-"]
     },
     {
-      "groupName": "pytest",
+      "groupName": "group:pytest",
       "matchPackageNames": ["pytest"],
       "matchPackagePatterns": ["^pytest-"]
     }
