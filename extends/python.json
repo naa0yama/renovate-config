@@ -1,9 +1,19 @@
 {
-  "enabledManagers": ["poetry"],
   "packageRules": [
     {
-      "addLabels": ["managers:poetry"],
-      "matchManagers": ["poetry"]
+      "groupName": "flake8",
+      "matchPackageNames": ["flake8"],
+      "matchPackagePatterns": ["^flake8-"]
+    },
+    {
+      "groupName": "jupyter",
+      "matchPackageNames": ["jupyter"],
+      "matchPackagePatterns": ["^jupyter-"]
+    },
+    {
+      "groupName": "pytest",
+      "matchPackageNames": ["pytest"],
+      "matchPackagePatterns": ["^pytest-"]
     }
   ]
 }
