@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "github>naa0yama/renovate-config//extends/python"],
   "assigneesFromCodeOwners": true,
   "prHourlyLimit": 99,
   "prConcurrentLimit": 20,
@@ -10,16 +10,24 @@
     "packageRules": [
       {
         "groupName": "All patch update {{depType}}",
-        "matchDepTypes": ["dependencies", "devDependencies"],
         "matchPackagePatterns": ["*"],
         "matchUpdateTypes": ["patch"]
       }
     ]
   },
+  "pin": {
+    "automerge": true,
+    "packageRules": [
+      {
+        "groupName": "All pin update {{depType}}",
+        "matchPackagePatterns": ["*"],
+        "matchUpdateTypes": ["pin"]
+      }
+    ]
+  },
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true,
-    "schedule": ["before 5am on monday"]
+    "automerge": true
   },
   "labels": [
     "renovate",
