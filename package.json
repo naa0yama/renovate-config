@@ -7,6 +7,9 @@
   "author": "@naa0yama",
   "license": "AGPL-3.0",
   "private": true,
+  "scripts": {
+    "dryrun": "renovate --log-level debug --dry-run true --token "
+  },
   "devDependencies": {
     "renovate": "24.96.3"
   }
