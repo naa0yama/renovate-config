@@ -11,6 +11,6 @@
     "dryrun": "renovate --log-level debug --dry-run true --token "
   },
   "devDependencies": {
-    "renovate": "28.2.1"
+    "renovate": "28.26.0"
   }
 }
