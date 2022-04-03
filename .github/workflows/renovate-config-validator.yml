@@ -3,6 +3,7 @@ name: Renovate Validate
 on:
   pull_request:
     paths:
+      - '.github/workflows/**.yml'
       - 'extends/**.json'
       - 'renovate.exsample.json'
       - 'renovate.json'
