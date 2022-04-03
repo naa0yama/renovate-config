@@ -16,12 +16,11 @@
       "matchPackagePatterns": ["^pytest-"]
     },
     {
-      "packagePatterns": [
-        "ipykernel"
-      ],
+      "packagePatterns": ["ipykernel"],
       "automerge": true,
       "major": {
         "automerge": false
+      }
     }
   ]
 }
