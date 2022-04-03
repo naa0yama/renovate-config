@@ -16,7 +16,7 @@
       "matchPackagePatterns": ["^pytest-"]
     },
     {
-      "packagePatterns": ["ipykernel"],
+      "packagePatterns": ["ipykernel", "mypy"],
       "automerge": true,
       "major": {
         "automerge": false
