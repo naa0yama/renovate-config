@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", "github>naa0yama/renovate-config/extends/python"],
+  "extends": ["config:base", "github>naa0yama/renovate-config//extends/python"],
   "assigneesFromCodeOwners": true,
   "prHourlyLimit": 99,
   "prConcurrentLimit": 20,
