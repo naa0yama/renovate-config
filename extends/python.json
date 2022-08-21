@@ -1,26 +1,40 @@
 {
   "packageRules": [
     {
-      "groupName": "group:flake8",
-      "matchPackageNames": ["flake8"],
-      "matchPackagePatterns": ["^flake8-"]
-    },
-    {
-      "groupName": "group:jupyter",
-      "matchPackageNames": ["jupyter"],
-      "matchPackagePatterns": ["^jupyter-"]
-    },
-    {
-      "groupName": "group:pytest",
-      "matchPackageNames": ["pytest"],
-      "matchPackagePatterns": ["^pytest-"]
-    },
-    {
-      "packagePatterns": ["ipykernel", "mypy"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "automerge": true,
       "major": {
         "automerge": false
       }
+    },
+    {
+      "groupName": "group:flake8",
+      "matchPackageNames": [
+        "flake8"
+      ],
+      "matchPackagePatterns": [
+        "^flake8-"
+      ]
+    },
+    {
+      "groupName": "group:jupyter",
+      "matchPackageNames": [
+        "jupyter"
+      ],
+      "matchPackagePatterns": [
+        "^jupyter-"
+      ]
+    },
+    {
+      "groupName": "group:pytest",
+      "matchPackageNames": [
+        "pytest"
+      ],
+      "matchPackagePatterns": [
+        "^pytest-"
+      ]
     }
   ]
 }

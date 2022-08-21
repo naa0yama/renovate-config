@@ -51,7 +51,9 @@ SemVer の考え方
 * `separateMinorPatch` パッチとマイナーアップグレードを同じ依存関係に対して別々のPRに分ける
 
 * lockfile メンテナンス
-    * スケジュールあり
+    * automerge する
+
+* pin のリクエスト
     * automerge する
 
 * パッチ(patch)
@@ -106,6 +108,10 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 
 主に SemVer に従ってなく `21.3.1` 21年.3月.1日 のようなバージョンで出してくる物やグループ化したいものを設定している
 
+## extends
+
+* 各言語の設定を作成する
+    * ファイル名は、 `extends/group/<language>.json`
 
 ## Ref
 
@@ -118,6 +124,7 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 
 * [sugarshin/renovate\-config: My shareable config for Renovate](https://github.com/sugarshin/renovate-config)
 * [Process Escape Characters in Release \`body\` · Issue \#25 · actions/create\-release](https://github.com/actions/create-release/issues/25)
+* [hatena/renovate\-config: A shareable config preset for Renovate used in Hatena\.](https://github.com/hatena/renovate-config)
 
 ## LICENSE
 

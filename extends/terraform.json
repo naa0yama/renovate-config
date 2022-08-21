@@ -1,13 +1,24 @@
 {
-  "enabledManagers": ["terraform", "terraform-version"],
+  "enabledManagers": [
+    "terraform",
+    "terraform-version"
+  ],
   "packageRules": [
     {
-      "addLabels": ["managers:terraform"],
-      "matchManagers": ["terraform"]
+      "addLabels": [
+        "managers:terraform"
+      ],
+      "matchManagers": [
+        "terraform"
+      ]
     },
     {
-      "addLabels": ["managers:terraform-version"],
-      "matchManagers": ["terraform"]
+      "addLabels": [
+        "managers:terraform-version"
+      ],
+      "matchManagers": [
+        "terraform"
+      ]
     }
   ]
 }
