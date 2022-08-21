@@ -1,5 +1,9 @@
 {
-  "extends": ["config:base", "github>naa0yama/renovate-config//extends/python"],
+  "extends": [
+    "config:base",
+    "github>naa0yama/renovate-config//extends/python"
+  ],
+  "assigneesFromCodeOwners": false,
   "prHourlyLimit": 99,
   "prConcurrentLimit": 20,
   "separateMajorMinor": true,
@@ -9,8 +13,12 @@
     "packageRules": [
       {
         "groupName": "All patch update {{depType}}",
-        "matchPackagePatterns": ["*"],
-        "matchUpdateTypes": ["patch"]
+        "matchPackagePatterns": [
+          "*"
+        ],
+        "matchUpdateTypes": [
+          "patch"
+        ]
       }
     ]
   },
@@ -19,8 +27,12 @@
     "packageRules": [
       {
         "groupName": "All pin update {{depType}}",
-        "matchPackagePatterns": ["*"],
-        "matchUpdateTypes": ["pin"]
+        "matchPackagePatterns": [
+          "*"
+        ],
+        "matchUpdateTypes": [
+          "pin"
+        ]
       }
     ]
   },

@@ -1,0 +1,16 @@
+{
+  "enabledManagers": [
+    "npm"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "^renovate$"
+      ],
+      "automerge": true,
+      "major": {
+        "automerge": false
+      }
+    }
+  ]
+}

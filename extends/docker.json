@@ -1,13 +1,24 @@
 {
-  "enabledManagers": ["dockerfile", "docker-compose"],
+  "enabledManagers": [
+    "dockerfile",
+    "docker-compose"
+  ],
   "packageRules": [
     {
-      "addLabels": ["managers:dockerfile"],
-      "matchManagers": ["dockerfile"]
+      "addLabels": [
+        "managers:dockerfile"
+      ],
+      "matchManagers": [
+        "dockerfile"
+      ]
     },
     {
-      "addLabels": ["managers:docker-compose"],
-      "matchManagers": ["docker-compose"]
+      "addLabels": [
+        "managers:docker-compose"
+      ],
+      "matchManagers": [
+        "docker-compose"
+      ]
     }
   ]
 }

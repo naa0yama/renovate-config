@@ -1,16 +1,26 @@
 {
-  "enabledManagers": ["github-actions"],
+  "enabledManagers": [
+    "github-actions"
+  ],
   "regexManagers": [
     {
-      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
-      "matchStrings": ["uses: (?<depName>.*?)@(?<currentValue>.*?)\n"],
+      "fileMatch": [
+        "^\\.github/workflows/[^/]+\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "uses: (?<depName>.*?)@(?<currentValue>.*?)\n"
+      ],
       "datasourceTemplate": "github-releases"
     }
   ],
   "packageRules": [
     {
-      "addLabels": ["managers:github-actions"],
-      "matchManagers": ["github-actions"],
+      "addLabels": [
+        "managers:github-actions"
+      ],
+      "matchManagers": [
+        "github-actions"
+      ],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?"
     }
   ]
