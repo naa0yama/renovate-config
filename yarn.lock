@@ -3213,9 +3213,9 @@ jsonfile@^6.0.1:
     graceful-fs "^4.1.6"
 
 keyv@^4.0.0:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.3.3.tgz#6c1bcda6353a9e96fc1b4e1aeb803a6e35090ba9"
-  integrity sha512-AcysI17RvakTh8ir03+a3zJr5r0ovnAH/XTXei/4HIv3bL2K/jzvgivLK9UuI/JbU1aJjM3NSAnVvVVd3n+4DQ==
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.4.0.tgz#8415fa45948201bb1a0bf4ed83dad7ae6babe866"
+  integrity sha512-BYafwt3p7j3Nczk/4IHsCXVV10Qy+pjPC6fpu91bmQl7d8XCrcmttI+dFb7qvp+5wq3QYl1tpL1YdwElzeMiLA==
   dependencies:
     compress-brotli "^1.3.8"
     json-buffer "3.0.1"
