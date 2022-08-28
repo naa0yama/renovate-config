@@ -1,41 +1,17 @@
 {
   "extends": [
     "config:base",
-    "github>naa0yama/renovate-config//extends/python"
+    "github>naa0yama/renovate-config//extends/docker",
+    "github>naa0yama/renovate-config//extends/github-actions",
+    "github>naa0yama/renovate-config//extends/npm",
+    "github>naa0yama/renovate-config//extends/python",
+    "github>naa0yama/renovate-config//extends/terraform"
   ],
   "assigneesFromCodeOwners": false,
   "prHourlyLimit": 99,
   "prConcurrentLimit": 20,
   "separateMajorMinor": true,
   "separateMinorPatch": true,
-  "patch": {
-    "automerge": true,
-    "packageRules": [
-      {
-        "groupName": "All patch update {{depType}}",
-        "matchPackagePatterns": [
-          "*"
-        ],
-        "matchUpdateTypes": [
-          "patch"
-        ]
-      }
-    ]
-  },
-  "pin": {
-    "automerge": true,
-    "packageRules": [
-      {
-        "groupName": "All pin update {{depType}}",
-        "matchPackagePatterns": [
-          "*"
-        ],
-        "matchUpdateTypes": [
-          "pin"
-        ]
-      }
-    ]
-  },
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
