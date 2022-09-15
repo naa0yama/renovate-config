@@ -13,6 +13,20 @@
   "prConcurrentLimit": 20,
   "separateMajorMinor": true,
   "separateMinorPatch": true,
+  "patch": {
+    "automerge": true,
+    "packageRules": [
+      {
+        "groupName": "All patch update {{depType}}",
+        "matchPackagePatterns": [
+          "*"
+        ],
+        "matchUpdateTypes": [
+          "patch"
+        ]
+      }
+    ]
+  },
   "pin": {
     "automerge": true,
     "packageRules": [
