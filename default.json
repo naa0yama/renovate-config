@@ -1,12 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    "github>naa0yama/renovate-config//extends/docker",
-    "github>naa0yama/renovate-config//extends/github-actions",
-    "github>naa0yama/renovate-config//extends/npm",
-    "github>naa0yama/renovate-config//extends/python",
-    "github>naa0yama/renovate-config//extends/terraform"
+    "config:base"
   ],
   "assigneesFromCodeOwners": false,
   "prHourlyLimit": 99,
