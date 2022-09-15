@@ -1,14 +1,6 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
-    {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "automerge": true,
-      "major": {
-        "automerge": false
-      }
-    },
     {
       "groupName": "group:flake8",
       "matchPackageNames": [
@@ -35,6 +27,19 @@
       "matchPackagePatterns": [
         "^pytest-"
       ]
+    },
+    {
+      "groupName": "All {{depType}} update",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true,
+      "major": {
+        "automerge": false
+      }
     }
   ]
 }
