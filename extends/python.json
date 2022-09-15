@@ -1,6 +1,10 @@
 {
   "packageRules": [
     {
+      "groupName": "All {{depType}} update",
+      "matchPackagePatterns": [
+        "*"
+      ],
       "matchDepTypes": [
         "devDependencies"
       ],
