@@ -34,7 +34,7 @@
         "*"
       ],
       "matchDepTypes": [
-        "devDependencies"
+        "dev-dependencies"
       ],
       "automerge": true,
       "major": {
