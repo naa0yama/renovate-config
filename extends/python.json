@@ -29,6 +29,13 @@
       ]
     },
     {
+      "groupName": "group:boto3",
+      "matchPackageNames": [
+        "boto3",
+        "botocore"
+      ]
+    },
+    {
       "groupName": "All {{depType}} update",
       "matchPackagePatterns": [
         "*"
