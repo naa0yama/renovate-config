@@ -53,5 +53,21 @@
     "manager:{{manager}}"
   ],
   "timezone": "Asia/Tokyo",
-  "packageRules": []
+  "packageRules": [
+    {
+      "groupName": "All {{depType}} update",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchDepTypes": [
+        "action",
+        "dev-dependencies"
+      ],
+      "automerge": true,
+      "separateMinorPatch": false,
+      "major": {
+        "automerge": false
+      }
+    }
+  ]
 }
