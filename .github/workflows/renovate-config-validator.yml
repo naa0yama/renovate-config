@@ -7,6 +7,7 @@ on:
       - "extends/**.json"
       - "renovate.exsample.json"
       - "renovate.json"
+  workflow_dispatch:
 
 jobs:
   validator:
