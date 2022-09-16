@@ -43,6 +43,9 @@
       "matchDepTypes": [
         "dev-dependencies"
       ],
+      "matchLanguages": [
+        "python"
+      ],
       "automerge": true,
       "major": {
         "automerge": false
