@@ -33,7 +33,7 @@ jobs:
 
       - name: Run renovate-config-validator
         run: |
-          set -x
+          set -eu
 
           for file in $(find . -maxdepth 2 -type f -name "*.json" -not -name package.json | sort); do
             echo "Validate ${file}"
