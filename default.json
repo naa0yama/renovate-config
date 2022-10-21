@@ -3,7 +3,6 @@
   "extends": [
     "config:base",
     "github>naa0yama/renovate-config//extends/docker",
-    "github>naa0yama/renovate-config//extends/github-actions",
     "github>naa0yama/renovate-config//extends/npm",
     "github>naa0yama/renovate-config//extends/python"
   ],
