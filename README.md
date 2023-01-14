@@ -17,17 +17,6 @@ curl -sfSL https://raw.githubusercontent.com/naa0yama/renovate-config/main/renov
 
 ```
 
-`.github/CODEOWNERS` ファイルを作成する、各プロジェクトで `assignees` を書いてもいいが、面倒なので `CODEOWNERS`
-を利用する
-
-Ref: [コードオーナーについて \- GitHub Docs](https://docs.github.com/ja/github/creating-cloning-and-archiving-repositories/about-code-owners)
-
-```
-
-* @naa0yama
-
-```
-
 ## 設定
 
 SemVer の考え方
@@ -36,7 +25,6 @@ SemVer の考え方
 | :-------------- | :-------------- | :------------ | :------------ |
 | 1               | 1               | 1             | 1             |
 
-
 |          |       | description                                            |
 | :------- | :---: | :----------------------------------------------------- |
 | メジャー | major | 後方互換性がない変更の時にインクリメントする番号です。 |
@@ -44,28 +32,37 @@ SemVer の考え方
 | パッチ   | patch | バグ修正の時にインクリメントする番号です。             |
 | ビルド   | build | 開発中などにビルドした時にインクリメントする番号です。 |
 
-
 ### 共通の設定
 
+* `assignees` Pull Request のアサイン者リスト
+
+```json
+{
+  "assignees": [
+    "@naa0yama"
+  ]
+}
+```
+
 * `prHourlyLimit` PRの作成を1時間に★回までに制限する
-* `separateMinorPatch` パッチとマイナーアップグレードを同じ依存関係に対して別々のPRに分ける
+* `separateMinorPatch` パッチ(patch) とマイナー(minor) アップグレードを同じ依存関係に対して別々のPRに分ける
 
 * lockfile メンテナンス
-    * automerge する
+  * automerge する
 
 * pin のリクエスト
-    * automerge する
+  * automerge する
 
 * パッチ(patch)
-    * ラベル: `update-patch` をつける
-    * まとめて PR にする
-    * automerge する
+  * ラベル: `update-patch` をつける
+  * まとめて PR にする
+  * automerge する
 
 * マイナー(minor)
-    * ラベル: `update-minor` をつける
+  * ラベル: `update-minor` をつける
 
 * メジャー(major)
-    * ラベル: `update-major` をつける
+  * ラベル: `update-major` をつける
 
 ### 定期実行
 
@@ -102,8 +99,6 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 | [helpers:disableTypesNodeMajor](https://docs.renovatebot.com/presets-helpers/#helpersdisabletypesnodemajor)         | Node.js の @types/node のメジャーアップデートを無効にする                                                                    |
 | [workarounds:all](https://docs.renovatebot.com/presets-workarounds/#workaroundsall)                                 | パッケージの既知の問題に対する回避策のコレクション                                                                           |
 
-
-
 ### パッケージごとの個別設定
 
 主に SemVer に従ってなく `21.3.1` 21年.3月.1日 のようなバージョンで出してくる物やグループ化したいものを設定している
@@ -111,7 +106,7 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 ## extends
 
 * 各言語の設定を作成する
-    * ファイル名は、 `extends/group/<language>.json`
+  * ファイル名は、 `extends/group/<language>.json`
 
 ## Ref
 
@@ -120,8 +115,6 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 * [Default Presets \| Renovate Docs](https://docs.renovatebot.com/presets-default/)
 * [Managers \- Renovate Docs \| Renovate Docs](https://docs.renovatebot.com/modules/manager/)
 * [Datasources \- Renovate Docs \| Renovate Docs](https://docs.renovatebot.com/modules/datasource/)
-
-
 * [sugarshin/renovate\-config: My shareable config for Renovate](https://github.com/sugarshin/renovate-config)
 * [Process Escape Characters in Release \`body\` · Issue \#25 · actions/create\-release](https://github.com/actions/create-release/issues/25)
 * [hatena/renovate\-config: A shareable config preset for Renovate used in Hatena\.](https://github.com/hatena/renovate-config)
