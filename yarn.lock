@@ -1947,10 +1947,10 @@
   dependencies:
     "@types/node" "*"
 
-"@yarnpkg/core@3.5.1":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@yarnpkg/core/-/core-3.5.1.tgz#bb1f13ffed9828a8b4d22980615bb7f1569daefe"
-  integrity sha512-BkbqhE7Ti/Kk2zl0MF2TPosUSh7yS9iaZWnmcXfzKPcPatY0NTg1wX+OuW/eXMFAHudXXmMMte9Ve2f6Kj7itQ==
+"@yarnpkg/core@3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@yarnpkg/core/-/core-3.5.2.tgz#a387f3cae7766c9f6801ad356e2f9bd9548485e6"
+  integrity sha512-IaKWHArtc0JAUXuDN2sSV57+yjemVsz//k8NjHT02AmUlCM7dOmIT/FeGfcVFZ6Zy8ZSwEwyzQLf3nxx5alzQg==
   dependencies:
     "@arcanis/slice-ansi" "^1.1.1"
     "@types/semver" "^7.1.0"
@@ -1959,7 +1959,7 @@
     "@yarnpkg/json-proxy" "^2.1.1"
     "@yarnpkg/libzip" "^2.3.0"
     "@yarnpkg/parsers" "^2.5.1"
-    "@yarnpkg/pnp" "^3.3.2"
+    "@yarnpkg/pnp" "^3.3.3"
     "@yarnpkg/shell" "^3.2.5"
     camelcase "^5.3.1"
     chalk "^3.0.0"
@@ -2017,7 +2017,7 @@
     js-yaml "^3.10.0"
     tslib "^1.13.0"
 
-"@yarnpkg/pnp@^3.3.2":
+"@yarnpkg/pnp@^3.3.3":
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/@yarnpkg/pnp/-/pnp-3.3.3.tgz#8e8151232959c4c9aaa42289c271794facbd70cf"
   integrity sha512-pI1mQ4m5RwgUA/TW6Y4odqSOt4QV+FuWXi9M9WKfuD+gePgjsMgjRA2siK8DekVmPUUb6ffhWEcKuGjjjj69Iw==
@@ -4476,10 +4476,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@35.115.0:
-  version "35.115.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-35.115.0.tgz#5b71e5e8a379d3544d711fe0681eb7ccb525f2d1"
-  integrity sha512-VQzOgascNDkthCuzyW2YwMdvwhVe9C9qGxDbSzYSjQtyemZNWntmDn1u6PEZakRBQzO1v0aIHH/RcOGWYlFWXA==
+renovate@35.115.2:
+  version "35.115.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-35.115.2.tgz#ac139e2571a66c69d7a54df528dae4f707cbf4b5"
+  integrity sha512-LTOJcJlf1cyJ4LmSPVqcnuZCwy4gEpOeNzBCVWOZn62SB6Ix14mRc3K4t+W8Tq48RGQhnElc++4r+lvzKqwsdw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.348.0"
     "@aws-sdk/client-ec2" "3.348.0"
@@ -4508,7 +4508,7 @@ renovate@35.115.0:
     "@sindresorhus/is" "4.6.0"
     "@types/ms" "0.7.31"
     "@types/tmp" "0.2.3"
-    "@yarnpkg/core" "3.5.1"
+    "@yarnpkg/core" "3.5.2"
     "@yarnpkg/parsers" "2.5.1"
     agentkeepalive "4.3.0"
     aggregate-error "3.1.0"
@@ -4925,6 +4925,7 @@ stream-to-promise@^2.2.0:
     stream-to-array "~2.3.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4957,6 +4958,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
