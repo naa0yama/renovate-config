@@ -7,6 +7,9 @@ on:
       - "extends/**.json"
       - "renovate.exsample.json"
       - "renovate.json"
+      - "package-lock.json"
+      - "package.json"
+      - "yarn.lock"
   workflow_dispatch:
 
 jobs:
