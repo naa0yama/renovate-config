@@ -4470,10 +4470,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@36.56.3:
-  version "36.56.3"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-36.56.3.tgz"
-  integrity sha512-wWFS5cDnCmTa0+Bptc/crE3qorGxuFWqm1YWWWvmhUpuMLHjcXJSXbGLaLpN17mvluLU2zK32JUMJLgw0Kl0yw==
+renovate@36.57.1:
+  version "36.57.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-36.57.1.tgz"
+  integrity sha512-/TlMHuY8TtCgM7ov1hH9wa5j6ZFfqtvYxg0n/bjBIGRYCfz3suiPCc5cnIx8HBB0EC5tJKiYLoO5xE6soaxnRg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4579,7 +4579,7 @@ renovate@36.56.3:
     validate-npm-package-name "5.0.0"
     vuln-vects "1.1.0"
     xmldoc "1.3.0"
-    zod "3.22.0"
+    zod "3.22.1"
   optionalDependencies:
     re2 "1.20.1"
 
@@ -5410,10 +5410,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@3.22.0:
-  version "3.22.0"
-  resolved "https://registry.npmjs.org/zod/-/zod-3.22.0.tgz"
-  integrity sha512-y5KZY/ssf5n7hCGDGGtcJO/EBJEm5Pa+QQvFBeyMOtnFYOSflalxIFFvdaYevPhePcmcKC4aTbFkCcXN7D0O8Q==
+zod@3.22.1:
+  version "3.22.1"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.22.1.tgz"
+  integrity sha512-+qUhAMl414+Elh+fRNtpU+byrwjDFOS1N7NioLY+tSlcADTx4TkCUua/hxJvxwDXcV4397/nZ420jy4n4+3WUg==
 
 zwitch@^1.0.0:
   version "1.0.5"
