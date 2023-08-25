@@ -4470,10 +4470,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@36.64.0:
-  version "36.64.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-36.64.0.tgz"
-  integrity sha512-Zpvgv+YdqprMv1HXoBstzorNKlBRFX57ahX13hWDTz8q5NpSXyFl6NMbdZJfC/i3bccaQ2REqM6ISaiu2rEfxA==
+renovate@36.64.1:
+  version "36.64.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-36.64.1.tgz"
+  integrity sha512-JvP4U1daaj7vKG1bMxW9NyN4rIhukS7nH5t55Ey0tYuOluTUR+sfRRhScXUV6mH+HNbJBssRGxSUwQ8l+/10CQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4573,7 +4573,7 @@ renovate@36.64.0:
     slugify "1.6.6"
     source-map-support "0.5.21"
     traverse "0.6.7"
-    tslib "2.6.1"
+    tslib "2.6.2"
     upath "2.0.1"
     url-join "4.0.1"
     validate-npm-package-name "5.0.0"
@@ -5070,10 +5070,10 @@ trough@^1.0.0:
   resolved "https://registry.npmjs.org/trough/-/trough-1.0.5.tgz"
   integrity sha512-rvuRbTarPXmMb79SmzEp8aqXNKcK+y0XaB298IXueQ8I2PsrATcPBCSPyK/dDNa2iWOhKlfNnOjdAOTBU/nkFA==
 
-tslib@2.6.1, tslib@^2.3.1, tslib@^2.5.0:
-  version "2.6.1"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.1.tgz"
-  integrity sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==
+tslib@2.6.2, tslib@^2.3.1, tslib@^2.5.0:
+  version "2.6.2"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz"
+  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
 
 tslib@^1.11.1, tslib@^1.13.0:
   version "1.14.1"
