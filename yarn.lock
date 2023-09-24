@@ -4683,10 +4683,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@36.106.1:
-  version "36.106.1"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-36.106.1.tgz"
-  integrity sha512-cXCnCtP0laE8utyfFvVz7ryXjOxYP7/b3z4HejIFN9425hz00f3y1iXK/fKd0jl30QfAaxwblfhVX51G9znPow==
+renovate@36.106.2:
+  version "36.106.2"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-36.106.2.tgz"
+  integrity sha512-+VuO7gyB8xqyrxcAZGp1G6Uk01X36vE07X92SH+YMLeq95ipw7dhkLk+x0gIsMhx54GlVLMKQxMrt62IGVfPzQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
