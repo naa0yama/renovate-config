@@ -3212,10 +3212,10 @@ good-enough-parser@1.1.23:
     klona "2.0.6"
     moo "0.5.2"
 
-google-auth-library@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.npmjs.org/google-auth-library/-/google-auth-library-9.0.0.tgz"
-  integrity sha512-IQGjgQoVUAfOk6khqTVMLvWx26R+yPw9uLyb1MNyMQpdKiKt0Fd9sp4NWoINjyGHR8S3iw12hMTYK7O8J07c6Q==
+google-auth-library@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.npmjs.org/google-auth-library/-/google-auth-library-9.1.0.tgz"
+  integrity sha512-1M9HdOcQNPV5BwSXqwwT238MTKodJFBxZ/V2JP397ieOLv4FjQdfYb9SooR7Mb+oUT2IJ92mLJQf804dyx0MJA==
   dependencies:
     base64-js "^1.3.0"
     ecdsa-sig-formatter "^1.0.11"
@@ -4683,10 +4683,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.11.0:
-  version "37.11.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.11.0.tgz"
-  integrity sha512-srPU+4A4w16XxTAVsAtSIIArr9fj0TKYpJPPiftBMLP5Pe34ez9zr34t5avhrSZ0LuL5DXKSwDaVw3jGXE8kDA==
+renovate@37.11.1:
+  version "37.11.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.11.1.tgz"
+  integrity sha512-V0306xEL0LRVErn4tA7FQCycNkes/GMV8r79Qm8JjH1gP2As48P3+bPeEksx8wYneQlpzqMPELY+zxLLKRbsaA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4747,7 +4747,7 @@ renovate@37.11.0:
     glob "10.3.10"
     global-agent "3.0.0"
     good-enough-parser "1.1.23"
-    google-auth-library "9.0.0"
+    google-auth-library "9.1.0"
     got "11.8.6"
     graph-data-structure "3.3.0"
     handlebars "4.7.8"
