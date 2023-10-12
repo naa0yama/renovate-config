@@ -2822,15 +2822,15 @@ emoji-regex@^9.2.2:
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
-emojibase-regex@15.0.0:
-  version "15.0.0"
-  resolved "https://registry.npmjs.org/emojibase-regex/-/emojibase-regex-15.0.0.tgz"
-  integrity sha512-b5y58xrmZhH551zIa3ZOHl1mRI5KecA+5sAyWZCQEaj1maufZJJoENVwDqigzJoAkG604DuRqfdpy4E5rzSUsg==
+emojibase-regex@15.2.0:
+  version "15.2.0"
+  resolved "https://registry.npmjs.org/emojibase-regex/-/emojibase-regex-15.2.0.tgz"
+  integrity sha512-65H5YepRW3gdrghV/Ed9kW3Qry8/qeKJmMlm31nTsOrEZfuAgyr28FmloXpyak86+chR8cukZA7dlafZzrJXbw==
 
-emojibase@15.0.0:
-  version "15.0.0"
-  resolved "https://registry.npmjs.org/emojibase/-/emojibase-15.0.0.tgz"
-  integrity sha512-bvSIs98sHaVnyKPmW+obRjo49MFx0g+rhfSz6mTePAagEZSlDPosq0b6AcSJa5gt48z3VP2ooXclyBs8vIkpGA==
+emojibase@15.2.0:
+  version "15.2.0"
+  resolved "https://registry.npmjs.org/emojibase/-/emojibase-15.2.0.tgz"
+  integrity sha512-gB6rIVtyJPersQvAo4nOGYPeILMhlcfZdiwCWVeRAtkJ7sm0tExZETGyLhrTQcHvZQhDEYI1vlCeqUhn5gZkQA==
 
 encoding@^0.1.13:
   version "0.1.13"
@@ -4683,10 +4683,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.13.4:
-  version "37.13.4"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.13.4.tgz"
-  integrity sha512-j6d2/iuOFklxoTkU8i9XIKJwbFj864ixExxQDEFEWYo8Rx9HQQLLFzY9vyrh8qxT7zsjLGMTIQAjcgerKRgvcA==
+renovate@37.13.7:
+  version "37.13.7"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.13.7.tgz"
+  integrity sha512-SA683Ru4YZL3wTM1p/3qc6jqEW7QjrTiuYnMtCTJkPXl/Yzjj2QnvLHAGY6OTIL8+JUjf0+WCfmgCroYTYre5Q==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4736,8 +4736,8 @@ renovate@37.13.4:
     editorconfig "2.0.0"
     email-addresses "5.0.0"
     emoji-regex "10.2.1"
-    emojibase "15.0.0"
-    emojibase-regex "15.0.0"
+    emojibase "15.2.0"
+    emojibase-regex "15.2.0"
     extract-zip "2.0.1"
     find-packages "10.0.4"
     find-up "5.0.0"
