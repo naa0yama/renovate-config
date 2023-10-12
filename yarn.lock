@@ -938,10 +938,10 @@
   resolved "https://registry.npmjs.org/@breejs/later/-/later-4.1.0.tgz"
   integrity sha512-QgGnZ9b7o4k0Ai1ZbTJWwZpZcFK9d+Gb+DyNt4UT9x6IEIs5HVu0iIlmgzGqN+t9MoJSpSPo9S/Mm51UtHr3JA==
 
-"@cdktf/hcl2json@0.18.0":
-  version "0.18.0"
-  resolved "https://registry.npmjs.org/@cdktf/hcl2json/-/hcl2json-0.18.0.tgz"
-  integrity sha512-wnnGTdXExmG+HCLsAsce3fOTDBpj8MpadMzKU7hxj+/xdGvACnU0JB7wcK0FRIKlbJFmxgwYzFmVrgd7z3Be/g==
+"@cdktf/hcl2json@0.18.1":
+  version "0.18.1"
+  resolved "https://registry.npmjs.org/@cdktf/hcl2json/-/hcl2json-0.18.1.tgz"
+  integrity sha512-zsWgeMxzhJEthkl4SA6VHEd6A3Nx9Jq6mYNFDvB0RtRUFoLVNJuuzgvwyUoeuzgMuOGtU3DhyvfYS8THDJKzuQ==
   dependencies:
     fs-extra "^11.1.1"
 
@@ -1992,9 +1992,9 @@
     "@types/node" "*"
 
 "@types/semver@^7.1.0":
-  version "7.5.2"
-  resolved "https://registry.npmjs.org/@types/semver/-/semver-7.5.2.tgz"
-  integrity sha512-7aqorHYgdNO4DM36stTiGO3DvKoex9TQRwsJU6vMaFGyqpBA1MNZkz+PG3gaNUPpTAOYhT1WR7M1JyA3fbS9Cw==
+  version "7.5.3"
+  resolved "https://registry.npmjs.org/@types/semver/-/semver-7.5.3.tgz"
+  integrity sha512-OxepLK9EuNEIPxWNME+C6WwbRAOOI2o2BaQEGzz5Lu2e4Z5eDnEo+/aVEDMIXywoJitJ7xWd641wrGLZdtwRyw==
 
 "@types/shimmer@^1.0.2":
   version "1.0.2"
@@ -2023,10 +2023,10 @@
   dependencies:
     "@types/node" "*"
 
-"@yarnpkg/core@3.5.3":
-  version "3.5.3"
-  resolved "https://registry.npmjs.org/@yarnpkg/core/-/core-3.5.3.tgz"
-  integrity sha512-yyU/fA2aWQ53KD5vsthJRJKhNO4zFgaKLNM3X6JgfUPfLLNQJxHvFpB4+X+v9HxceokiDGx3hp0DaAUWjO2mEw==
+"@yarnpkg/core@3.5.4":
+  version "3.5.4"
+  resolved "https://registry.npmjs.org/@yarnpkg/core/-/core-3.5.4.tgz"
+  integrity sha512-iIOoFnGOXP3LLxg0RiRIUB1n55bY0R1BRxxKsA2CtNeivR4wyBh/828SamthVzkKbsUs6y9q7U+1RMn9fEEHFg==
   dependencies:
     "@arcanis/slice-ansi" "^1.1.1"
     "@types/semver" "^7.1.0"
@@ -2035,7 +2035,7 @@
     "@yarnpkg/json-proxy" "^2.1.1"
     "@yarnpkg/libzip" "^2.3.0"
     "@yarnpkg/parsers" "^2.5.1"
-    "@yarnpkg/pnp" "^3.3.4"
+    "@yarnpkg/pnp" "^3.3.5"
     "@yarnpkg/shell" "^3.2.5"
     camelcase "^5.3.1"
     chalk "^3.0.0"
@@ -2093,7 +2093,7 @@
     js-yaml "^3.10.0"
     tslib "^1.13.0"
 
-"@yarnpkg/pnp@^3.3.4":
+"@yarnpkg/pnp@^3.3.5":
   version "3.3.5"
   resolved "https://registry.npmjs.org/@yarnpkg/pnp/-/pnp-3.3.5.tgz"
   integrity sha512-VKfOriFOKfclaL/f5+qEKyqBmWpYuRkgyutcf3tgysisw2G9MQkJWNoYpn/A6RHAZRTQJKFU3wtvBjSSjpu67A==
@@ -2512,9 +2512,9 @@ chownr@^2.0.0:
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
 ci-info@^3.2.0:
-  version "3.8.0"
-  resolved "https://registry.npmjs.org/ci-info/-/ci-info-3.8.0.tgz"
-  integrity sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==
+  version "3.9.0"
+  resolved "https://registry.npmjs.org/ci-info/-/ci-info-3.9.0.tgz"
+  integrity sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==
 
 cjs-module-lexer@^1.2.2:
   version "1.2.3"
@@ -4683,10 +4683,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.13.2:
-  version "37.13.2"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.13.2.tgz"
-  integrity sha512-oiZatVrJI4cePwDiGk9V2xRIUwrkvWoWLp9/p+LzUz/T9+Y72RIvRiejX8FC3OnqtCiNKM1Z2nDsGaBjK1HgaQ==
+renovate@37.13.3:
+  version "37.13.3"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.13.3.tgz"
+  integrity sha512-xzN6J4uSd4NabzItEeKnFFmnhBpSxY6oDJ9ff4Q5BxGhsMDdI0gBa5v5G0gStrY1odJxXlgxYaFEJCfpQk1pOA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4695,7 +4695,7 @@ renovate@37.13.2:
     "@aws-sdk/client-s3" "3.363.0"
     "@aws-sdk/credential-providers" "3.363.0"
     "@breejs/later" "4.1.0"
-    "@cdktf/hcl2json" "0.18.0"
+    "@cdktf/hcl2json" "0.18.1"
     "@iarna/toml" "3.0.0"
     "@opentelemetry/api" "1.6.0"
     "@opentelemetry/context-async-hooks" "1.17.0"
@@ -4714,7 +4714,7 @@ renovate@37.13.2:
     "@sindresorhus/is" "4.6.0"
     "@types/ms" "0.7.32"
     "@types/tmp" "0.2.4"
-    "@yarnpkg/core" "3.5.3"
+    "@yarnpkg/core" "3.5.4"
     "@yarnpkg/parsers" "2.5.1"
     agentkeepalive "4.5.0"
     aggregate-error "3.1.0"
