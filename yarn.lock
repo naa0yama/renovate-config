@@ -2570,10 +2570,10 @@ color-support@^1.1.3:
   resolved "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
 
-commander@11.0.0, commander@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-11.0.0.tgz"
-  integrity sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==
+commander@11.1.0, commander@^11.0.0:
+  version "11.1.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-11.1.0.tgz"
+  integrity sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -4672,10 +4672,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.28.0:
-  version "37.28.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.28.0.tgz"
-  integrity sha512-LpxxtN8WzCip/4ObI0MlnbZAPn0iQkJ7y/J+7ZvHrjsHzQgxi/THp8jDPEessJiyI2WuNZyNgOgYWaqMn8UX6g==
+renovate@37.28.1:
+  version "37.28.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.28.1.tgz"
+  integrity sha512-O6rHj8GVgmx7ReyxahKo/IDH5XBZKi+5+syr4nysX145iUdCoBRGNcfn+P24j9niFO0+V1RVNPVx6GyCIAuQ9g==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4716,7 +4716,7 @@ renovate@37.28.0:
     chalk "4.1.2"
     changelog-filename-regex "2.0.1"
     clean-git-ref "2.0.1"
-    commander "11.0.0"
+    commander "11.1.0"
     conventional-commits-detector "1.0.3"
     cron-parser "4.9.0"
     deepmerge "4.3.1"
