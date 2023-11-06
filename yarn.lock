@@ -965,11 +965,6 @@
   resolved "https://registry.npmjs.org/@gwhitney/detect-indent/-/detect-indent-7.0.1.tgz"
   integrity sha512-7bQW+gkKa2kKZPeJf6+c6gFK9ARxQfn+FKy9ScTBppyKRWH2KzsmweXUoklqeEiHiNVWaeP5csIdsNq6w7QhzA==
 
-"@iarna/toml@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@iarna/toml/-/toml-3.0.0.tgz"
-  integrity sha512-td6ZUkz2oS3VeleBcN+m//Q6HlCFCPrnI0FZhrt/h4XqLEdOyYp2u21nd8MdsR+WJy5r9PTDaHTDDfhf4H4l6Q==
-
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
   resolved "https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz"
@@ -2925,6 +2920,11 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
+eslint-visitor-keys@^3.0.0:
+  version "3.4.3"
+  resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz"
+  integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
+
 esprima@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz"
@@ -4733,10 +4733,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.48.0:
-  version "37.48.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.48.0.tgz"
-  integrity sha512-cuvpWuqAJSfFakCKcWWazQaoDz4AOFr7insHcE+SxBZ+VIIapcywbJHVenCghUqcflrofj09o8PBfqqhK7b7mA==
+renovate@37.48.3:
+  version "37.48.3"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.48.3.tgz"
+  integrity sha512-+86G8Dw7YJ2tJTrGA/oh2VrkTt6LTFAtpQn3zav8r43Aq+5tHsy5ccG/QwQhjI+S96cUdoEA2uRXRDlkQSFYXw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4746,7 +4746,6 @@ renovate@37.48.0:
     "@aws-sdk/credential-providers" "3.363.0"
     "@breejs/later" "4.1.0"
     "@cdktf/hcl2json" "0.19.0"
-    "@iarna/toml" "3.0.0"
     "@opentelemetry/api" "1.6.0"
     "@opentelemetry/context-async-hooks" "1.17.0"
     "@opentelemetry/exporter-trace-otlp-http" "0.43.0"
@@ -4836,6 +4835,7 @@ renovate@37.48.0:
     simple-git "3.20.0"
     slugify "1.6.6"
     source-map-support "0.5.21"
+    toml-eslint-parser "0.6.0"
     traverse "0.6.7"
     tslib "2.6.2"
     upath "2.0.1"
@@ -5325,6 +5325,13 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+toml-eslint-parser@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/toml-eslint-parser/-/toml-eslint-parser-0.6.0.tgz"
+  integrity sha512-aTmQa0RFb+2URe8IZOfo/oxt3b5rlXlpG9xE+6FmeI8immCGLnZYvKVxbnCYJx4bIKIaEwl0BnCDhwO70yeWSA==
+  dependencies:
+    eslint-visitor-keys "^3.0.0"
 
 tr46@~0.0.3:
   version "0.0.3"
