@@ -1990,10 +1990,10 @@
   resolved "https://registry.npmjs.org/@types/shimmer/-/shimmer-1.0.5.tgz"
   integrity sha512-9Hp0ObzwwO57DpLFF0InUjUm/II8GmKAvzbefxQTihCb7KI6yc9yzf0nLc4mVdby5N4DRCgQM2wCup9KTieeww==
 
-"@types/tmp@0.2.5":
-  version "0.2.5"
-  resolved "https://registry.npmjs.org/@types/tmp/-/tmp-0.2.5.tgz"
-  integrity sha512-KodRrjqWrk/3VyzfR4aeXkf2n5Ssg+bvVUhXlvHVffLiIHriLlrO3vYobB+Kvnr9DkNzMiyWHT3G6hT/xX0ryQ==
+"@types/tmp@0.2.6":
+  version "0.2.6"
+  resolved "https://registry.npmjs.org/@types/tmp/-/tmp-0.2.6.tgz"
+  integrity sha512-chhaNf2oKHlRkDGt+tiKE2Z5aJ6qalm7Z9rlLdBwmOiAAf09YQvvoLXjWK4HWPF1xU/fqvMgfNfpVoBscA/tKA==
 
 "@types/treeify@^1.0.0":
   version "1.0.3"
@@ -3744,10 +3744,10 @@ lru-cache@^7.7.1:
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
-luxon@3.4.3, luxon@^3.2.1, luxon@^3.4.3:
-  version "3.4.3"
-  resolved "https://registry.npmjs.org/luxon/-/luxon-3.4.3.tgz"
-  integrity sha512-tFWBiv3h7z+T/tDaoxA8rqTxy1CHV6gHS//QdaH4pulbq/JuBSGgQspQQqcgnwdAx6pNI7cmvz5Sv/addzHmUg==
+luxon@3.4.4, luxon@^3.2.1, luxon@^3.4.3:
+  version "3.4.4"
+  resolved "https://registry.npmjs.org/luxon/-/luxon-3.4.4.tgz"
+  integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
 
 make-fetch-happen@^10.0.3:
   version "10.2.1"
@@ -4553,10 +4553,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.59.2:
-  version "37.59.2"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.59.2.tgz"
-  integrity sha512-ITvbPjWS7seygR31Thm9ysPFPu+0lSYzzBM1PBxqDwxXRtc2ou4vsZ53fGyDPiX/Vz5OnRC1tB6jkoQL8giazQ==
+renovate@37.59.4:
+  version "37.59.4"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.59.4.tgz"
+  integrity sha512-HnIm0ffC5UURdqxXkFh3tB9aSgVeq64mxokihvdabUrAcGm22KQiTF4M8Zj7x7N3cw0Lp0liL/ox1qDh9gkCuQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4582,7 +4582,7 @@ renovate@37.59.2:
     "@renovatebot/ruby-semver" "3.0.18"
     "@sindresorhus/is" "4.6.0"
     "@types/ms" "0.7.34"
-    "@types/tmp" "0.2.5"
+    "@types/tmp" "0.2.6"
     "@yarnpkg/core" "4.0.1"
     "@yarnpkg/parsers" "3.0.0"
     agentkeepalive "4.5.0"
@@ -4629,7 +4629,7 @@ renovate@37.59.2:
     jsonata "2.0.3"
     klona "2.0.6"
     lru-cache "10.0.1"
-    luxon "3.4.3"
+    luxon "3.4.4"
     markdown-it "13.0.2"
     markdown-table "2.0.0"
     minimatch "9.0.3"
