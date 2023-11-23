@@ -3206,10 +3206,10 @@ iconv-lite@^0.6.2:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
-ignore@5.2.4:
-  version "5.2.4"
-  resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
-  integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
+ignore@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.0.tgz"
+  integrity sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==
 
 immediate@~3.0.5:
   version "3.0.6"
@@ -4386,10 +4386,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.65.2:
-  version "37.65.2"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.65.2.tgz"
-  integrity sha512-hg9WDccMUSMsqIGziXocUOzKvLegmeBkRsfHiFDqDtDo7Fh2RQLukcCmooAVs70Zh/0CY9ltonPtOHCJVQiHfg==
+renovate@37.65.3:
+  version "37.65.3"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.65.3.tgz"
+  integrity sha512-a3sdieYYkstKUQ3zbwkprd22sXBsVRhLqvP7rHXm2Q0ewELeFps5+90ECJ8o+wuiohXyeedyKnwHxQxGmj7ezw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4453,7 +4453,7 @@ renovate@37.65.2:
     got "11.8.6"
     graph-data-structure "3.3.0"
     handlebars "4.7.8"
-    ignore "5.2.4"
+    ignore "5.3.0"
     ini "4.1.1"
     js-yaml "4.1.0"
     json-dup-key-validator "1.0.3"
