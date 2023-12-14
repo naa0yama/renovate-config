@@ -1113,7 +1113,7 @@
   resolved "https://registry.npmjs.org/@one-ini/wasm/-/wasm-0.1.1.tgz"
   integrity sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==
 
-"@opentelemetry/api-logs@0.45.1":
+"@opentelemetry/api-logs@0.45.1", "@opentelemetry/api-logs@^0.45.1":
   version "0.45.1"
   resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.45.1.tgz"
   integrity sha512-zVGq/k70l+kB/Wuv3O/zhptP2hvDhEbhDu9EtHde1iWZJf3FedeYS/nWVcMBkkyPAjS/JKNk86WN4CBQLGUuOw==
@@ -1148,11 +1148,12 @@
     "@opentelemetry/resources" "1.18.1"
     "@opentelemetry/sdk-trace-base" "1.18.1"
 
-"@opentelemetry/instrumentation-bunyan@0.33.0":
-  version "0.33.0"
-  resolved "https://registry.npmjs.org/@opentelemetry/instrumentation-bunyan/-/instrumentation-bunyan-0.33.0.tgz"
-  integrity sha512-i3xfmhajtOEuFO+9yMU/wJiH0tY4VtIlbJKGIKVHFOsoNqPQpG7iUQP01p0FRoje+UB+ZUvs4hU7fCZzwtnC1g==
+"@opentelemetry/instrumentation-bunyan@0.34.0":
+  version "0.34.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/instrumentation-bunyan/-/instrumentation-bunyan-0.34.0.tgz"
+  integrity sha512-UjuvggGrclyn6avTcMAdqLyrrTV26ufB73vPBPlEmA3a2dtYCS07zW82Kacxi5emZDpmHIk6zQE18DqCb/xfpA==
   dependencies:
+    "@opentelemetry/api-logs" "^0.45.1"
     "@opentelemetry/instrumentation" "^0.45.1"
     "@types/bunyan" "1.8.9"
 
@@ -4377,10 +4378,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.98.0:
-  version "37.98.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.98.0.tgz"
-  integrity sha512-rgabfc2h3fjcmtBS/NsOL2wO+La9DZLPHIQQvtJw8m8FgqgkrlmIY7U3gc/e0EJwRczBf0IzdHvgrmdFet0a0Q==
+renovate@37.98.1:
+  version "37.98.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.98.1.tgz"
+  integrity sha512-8fZ9kkJ2arCTk2/fiSirllrFC01KiwyF9JQt7Prsrx4J5yRsprED8Mo6rVDriD0iYQdLTg5vOPLdddX+fHXI+Q==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4394,7 +4395,7 @@ renovate@37.98.0:
     "@opentelemetry/context-async-hooks" "1.18.1"
     "@opentelemetry/exporter-trace-otlp-http" "0.45.1"
     "@opentelemetry/instrumentation" "0.45.1"
-    "@opentelemetry/instrumentation-bunyan" "0.33.0"
+    "@opentelemetry/instrumentation-bunyan" "0.34.0"
     "@opentelemetry/instrumentation-http" "0.45.1"
     "@opentelemetry/resources" "1.18.1"
     "@opentelemetry/sdk-trace-base" "1.18.1"
