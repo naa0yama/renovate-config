@@ -4406,10 +4406,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.105.3:
-  version "37.105.3"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.105.3.tgz"
-  integrity sha512-xuB3SLcPXoVbhmEne/KmY9yyvj+g92Jf+4ndopBZwG+LGCC8BCh7kDJSOyvkGLSrw4elkSS6VzS0HjOcq2FKvg==
+renovate@37.105.4:
+  version "37.105.4"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.105.4.tgz"
+  integrity sha512-L18HWNBk5clM532Mb9YtTPFx1AnpBrl7cscMhMgCuK0a6jRIFVYSN7pRVEx8FZyxr/66w7dsRzTVdMHQoKE74w==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4509,7 +4509,7 @@ renovate@37.105.3:
     slugify "1.6.6"
     source-map-support "0.5.21"
     toml-eslint-parser "0.9.3"
-    traverse "0.6.7"
+    traverse "0.6.8"
     tslib "2.6.2"
     upath "2.0.1"
     url-join "4.0.1"
@@ -4964,10 +4964,10 @@ tr46@~0.0.3:
   resolved "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
 
-traverse@0.6.7:
-  version "0.6.7"
-  resolved "https://registry.npmjs.org/traverse/-/traverse-0.6.7.tgz"
-  integrity sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==
+traverse@0.6.8:
+  version "0.6.8"
+  resolved "https://registry.npmjs.org/traverse/-/traverse-0.6.8.tgz"
+  integrity sha512-aXJDbk6SnumuaZSANd21XAo15ucCDE38H4fkqiGsc3MhCK+wOlZvLP9cB/TvpHT0mOyWgC4Z8EwRlzqYSUzdsA==
 
 treeify@^1.1.0:
   version "1.1.0"
