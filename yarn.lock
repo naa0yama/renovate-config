@@ -4406,10 +4406,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.122.0:
-  version "37.122.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.122.0.tgz"
-  integrity sha512-9ufoGId5+9eOySnkxugIYaJj8Wo/z4pyrNPZylx08OxI9PyZNSkVJ8iQutpK2WFVFqJkNvceOvk8Qff//lLINQ==
+renovate@37.123.1:
+  version "37.123.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.123.1.tgz"
+  integrity sha512-ODmVs7NLFyij/yMTPKW4cn018YqvNp8tyHp71GHUqkhTXDpHMnV2WTKkQgciRcLAp57izDvemrEkzwy1ZFxyQA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4505,7 +4505,7 @@ renovate@37.122.0:
     semver-stable "3.0.0"
     semver-utils "1.1.4"
     shlex "2.1.2"
-    simple-git "3.21.0"
+    simple-git "3.22.0"
     slugify "1.6.6"
     source-map-support "0.5.21"
     toml-eslint-parser "0.9.3"
@@ -4713,10 +4713,10 @@ signal-exit@^4.0.1:
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
-simple-git@3.21.0:
-  version "3.21.0"
-  resolved "https://registry.npmjs.org/simple-git/-/simple-git-3.21.0.tgz"
-  integrity sha512-oTzw9248AF5bDTMk9MrxsRzEzivMlY+DWH0yWS4VYpMhNLhDWnN06pCtaUyPnqv/FpsdeNmRqmZugMABHRPdDA==
+simple-git@3.22.0:
+  version "3.22.0"
+  resolved "https://registry.npmjs.org/simple-git/-/simple-git-3.22.0.tgz"
+  integrity sha512-6JujwSs0ac82jkGjMHiCnTifvf1crOiY/+tfs/Pqih6iow7VrpNKRRNdWm6RtaXpvvv/JGNYhlUtLhGFqHF+Yw==
   dependencies:
     "@kwsites/file-exists" "^1.1.1"
     "@kwsites/promise-deferred" "^1.1.1"
