@@ -60,13 +60,26 @@
       "groupName": "All {{depType}} update",
       "matchDepTypes": [
         "action",
-        "dev-dependencies"
+        "dev-dependencies",
+        "devDependencies"
       ],
+      "rangeStrategy": "update-lockfile",
       "automerge": true,
       "separateMinorPatch": false,
       "major": {
         "automerge": false
       }
+    },
+    {
+      "groupName": "dependencies (non-major)",
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "rangeStrategy": "pin"
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
     }
   ]
 }
