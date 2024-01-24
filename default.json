@@ -8,10 +8,12 @@
     "github>naa0yama/renovate-config//extends/python"
   ],
   "assigneesFromCodeOwners": false,
-  "prHourlyLimit": 99,
-  "prConcurrentLimit": 20,
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 5,
   "separateMajorMinor": true,
   "separateMinorPatch": true,
+  "platformAutomerge": true,
   "patch": {
     "automerge": true,
     "packageRules": [
@@ -56,9 +58,6 @@
   "packageRules": [
     {
       "groupName": "All {{depType}} update",
-      "matchPackagePatterns": [
-        "*"
-      ],
       "matchDepTypes": [
         "action",
         "dev-dependencies"
