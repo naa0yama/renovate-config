@@ -63,7 +63,7 @@
         "dev-dependencies",
         "devDependencies"
       ],
-      "rangeStrategy": "update-lockfile",
+      "rangeStrategy": "pin",
       "automerge": true,
       "separateMinorPatch": false,
       "major": {
@@ -75,11 +75,7 @@
       "matchDepTypes": [
         "dependencies"
       ],
-      "rangeStrategy": "pin",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "rangeStrategy": "pin"
     }
   ]
 }
