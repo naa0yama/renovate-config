@@ -75,11 +75,11 @@
       "matchDepTypes": [
         "dependencies"
       ],
-      "rangeStrategy": "pin"
+      "rangeStrategy": "pin",
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ],
+      ]
     }
   ]
 }
