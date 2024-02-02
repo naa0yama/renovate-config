@@ -1896,10 +1896,10 @@
     "@thi.ng/arrays" "^1.0.3"
     "@thi.ng/checks" "^2.9.11"
 
-"@types/better-sqlite3@7.6.8":
-  version "7.6.8"
-  resolved "https://registry.npmjs.org/@types/better-sqlite3/-/better-sqlite3-7.6.8.tgz"
-  integrity sha512-ASndM4rdGrzk7iXXqyNC4fbwt4UEjpK0i3j4q4FyeQrLAthfB6s7EF135ZJE0qQxtKIMFwmyT6x0switET7uIw==
+"@types/better-sqlite3@7.6.9":
+  version "7.6.9"
+  resolved "https://registry.npmjs.org/@types/better-sqlite3/-/better-sqlite3-7.6.9.tgz"
+  integrity sha512-FvktcujPDj9XKMJQWFcl2vVl7OdRIqsSRX9b0acWwTmwLK9CF2eqo/FRcmMLNpugKoX/avA6pb7TorDLmpgTnQ==
   dependencies:
     "@types/node" "*"
 
@@ -4535,10 +4535,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.165.5:
-  version "37.165.5"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.165.5.tgz"
-  integrity sha512-l5YGeOfo8mbt9fNf+URptwv0trGyrJe9ElPRHqhi8dOQDskqJR7ss3vRE0vnN6HXg3SC8Z2fBzC6tPf8EKbdEQ==
+renovate@37.165.6:
+  version "37.165.6"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.165.6.tgz"
+  integrity sha512-8DpFph5U1E65ECkHc4J/p8Kbo9JQ53jQg2igg2V8TGDNk8NqN9oxc4rTUyAyBnOB1MpP2NeOHudG6xOqFCn0Ng==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4563,7 +4563,7 @@ renovate@37.165.5:
     "@renovatebot/pep440" "3.0.17"
     "@renovatebot/ruby-semver" "3.0.23"
     "@sindresorhus/is" "4.6.0"
-    "@types/better-sqlite3" "7.6.8"
+    "@types/better-sqlite3" "7.6.9"
     "@types/ms" "0.7.34"
     "@types/tmp" "0.2.6"
     "@yarnpkg/core" "4.0.2"
