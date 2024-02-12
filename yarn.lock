@@ -1345,10 +1345,10 @@
   resolved "https://registry.npmjs.org/@redis/bloom/-/bloom-1.2.0.tgz"
   integrity sha512-HG2DFjYKbpNmVXsa0keLHp/3leGJz1mjh09f2RLGGLQZzSHpkmZWuwJbAvo3QcRY8p80m5+ZdXZdYOSBLlp7Cg==
 
-"@redis/client@1.5.13":
-  version "1.5.13"
-  resolved "https://registry.npmjs.org/@redis/client/-/client-1.5.13.tgz"
-  integrity sha512-epkUM9D0Sdmt93/8Ozk43PNjLi36RZzG+d/T1Gdu5AI8jvghonTeLYV69WVWdilvFo+PYxbP0TZ0saMvr6nscQ==
+"@redis/client@1.5.14":
+  version "1.5.14"
+  resolved "https://registry.npmjs.org/@redis/client/-/client-1.5.14.tgz"
+  integrity sha512-YGn0GqsRBFUQxklhY7v562VMOP0DcmlrHHs3IV1mFE3cbxe31IITUkqhBcIhVSI/2JqtWAJXg5mjV4aU+zD0HA==
   dependencies:
     cluster-key-slot "1.1.2"
     generic-pool "3.9.0"
@@ -1374,20 +1374,20 @@
   resolved "https://registry.npmjs.org/@redis/time-series/-/time-series-1.0.5.tgz"
   integrity sha512-IFjIgTusQym2B5IZJG3XKr5llka7ey84fw/NOYqESP5WUfQs9zz1ww/9+qoz4ka/S6KcGBodzlCeZ5UImKbscg==
 
-"@renovatebot/osv-offline-db@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/@renovatebot/osv-offline-db/-/osv-offline-db-1.5.1.tgz"
-  integrity sha512-I356SDDjbCu58j58TC1qiGQ4dwhSd9nQjl9bVbWNPjDY91S4tH5OfR6I5eV4bXxZgp0dxMWRakyFlbTbOjPpfw==
+"@renovatebot/osv-offline-db@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/@renovatebot/osv-offline-db/-/osv-offline-db-1.6.0.tgz"
+  integrity sha512-cEOCTyd3+/7gPDmBn0pyJtF01+f9e/dJ1mOoML+v5AsP8GIPAzhtQUuIB5FiCxS4IsbP0qm34anYUZHGJldNJA==
   dependencies:
     "@seald-io/nedb" "^4.0.4"
 
-"@renovatebot/osv-offline@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.npmjs.org/@renovatebot/osv-offline/-/osv-offline-1.5.0.tgz"
-  integrity sha512-IQK1b0uCugooaK+miCNcaKUf+pBIK8uICFRZY2QyG1DuAFm2MfPYF3asMtO1ebD317QZGxaI4q08+V66T3K8HA==
+"@renovatebot/osv-offline@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/@renovatebot/osv-offline/-/osv-offline-1.5.1.tgz"
+  integrity sha512-NQT7ikG+uA2M9IrGEY/f43FNXWQrFbIKSKk4kFxcOJL+Y3mYJF6EpVcqxfp2ExIrwu50r2rBbzdX9jgbuhiwwQ==
   dependencies:
     "@octokit/rest" "^20.0.2"
-    "@renovatebot/osv-offline-db" "1.5.1"
+    "@renovatebot/osv-offline-db" "1.6.0"
     adm-zip "~0.5.10"
     fs-extra "^11.2.0"
     got "^11.8.6"
@@ -4466,13 +4466,13 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-redis@4.6.12:
-  version "4.6.12"
-  resolved "https://registry.npmjs.org/redis/-/redis-4.6.12.tgz"
-  integrity sha512-41Xuuko6P4uH4VPe5nE3BqXHB7a9lkFL0J29AlxKaIfD6eWO8VO/5PDF9ad2oS+mswMsfFxaM5DlE3tnXT+P8Q==
+redis@4.6.13:
+  version "4.6.13"
+  resolved "https://registry.npmjs.org/redis/-/redis-4.6.13.tgz"
+  integrity sha512-MHgkS4B+sPjCXpf+HfdetBwbRz6vCtsceTmw1pHNYJAsYxrfpOP6dz+piJWGos8wqG7qb3vj/Rrc5qOlmInUuA==
   dependencies:
     "@redis/bloom" "1.2.0"
-    "@redis/client" "1.5.13"
+    "@redis/client" "1.5.14"
     "@redis/graph" "1.1.1"
     "@redis/json" "1.0.6"
     "@redis/search" "1.1.6"
@@ -4515,10 +4515,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.184.0:
-  version "37.184.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.184.0.tgz"
-  integrity sha512-EFAMV206OvX2oYtnxK6qqL4Ho/IsHfz9/yhB+IGD3GHn4IGm12+4KeqLW3ZUv+enZ+FypKkgx+cApdE+ZVeFxA==
+renovate@37.184.3:
+  version "37.184.3"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.184.3.tgz"
+  integrity sha512-dQZ0GJizZ43LD33mLKv/6y+vep2sx8ZNcjotcDCgTqHyRKml7tzpEzuIqSHymV/XlUEEiC87KUWfZUPC2Dl+Eg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4539,7 +4539,7 @@ renovate@37.184.0:
     "@opentelemetry/sdk-trace-node" "1.21.0"
     "@opentelemetry/semantic-conventions" "1.21.0"
     "@qnighy/marshal" "0.1.3"
-    "@renovatebot/osv-offline" "1.5.0"
+    "@renovatebot/osv-offline" "1.5.1"
     "@renovatebot/pep440" "3.0.17"
     "@renovatebot/ruby-semver" "3.0.23"
     "@sindresorhus/is" "4.6.0"
@@ -4608,7 +4608,7 @@ renovate@37.184.0:
     p-throttle "4.1.1"
     parse-link-header "2.0.0"
     prettier "3.2.5"
-    redis "4.6.12"
+    redis "4.6.13"
     remark "13.0.0"
     remark-github "10.1.0"
     safe-stable-stringify "2.4.3"
