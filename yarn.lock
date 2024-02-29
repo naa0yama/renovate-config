@@ -2210,10 +2210,10 @@ before-after-hook@^2.2.0:
   resolved "https://registry.npmjs.org/before-after-hook/-/before-after-hook-2.2.3.tgz"
   integrity sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==
 
-better-sqlite3@9.4.1:
-  version "9.4.1"
-  resolved "https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-9.4.1.tgz"
-  integrity sha512-QpqiQeMI4WkE+dQ68zTMX5OzlPGc7lXIDP1iKUt4Omt9PdaVgzKYxHIJRIzt1E+RUBQoFmkip/IbvzyrxehAIg==
+better-sqlite3@9.4.3:
+  version "9.4.3"
+  resolved "https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-9.4.3.tgz"
+  integrity sha512-ud0bTmD9O3uWJGuXDltyj3R47Nz0OHX8iqPOT5PMspGqlu/qQFn+5S2eFBUCrySpavTjFXbi4EgrfVvPAHlImw==
   dependencies:
     bindings "^1.5.0"
     prebuild-install "^7.1.1"
@@ -4542,10 +4542,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.219.5:
-  version "37.219.5"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.219.5.tgz"
-  integrity sha512-blsdE7ATPWq/rK1NesZMV+rCRjHdOi+usSJxj58+rZmYO70OWacoKB6j5Au4xyR0aKPVqCx4MEoXCh55p2++fA==
+renovate@37.219.7:
+  version "37.219.7"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.219.7.tgz"
+  integrity sha512-DtD8AAUvg3sf/Us66vbz6IORuO4+Qz6uemfnTuhmhe94xW+9pNwjxrGZhw+7+CWJVnbAlBNSYWJCHRPssLNzrA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4580,7 +4580,7 @@ renovate@37.219.5:
     auth-header "1.0.0"
     aws4 "1.12.0"
     azure-devops-node-api "12.4.0"
-    better-sqlite3 "9.4.1"
+    better-sqlite3 "9.4.3"
     bunyan "1.8.15"
     cacache "18.0.2"
     cacheable-lookup "5.0.4"
