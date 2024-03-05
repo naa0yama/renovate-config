@@ -3586,10 +3586,10 @@ json5@2.2.3, json5@^2.2.1:
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-jsonata@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/jsonata/-/jsonata-2.0.3.tgz"
-  integrity sha512-Up2H81MUtjqI/dWwWX7p4+bUMfMrQJVMN/jW6clFMTiYP528fBOBNtRu944QhKTs3+IsVWbgMeUTny5fw2VMUA==
+jsonata@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/jsonata/-/jsonata-2.0.4.tgz"
+  integrity sha512-vfavX4/G/yrYxE+UrmT/oUJ3ph7KqUrb0R7b0LVRcntQwxw+Z5kA1pNUIQzX5hF04Oe1eKxyoIPsmXtc2LgJTQ==
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -4542,10 +4542,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.227.0:
-  version "37.227.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.227.0.tgz"
-  integrity sha512-KwZcwDKCId+xwHxARaMdzJSI3ojLQXcPgZq0EK9jIRpfAU8zwKl8DanY+hLjeUZI8xpnBRl1f4ovs4H3urY1OQ==
+renovate@37.227.1:
+  version "37.227.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.227.1.tgz"
+  integrity sha512-tWIH77p4BTAJdIQrW5mzXpiKJSBUY9H1pVQ48hiWixcR74IbwP0ApJLIEtt0Chz06QUL1g/SgquBeAgGM7lB5g==
   dependencies:
     "@aws-sdk/client-codecommit" "3.363.0"
     "@aws-sdk/client-ec2" "3.363.0"
@@ -4617,7 +4617,7 @@ renovate@37.227.0:
     json-dup-key-validator "1.0.3"
     json-stringify-pretty-compact "3.0.0"
     json5 "2.2.3"
-    jsonata "2.0.3"
+    jsonata "2.0.4"
     klona "2.0.6"
     lru-cache "10.2.0"
     luxon "3.4.4"
