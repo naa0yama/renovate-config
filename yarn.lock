@@ -5071,10 +5071,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.333.1:
-  version "37.333.1"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.333.1.tgz"
-  integrity sha512-XMQInaEvCgvFabsKgNxmhFLdSBTDycf2EQ//d9+d0ewC92krVoLS55a90V5k++j1yHpJJmOutI772UeXfvfR7g==
+renovate@37.334.0:
+  version "37.334.0"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.334.0.tgz"
+  integrity sha512-NmlWtBJEiV0OGFKWw0Zj6gYrx4tBy6lnLn79vwOr1hvNyTmbc8ATyfmNSUqxlRdyBC4ounKzeV42cBhRCVCWqw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.565.0"
     "@aws-sdk/client-ec2" "3.565.0"
@@ -5110,7 +5110,6 @@ renovate@37.333.1:
     auth-header "1.0.0"
     aws4 "1.12.0"
     azure-devops-node-api "13.0.0"
-    better-sqlite3 "9.5.0"
     bunyan "1.8.15"
     cacache "18.0.2"
     cacheable-lookup "5.0.4"
@@ -5185,6 +5184,7 @@ renovate@37.333.1:
     xmldoc "1.3.0"
     zod "3.23.4"
   optionalDependencies:
+    better-sqlite3 "9.5.0"
     openpgp "5.11.1"
     re2 "1.20.10"
 
