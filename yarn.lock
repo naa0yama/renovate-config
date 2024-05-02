@@ -1093,14 +1093,7 @@
   resolved "https://registry.npmjs.org/@one-ini/wasm/-/wasm-0.1.1.tgz"
   integrity sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==
 
-"@opentelemetry/api-logs@0.50.0", "@opentelemetry/api-logs@^0.50.0":
-  version "0.50.0"
-  resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.50.0.tgz"
-  integrity sha512-JdZuKrhOYggqOpUljAq4WWNi5nB10PmgoF0y2CvedLGXd0kSawb/UBnWT8gg1ND3bHCNHStAIVT0ELlxJJRqrA==
-  dependencies:
-    "@opentelemetry/api" "^1.0.0"
-
-"@opentelemetry/api-logs@0.51.0":
+"@opentelemetry/api-logs@0.51.0", "@opentelemetry/api-logs@^0.51.0":
   version "0.51.0"
   resolved "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.51.0.tgz"
   integrity sha512-m/jtfBPEIXS1asltl8fPQtO3Sb1qMpuL61unQajUmM8zIxeMF1AlqzWXM3QedcYgTTFiJCew5uJjyhpmqhc0+g==
@@ -1135,13 +1128,13 @@
     "@opentelemetry/resources" "1.24.0"
     "@opentelemetry/sdk-trace-base" "1.24.0"
 
-"@opentelemetry/instrumentation-bunyan@0.37.0":
-  version "0.37.0"
-  resolved "https://registry.npmjs.org/@opentelemetry/instrumentation-bunyan/-/instrumentation-bunyan-0.37.0.tgz"
-  integrity sha512-NKHuTIn1JrxfKZ8sVZjwT/bD3wyijkipiWzBvvxGj8pJJJNP5shVHWcEJhk5tQsfKQc4LproTAPdklex1o5/ag==
+"@opentelemetry/instrumentation-bunyan@0.38.0":
+  version "0.38.0"
+  resolved "https://registry.npmjs.org/@opentelemetry/instrumentation-bunyan/-/instrumentation-bunyan-0.38.0.tgz"
+  integrity sha512-ThNcgTE22W7PKzTzz5qfGxb5Gf7rA3EORousYo2nJWHHcF6gqiMNv2+GXY3MdpjLBr8IgCfhtvbQdD6rlIPUpA==
   dependencies:
-    "@opentelemetry/api-logs" "^0.50.0"
-    "@opentelemetry/instrumentation" "^0.50.0"
+    "@opentelemetry/api-logs" "^0.51.0"
+    "@opentelemetry/instrumentation" "^0.51.0"
     "@types/bunyan" "1.8.9"
 
 "@opentelemetry/instrumentation-http@0.51.0":
@@ -1154,24 +1147,12 @@
     "@opentelemetry/semantic-conventions" "1.24.0"
     semver "^7.5.2"
 
-"@opentelemetry/instrumentation@0.51.0":
+"@opentelemetry/instrumentation@0.51.0", "@opentelemetry/instrumentation@^0.51.0":
   version "0.51.0"
   resolved "https://registry.npmjs.org/@opentelemetry/instrumentation/-/instrumentation-0.51.0.tgz"
   integrity sha512-Eg/+Od5bEvzpvZQGhvMyKIkrzB9S7jW+6z9LHEI2VXhl/GrqQ3oBqlzJt4tA6pGtxRmqQWKWGM1wAbwDdW/gUA==
   dependencies:
     "@opentelemetry/api-logs" "0.51.0"
-    "@types/shimmer" "^1.0.2"
-    import-in-the-middle "1.7.1"
-    require-in-the-middle "^7.1.1"
-    semver "^7.5.2"
-    shimmer "^1.2.1"
-
-"@opentelemetry/instrumentation@^0.50.0":
-  version "0.50.0"
-  resolved "https://registry.npmjs.org/@opentelemetry/instrumentation/-/instrumentation-0.50.0.tgz"
-  integrity sha512-bhGhbJiZKpuu7wTaSak4hyZcFPlnDeuSF/2vglze8B4w2LubcSbbOnkVTzTs5SXtzh4Xz8eRjaNnAm+u2GYufQ==
-  dependencies:
-    "@opentelemetry/api-logs" "0.50.0"
     "@types/shimmer" "^1.0.2"
     import-in-the-middle "1.7.1"
     require-in-the-middle "^7.1.1"
@@ -4143,10 +4124,10 @@ lowercase-keys@^2.0.0:
   resolved "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz"
   integrity sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==
 
-lru-cache@10.2.0, lru-cache@^10.0.1, lru-cache@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.2.0.tgz"
-  integrity sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==
+lru-cache@10.2.2, lru-cache@^10.0.1, lru-cache@^10.2.0:
+  version "10.2.2"
+  resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.2.2.tgz"
+  integrity sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==
 
 lru-cache@^6.0.0:
   version "6.0.0"
@@ -5055,10 +5036,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.335.0:
-  version "37.335.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.335.0.tgz"
-  integrity sha512-HKQ4yufnK/p70TP3MPq3lEFEAPEVRZi5vLu5n2IGuDbOQeVXArpMKrO0VwubojF2FDw6QpjJEYEznqD0LhkKrw==
+renovate@37.336.0:
+  version "37.336.0"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.336.0.tgz"
+  integrity sha512-Yi8ddzF99ZhY3/MaMKPfdIiqrSbMG0UZO93OcMjhnj26TC2wh0tbjXmJ3Ywl0NIVq42QSTrhCb7fBWyQWC9KJg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.565.0"
     "@aws-sdk/client-ec2" "3.565.0"
@@ -5072,7 +5053,7 @@ renovate@37.335.0:
     "@opentelemetry/context-async-hooks" "1.24.0"
     "@opentelemetry/exporter-trace-otlp-http" "0.51.0"
     "@opentelemetry/instrumentation" "0.51.0"
-    "@opentelemetry/instrumentation-bunyan" "0.37.0"
+    "@opentelemetry/instrumentation-bunyan" "0.38.0"
     "@opentelemetry/instrumentation-http" "0.51.0"
     "@opentelemetry/resources" "1.24.0"
     "@opentelemetry/sdk-trace-base" "1.24.0"
@@ -5129,7 +5110,7 @@ renovate@37.335.0:
     json5 "2.2.3"
     jsonata "2.0.4"
     klona "2.0.6"
-    lru-cache "10.2.0"
+    lru-cache "10.2.2"
     luxon "3.4.4"
     markdown-it "14.1.0"
     markdown-table "2.0.0"
