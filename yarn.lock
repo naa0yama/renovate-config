@@ -5036,10 +5036,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.346.0:
-  version "37.346.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.346.0.tgz"
-  integrity sha512-3X4+tjkOvG9+a8w2AVPuMHWRmve2W2p58FuqZCXlA5Mql0jRCk7LOHFI+M/7tUUpWjV6EerS1rAM0nthpaVAPw==
+renovate@37.347.1:
+  version "37.347.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.347.1.tgz"
+  integrity sha512-QGBjCDFmFY6TBIbgaBZrk4zunV9A15jnJvlKhE7odKPg+YGjqFFfTAIfjb/VarsueJ6+SHDFmUoKU5sUUAEsXg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.565.0"
     "@aws-sdk/client-ec2" "3.565.0"
@@ -5144,7 +5144,7 @@ renovate@37.346.0:
     validate-npm-package-name "5.0.0"
     vuln-vects "1.1.0"
     xmldoc "1.3.0"
-    zod "3.23.4"
+    zod "3.23.5"
   optionalDependencies:
     better-sqlite3 "9.6.0"
     openpgp "5.11.1"
@@ -6207,10 +6207,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@3.23.4:
-  version "3.23.4"
-  resolved "https://registry.npmjs.org/zod/-/zod-3.23.4.tgz"
-  integrity sha512-/AtWOKbBgjzEYYQRNfoGKHObgfAZag6qUJX1VbHo2PRBgS+wfWagEY2mizjfyAPcGesrJOcx/wcl0L9WnVrHFw==
+zod@3.23.5:
+  version "3.23.5"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.23.5.tgz"
+  integrity sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==
 
 zwitch@^1.0.0:
   version "1.0.5"
