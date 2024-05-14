@@ -2382,13 +2382,6 @@ buffer@^5.5.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
-builtins@^5.0.0:
-  version "5.1.0"
-  resolved "https://registry.npmjs.org/builtins/-/builtins-5.1.0.tgz"
-  integrity sha512-SW9lzGTLvWTP1AY8xeAMZimqDrIaSdLQUcVr9DMef51niJ022Ri87SwRRKYm4A6iHfkPaiVUu/Duw2Wc4J7kKg==
-  dependencies:
-    semver "^7.0.0"
-
 bunyan@1.8.15:
   version "1.8.15"
   resolved "https://registry.npmjs.org/bunyan/-/bunyan-1.8.15.tgz"
@@ -5036,10 +5029,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.358.0:
-  version "37.358.0"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.358.0.tgz"
-  integrity sha512-n7GoVUXRXo9O3oGC2WMWYOAScWqn5IJ99ER7k0OlW8BeGW+UAj24hC02iHEk0ciIJpmyO5YorkR0f80PvMCFMA==
+renovate@37.358.1:
+  version "37.358.1"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.358.1.tgz"
+  integrity sha512-imyv+/F32QT+A1uGMavvA8TkLIoADEZtAni/4cf/P9D6LGvfvBQgA+KFneOvz8slLCmw0h9+1TGOTtXfoI142Q==
   dependencies:
     "@aws-sdk/client-codecommit" "3.565.0"
     "@aws-sdk/client-ec2" "3.565.0"
@@ -5142,7 +5135,7 @@ renovate@37.358.0:
     tslib "2.6.2"
     upath "2.0.1"
     url-join "4.0.1"
-    validate-npm-package-name "5.0.0"
+    validate-npm-package-name "5.0.1"
     vuln-vects "1.1.0"
     xmldoc "1.3.0"
     zod "3.23.6"
@@ -5293,7 +5286,7 @@ semver-utils@1.1.4:
   resolved "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
 
-semver@7.6.0, semver@^7.0.0, semver@^7.1.2, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.5.2, semver@^7.5.3:
+semver@7.6.0, semver@^7.1.2, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.5.2, semver@^7.5.3:
   version "7.6.0"
   resolved "https://registry.npmjs.org/semver/-/semver-7.6.0.tgz"
   integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
@@ -6022,12 +6015,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validate-npm-package-name@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/validate-npm-package-name/-/validate-npm-package-name-5.0.0.tgz"
-  integrity sha512-YuKoXDAhBYxY7SfOKxHBDoSyENFeW5VvIIQp2TGQuit8gpK6MnWaQelBKxso72DoxTZfZdcP3W90LqpSkgPzLQ==
-  dependencies:
-    builtins "^5.0.0"
+validate-npm-package-name@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/validate-npm-package-name/-/validate-npm-package-name-5.0.1.tgz"
+  integrity sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==
 
 vfile-message@^2.0.0:
   version "2.0.4"
