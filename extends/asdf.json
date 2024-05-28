@@ -9,7 +9,7 @@
       "matchManagers": [
         "asdf"
       ],
-      "matchPackageNames": [
+      "matchDepNames": [
         "python"
       ]
     }
