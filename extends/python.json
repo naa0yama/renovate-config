@@ -5,6 +5,7 @@
       "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
       "matchDatasources": [
         "docker",
+        "github-releases",
         "github-tags"
       ],
       "matchManagers": [
@@ -12,13 +13,13 @@
         "dockerfile",
         "poetry"
       ],
-      "matchPackageNames": [
+      "matchDepNames": [
         "python"
       ]
     },
     {
       "groupName": "group:flake8",
-      "matchPackageNames": [
+      "matchDepNames": [
         "flake8"
       ],
       "matchPackagePatterns": [
@@ -27,7 +28,7 @@
     },
     {
       "groupName": "group:jupyter",
-      "matchPackageNames": [
+      "matchDepNames": [
         "jupyter"
       ],
       "matchPackagePatterns": [
@@ -36,7 +37,7 @@
     },
     {
       "groupName": "group:pytest",
-      "matchPackageNames": [
+      "matchDepNames": [
         "pytest"
       ],
       "matchPackagePatterns": [
@@ -45,7 +46,7 @@
     },
     {
       "groupName": "group:boto3",
-      "matchPackageNames": [
+      "matchDepNames": [
         "boto3",
         "botocore"
       ]
