@@ -37,9 +37,9 @@ jobs:
 
       - name: Run renovate-config-validator
         run: |
-          set -eu
+          set -eux
 
           for file in $(find . -maxdepth 2 -type f -name "*.json" -not -name package.json -not -name package-lock.json | sort); do
-            echo "Validate ${file}"
-            RENOVATE_CONFIG_FILE=${file} npx renovate-config-validator
+            echo -e "Validate ${file}\n"
+            npx --yes --package renovate -- renovate-config-validator --strict "${file}"
           done
