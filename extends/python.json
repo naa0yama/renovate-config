@@ -6,9 +6,11 @@
       "matchDatasources": [
         "docker",
         "github-releases",
-        "github-tags"
+        "github-tags",
+        "pypi"
       ],
       "matchManagers": [
+        "asdf",
         "docker-compose",
         "dockerfile",
         "poetry"
