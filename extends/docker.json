@@ -16,19 +16,6 @@
       "matchManagers": [
         "docker-compose"
       ]
-    },
-    {
-      "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchManagers": [
-        "dockerfile",
-        "docker-compose"
-      ],
-      "matchPackageNames": [
-        "python"
-      ]
     }
   ]
 }

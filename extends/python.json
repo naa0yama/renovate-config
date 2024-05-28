@@ -2,6 +2,21 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
+      "matchDatasources": [
+        "docker",
+        "github-tags"
+      ],
+      "matchManagers": [
+        "docker-compose",
+        "dockerfile",
+        "poetry"
+      ],
+      "matchPackageNames": [
+        "python"
+      ]
+    },
+    {
       "groupName": "group:flake8",
       "matchPackageNames": [
         "flake8"
