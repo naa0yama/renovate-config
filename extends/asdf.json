@@ -10,6 +10,7 @@
         "asdf"
       ],
       "matchDepNames": [
+        "poetry",
         "python"
       ]
     }
