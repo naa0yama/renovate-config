@@ -21,6 +21,13 @@
       ]
     },
     {
+      "groupName": "group:boto3",
+      "matchDepNames": [
+        "boto3",
+        "botocore"
+      ]
+    },
+    {
       "groupName": "group:flake8",
       "matchDepNames": [
         "flake8"
@@ -48,10 +55,21 @@
       ]
     },
     {
-      "groupName": "group:boto3",
+      "groupName": "group:ruff",
+      "matchDatasources": [
+        "github-tags",
+        "pypi"
+      ],
+      "matchManagers": [
+        "pre-commit",
+        "poetry"
+      ],
       "matchDepNames": [
-        "boto3",
-        "botocore"
+        "charliermarsh/ruff-pre-commit",
+        "ruff"
+      ],
+      "matchPackagePatterns": [
+        "^ruff-"
       ]
     }
   ]
