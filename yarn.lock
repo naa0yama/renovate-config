@@ -2372,13 +2372,13 @@ aws4@1.13.0:
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.13.0.tgz"
   integrity sha512-3AungXC4I8kKsS9PuS4JH2nc+0bVY/mjgrephHTIi8fpEeGsTHBUJeosp0Wc1myYMElmD0B3Oc4XL/HVJ4PV2g==
 
-azure-devops-node-api@14.0.0:
-  version "14.0.0"
-  resolved "https://registry.npmjs.org/azure-devops-node-api/-/azure-devops-node-api-14.0.0.tgz"
-  integrity sha512-VjMPCkaM3Z4ZRyzbZWlBz/AQvDlt+gPLzPoInkl3OcUs0xLtyFQpCa9Ni4Z9MmfMxTn9kuQuYCzBOmBIoM2WnQ==
+azure-devops-node-api@14.0.1:
+  version "14.0.1"
+  resolved "https://registry.npmjs.org/azure-devops-node-api/-/azure-devops-node-api-14.0.1.tgz"
+  integrity sha512-oVnFfTNmergd3JU852EpGY64d1nAxW8lCyzZqFDPhfQVZkdApBeK/ZMN7yoFiq/C50Ru304X1L/+BFblh2SRJw==
   dependencies:
     tunnel "0.0.6"
-    typed-rest-client "^2.0.0"
+    typed-rest-client "^2.0.1"
 
 backslash@^0.2.0:
   version "0.2.0"
@@ -5193,10 +5193,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.422.3:
-  version "37.422.3"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.422.3.tgz"
-  integrity sha512-fZXA6DcNiwKQTZITWNvIlkDaBVSPdEHejTfdwurIKJF40cDZw39Be+eo5tg/JeDVQ885kw28Sl/V1m/S10AAJw==
+renovate@37.422.4:
+  version "37.422.4"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.422.4.tgz"
+  integrity sha512-/KzokXv6LPvfnRYVtexNntk8eLXavLZVbi5BZ6MPrqFHDeTJw4dmKmYnDmzVYPi9/FPXJSknodAXJ6koJ1B2Ow==
   dependencies:
     "@aws-sdk/client-codecommit" "3.606.0"
     "@aws-sdk/client-ec2" "3.606.0"
@@ -5228,7 +5228,7 @@ renovate@37.422.3:
     aggregate-error "3.1.0"
     auth-header "1.0.0"
     aws4 "1.13.0"
-    azure-devops-node-api "14.0.0"
+    azure-devops-node-api "14.0.1"
     bunyan "1.8.15"
     cacache "18.0.3"
     cacheable-lookup "5.0.4"
@@ -6006,7 +6006,7 @@ typed-array-length@^1.0.6:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
 
-typed-rest-client@^2.0.0:
+typed-rest-client@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/typed-rest-client/-/typed-rest-client-2.0.1.tgz"
   integrity sha512-LSfgVu+jKUbkceVBGJ6bdIMzzpvjhw6A+aKsVnGa2S7bT82QCALh/RAtq/fdV3aLXxHqsChuClrQ93fXMrIckA==
