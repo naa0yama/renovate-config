@@ -2,26 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
-      "groupName": "group:python",
-      "matchDatasources": [
-        "docker",
-        "github-releases",
-        "github-tags",
-        "pypi"
-      ],
-      "matchManagers": [
-        "asdf",
-        "docker-compose",
-        "dockerfile",
-        "poetry"
-      ],
-      "matchDepNames": [
-        "poetry",
-        "python"
-      ]
-    },
-    {
       "groupName": "group:boto3",
       "matchDepNames": [
         "boto3",
@@ -56,6 +36,26 @@
       ]
     },
     {
+      "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
+      "groupName": "group:python",
+      "matchDatasources": [
+        "docker",
+        "github-releases",
+        "github-tags",
+        "pypi"
+      ],
+      "matchManagers": [
+        "asdf",
+        "docker-compose",
+        "dockerfile",
+        "poetry"
+      ],
+      "matchDepNames": [
+        "poetry",
+        "python"
+      ]
+    },
+    {
       "groupName": "group:ruff",
       "matchDatasources": [
         "github-tags",
@@ -71,6 +71,30 @@
       ],
       "matchPackagePatterns": [
         "^ruff-"
+      ]
+    },
+    {
+      "groupName": "group:sphinx",
+      "matchDepNames": [
+        "sphinx"
+      ],
+      "matchPackagePatterns": [
+        "^sphinx-"
+      ],
+      "matchDepTypes": [
+        "docsDependencies"
+      ]
+    },
+    {
+      "groupName": "group:tox",
+      "matchDepNames": [
+        "tox"
+      ],
+      "matchPackagePatterns": [
+        "^tox-"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
       ]
     }
   ]
