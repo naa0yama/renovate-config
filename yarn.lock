@@ -5193,10 +5193,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@37.440.4:
-  version "37.440.4"
-  resolved "https://registry.npmjs.org/renovate/-/renovate-37.440.4.tgz"
-  integrity sha512-5CUPyhf1oeNooHEDctUt4Wv2V5E/6eaBy1Rrg+857Fl7c4fm3hXjkDxtIUbWuqqp3rM0aN/2yspVhmKFWaFmuw==
+renovate@37.440.5:
+  version "37.440.5"
+  resolved "https://registry.npmjs.org/renovate/-/renovate-37.440.5.tgz"
+  integrity sha512-iLkKfc7TYoP3xaTn6IJ/cFfvXgQh3tSwAfj1l+eZJIOmsMIg9rvjNucLKGKLagDYAj9bJ2HOSUivd03tdhttOQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.606.0"
     "@aws-sdk/client-ec2" "3.606.0"
@@ -5288,7 +5288,7 @@ renovate@37.440.4:
     remark "13.0.0"
     remark-github "10.1.0"
     safe-stable-stringify "2.4.3"
-    semver "7.6.2"
+    semver "7.6.3"
     semver-stable "3.0.0"
     semver-utils "1.1.4"
     shlex "2.1.2"
@@ -5451,10 +5451,10 @@ semver-utils@1.1.4:
   resolved "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
 
-semver@7.6.2, semver@^7.1.2, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.5.2, semver@^7.5.3:
-  version "7.6.2"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.6.2.tgz"
-  integrity sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==
+semver@7.6.3, semver@^7.1.2, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5, semver@^7.5.2, semver@^7.5.3:
+  version "7.6.3"
+  resolved "https://registry.npmjs.org/semver/-/semver-7.6.3.tgz"
+  integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
 semver@^6.3.0:
   version "6.3.1"
