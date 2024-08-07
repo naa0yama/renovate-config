@@ -18,12 +18,8 @@
     "packageRules": [
       {
         "groupName": "All patch update {{depType}}",
-        "matchPackagePatterns": [
-          "*"
-        ],
-        "matchUpdateTypes": [
-          "patch"
-        ]
+        "matchUpdateTypes": ["patch"],
+        "matchPackageNames": ["*"]
       }
     ]
   },
@@ -32,19 +28,12 @@
     "packageRules": [
       {
         "groupName": "All pin update {{depType}}",
-        "matchPackagePatterns": [
-          "*"
-        ],
-        "matchUpdateTypes": [
-          "pin"
-        ]
+        "matchUpdateTypes": ["pin"],
+        "matchPackageNames": ["*"]
       }
     ]
   },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  },
+  "lockFileMaintenance": { "enabled": true, "automerge": true },
   "labels": [
     "renovate",
     "datasource:{{datasource}}",
@@ -57,23 +46,15 @@
   "packageRules": [
     {
       "groupName": "All {{depType}} update",
-      "matchDepTypes": [
-        "action",
-        "dev-dependencies",
-        "devDependencies"
-      ],
+      "matchDepTypes": ["action", "dev-dependencies", "devDependencies"],
       "rangeStrategy": "pin",
       "automerge": true,
       "separateMinorPatch": false,
-      "major": {
-        "automerge": false
-      }
+      "major": { "automerge": false }
     },
     {
       "groupName": "dependencies (non-major)",
-      "matchDepTypes": [
-        "dependencies"
-      ],
+      "matchDepTypes": ["dependencies"],
       "rangeStrategy": "pin"
     }
   ]
