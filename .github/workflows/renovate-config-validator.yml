@@ -16,20 +16,22 @@ on:
 jobs:
   validator:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 20
 
     steps:
       - uses: actions/checkout@v4.1.7
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4.0.3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Cache node_modules
         id: node_modules_cache_id
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: node-v${{ env.NODE_VERSION }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
       - name: Install
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
