@@ -1,101 +1,47 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
-    {
-      "groupName": "group:boto3",
-      "matchDepNames": [
-        "boto3",
-        "botocore"
-      ]
-    },
+    { "groupName": "group:boto3", "matchDepNames": ["boto3", "botocore"] },
     {
       "groupName": "group:flake8",
-      "matchDepNames": [
-        "flake8"
-      ],
-      "matchPackagePatterns": [
-        "^flake8-"
-      ]
+      "matchDepNames": ["flake8"],
+      "matchPackageNames": ["/^flake8-/"]
     },
     {
       "groupName": "group:jupyter",
-      "matchDepNames": [
-        "jupyter"
-      ],
-      "matchPackagePatterns": [
-        "^jupyter-"
-      ]
+      "matchDepNames": ["jupyter"],
+      "matchPackageNames": ["/^jupyter-/"]
     },
     {
       "groupName": "group:pytest",
-      "matchDepNames": [
-        "pytest"
-      ],
-      "matchPackagePatterns": [
-        "^pytest-"
-      ]
+      "matchDepNames": ["pytest"],
+      "matchPackageNames": ["/^pytest-/"]
     },
     {
       "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
       "groupName": "group:python",
-      "matchDatasources": [
-        "docker",
-        "github-releases",
-        "github-tags",
-        "pypi"
-      ],
-      "matchManagers": [
-        "asdf",
-        "docker-compose",
-        "dockerfile",
-        "poetry"
-      ],
-      "matchDepNames": [
-        "poetry",
-        "python"
-      ]
+      "matchDatasources": ["docker", "github-releases", "github-tags", "pypi"],
+      "matchManagers": ["asdf", "docker-compose", "dockerfile", "poetry"],
+      "matchDepNames": ["poetry", "python"]
     },
     {
       "groupName": "group:ruff",
-      "matchDatasources": [
-        "github-tags",
-        "pypi"
-      ],
-      "matchManagers": [
-        "pre-commit",
-        "poetry"
-      ],
-      "matchDepNames": [
-        "charliermarsh/ruff-pre-commit",
-        "ruff"
-      ],
-      "matchPackagePatterns": [
-        "^ruff-"
-      ]
+      "matchDatasources": ["github-tags", "pypi"],
+      "matchManagers": ["pre-commit", "poetry"],
+      "matchDepNames": ["charliermarsh/ruff-pre-commit", "ruff"],
+      "matchPackageNames": ["/^ruff-/"]
     },
     {
       "groupName": "group:sphinx",
-      "matchDepNames": [
-        "sphinx"
-      ],
-      "matchPackagePatterns": [
-        "^sphinx-"
-      ],
-      "matchDepTypes": [
-        "docsDependencies"
-      ]
+      "matchDepNames": ["sphinx"],
+      "matchDepTypes": ["docsDependencies"],
+      "matchPackageNames": ["/^sphinx-/"]
     },
     {
       "groupName": "group:tox",
-      "matchDepNames": [
-        "tox"
-      ],
-      "matchPackagePatterns": [
-        "^tox-"
-      ],
-      "matchDepTypes": [
-        "devDependencies"
-      ]
+      "matchDepNames": ["tox"],
+      "matchDepTypes": ["devDependencies"],
+      "matchPackageNames": ["/^tox-/"]
     }
   ]
 }
