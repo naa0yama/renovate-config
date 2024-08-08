@@ -4325,6 +4325,13 @@ minimalistic-assert@^1.0.0:
   resolved "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
+minimatch@10.0.1, minimatch@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.npmjs.org/minimatch/-/minimatch-10.0.1.tgz"
+  integrity sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==
+  dependencies:
+    brace-expansion "^2.0.1"
+
 "minimatch@2 || 3":
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -4339,17 +4346,10 @@ minimatch@9.0.2:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@9.0.5, minimatch@^9.0.4:
+minimatch@^9.0.4:
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
   integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
-  dependencies:
-    brace-expansion "^2.0.1"
-
-minimatch@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/minimatch/-/minimatch-10.0.1.tgz"
-  integrity sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -5088,10 +5088,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.21.4:
-  version "38.21.4"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.21.4.tgz#000cc69a284113e6492a227a6f7a4f5d44a71faf"
-  integrity sha512-J+r9l8XjS+E+wOGYcCt2y0DPrxGLkJRgRkovXhny8aRq1qliR4GBE8OaLASDk3ZKUMgXLqnuQNNAtbU1DnVWnQ==
+renovate@38.23.0:
+  version "38.23.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.23.0.tgz#1a00d383b6e7b08fa178527749fe82113192340a"
+  integrity sha512-gvDXz7cZeceqyEW8ylbvbfM2h8MBxxpvA8DLp9u0NHFPOfvwobyUmpeOTPO0D8My0gTW99pxudNaOgewHvgNQw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.621.0"
     "@aws-sdk/client-ec2" "3.621.0"
@@ -5167,7 +5167,7 @@ renovate@38.21.4:
     luxon "3.4.4"
     markdown-it "14.1.0"
     markdown-table "2.0.0"
-    minimatch "9.0.5"
+    minimatch "10.0.1"
     moo "0.5.2"
     ms "2.1.3"
     nanoid "3.3.7"
