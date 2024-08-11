@@ -4144,15 +4144,15 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@3.4.4, luxon@^3.2.1:
-  version "3.4.4"
-  resolved "https://registry.npmjs.org/luxon/-/luxon-3.4.4.tgz"
-  integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
-
-luxon@^3.5.0:
+luxon@3.5.0, luxon@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.5.0.tgz#6b6f65c5cd1d61d1fd19dbf07ee87a50bf4b8e20"
   integrity sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==
+
+luxon@^3.2.1:
+  version "3.4.4"
+  resolved "https://registry.npmjs.org/luxon/-/luxon-3.4.4.tgz"
+  integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
 
 make-fetch-happen@^13.0.0:
   version "13.0.1"
@@ -5093,10 +5093,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.24.1:
-  version "38.24.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.24.1.tgz#62b48dee8bb88b80ac0d8d3537c68202f51f82b9"
-  integrity sha512-WDIpxPt7GZ4+uqouMsmaXzwF6iOH04+3d2edDXwK8fSDT2bSX8R//+s2w2DoKpKVwcrIhwfsUKvlZuCPgWvscQ==
+renovate@38.25.0:
+  version "38.25.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.25.0.tgz#e701cc569925e4a7e977f7be9cade3ee36865637"
+  integrity sha512-BFabSL6PIEPxDHEltBlJEfB+NdHGxFFPul3qJp1l2q7G246Qbcp/a1edalIfJD4NTxFz3GIsmvhzaceLdPPRVw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.621.0"
     "@aws-sdk/client-ec2" "3.621.0"
@@ -5169,7 +5169,7 @@ renovate@38.24.1:
     jsonata "2.0.5"
     jsonc-parser "3.3.1"
     klona "2.0.6"
-    luxon "3.4.4"
+    luxon "3.5.0"
     markdown-it "14.1.0"
     markdown-table "2.0.0"
     minimatch "10.0.1"
