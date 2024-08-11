@@ -1472,17 +1472,17 @@
   dependencies:
     "@seald-io/nedb" "^4.0.4"
 
-"@renovatebot/osv-offline@1.5.7":
-  version "1.5.7"
-  resolved "https://registry.npmjs.org/@renovatebot/osv-offline/-/osv-offline-1.5.7.tgz"
-  integrity sha512-w44ydBUa4bPzfRLeKal8pgZSfP0K2nji9G2dPf/yk0gm5oPZa0OxVea2Ku1hhgYN6UMj0Qqyx8y8ssAOH8u0tg==
+"@renovatebot/osv-offline@1.5.8":
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.5.8.tgz#20ac712052a86465f83a2a83203090d9acac4dd9"
+  integrity sha512-3a9h+7q4dCOp/zM2/ijY+JvyWHiBmwqdN2GA+i3qddXgc5clxEaXQOSD8ycxSTgajE9qr2UmUmajgJoiJfCIDA==
   dependencies:
     "@octokit/rest" "^20.1.1"
     "@renovatebot/osv-offline-db" "1.6.0"
     adm-zip "~0.5.14"
     fs-extra "^11.2.0"
     got "^11.8.6"
-    luxon "^3.4.4"
+    luxon "^3.5.0"
     node-fetch "^2.7.0"
 
 "@renovatebot/pep440@3.0.20":
@@ -4144,10 +4144,15 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@3.4.4, luxon@^3.2.1, luxon@^3.4.4:
+luxon@3.4.4, luxon@^3.2.1:
   version "3.4.4"
   resolved "https://registry.npmjs.org/luxon/-/luxon-3.4.4.tgz"
   integrity sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==
+
+luxon@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.5.0.tgz#6b6f65c5cd1d61d1fd19dbf07ee87a50bf4b8e20"
+  integrity sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==
 
 make-fetch-happen@^13.0.0:
   version "13.0.1"
@@ -5088,10 +5093,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.24.0:
-  version "38.24.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.24.0.tgz#f23d490939455a39ff51c32aec659d30244c1759"
-  integrity sha512-LCeiUEHs/6wVKSrtSm5DicqQJq1fupYaKxVI/T9PmEe8vgl2j4uMnBUfIm7Hh0IlC+kNYZsFHGMv61SaxNJDgQ==
+renovate@38.24.1:
+  version "38.24.1"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.24.1.tgz#62b48dee8bb88b80ac0d8d3537c68202f51f82b9"
+  integrity sha512-WDIpxPt7GZ4+uqouMsmaXzwF6iOH04+3d2edDXwK8fSDT2bSX8R//+s2w2DoKpKVwcrIhwfsUKvlZuCPgWvscQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.621.0"
     "@aws-sdk/client-ec2" "3.621.0"
@@ -5113,7 +5118,7 @@ renovate@38.24.0:
     "@opentelemetry/semantic-conventions" "1.25.1"
     "@qnighy/marshal" "0.1.3"
     "@renovatebot/kbpgp" "3.0.1"
-    "@renovatebot/osv-offline" "1.5.7"
+    "@renovatebot/osv-offline" "1.5.8"
     "@renovatebot/pep440" "3.0.20"
     "@renovatebot/ruby-semver" "3.0.23"
     "@sindresorhus/is" "4.6.0"
