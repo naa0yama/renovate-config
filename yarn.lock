@@ -2358,10 +2358,10 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-aws4@1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.13.0.tgz#d9b802e9bb9c248d7be5f7f5ef178dc3684e9dcc"
-  integrity sha512-3AungXC4I8kKsS9PuS4JH2nc+0bVY/mjgrephHTIi8fpEeGsTHBUJeosp0Wc1myYMElmD0B3Oc4XL/HVJ4PV2g==
+aws4@1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.13.1.tgz#bb5f8b8a20739f6ae1caeaf7eea2c7913df8048e"
+  integrity sha512-u5w79Rd7SU4JaIlA/zFqG+gOiuq25q5VLyZ8E+ijJeILuTxVzZgp2CaGw/UTw6pXYN9XMO9yiqj/nEHmhTG5CA==
 
 azure-devops-node-api@14.0.1:
   version "14.0.1"
@@ -5088,10 +5088,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.25.3:
-  version "38.25.3"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.25.3.tgz#968009f6fc4144a8e66fe3bb3c7066ffc574e5f1"
-  integrity sha512-yfIoCxFyqQn15uabicllf6HlyhM8KRXkbFF+LmH/j37nOxBgWSPah371w6DSUOVlwB3W5RtHQYc3sm7/1Opqtw==
+renovate@38.26.0:
+  version "38.26.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.26.0.tgz#d996fe98691e91071e2aac0dbc614e83ed0744af"
+  integrity sha512-Fv+I1aJGSKJRDptNhCYEgClI1mBibTE6KRMyIpQp9qXXL32JNs4I4HKZQa/oFyrSP62rcgITlHbJQRetWzpmvA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.621.0"
     "@aws-sdk/client-ec2" "3.621.0"
@@ -5122,7 +5122,7 @@ renovate@38.25.3:
     agentkeepalive "4.5.0"
     aggregate-error "3.1.0"
     auth-header "1.0.0"
-    aws4 "1.13.0"
+    aws4 "1.13.1"
     azure-devops-node-api "14.0.1"
     bunyan "1.8.15"
     cacache "18.0.4"
