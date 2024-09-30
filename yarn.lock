@@ -952,10 +952,10 @@
   resolved "https://registry.yarnpkg.com/@breejs/later/-/later-4.2.0.tgz#669661f3a02535ef900f360c74e48c3f5483c786"
   integrity sha512-EVMD0SgJtOuFeg0lAVbCwa+qeTKILb87jqvLyUtQswGD9+ce2nB52Y5zbTF1Hc0MDFfbydcMcxb47jSdhikVHA==
 
-"@cdktf/hcl2json@0.20.8":
-  version "0.20.8"
-  resolved "https://registry.yarnpkg.com/@cdktf/hcl2json/-/hcl2json-0.20.8.tgz#aaf92ee2742e79eb157577a5f298cf460574488c"
-  integrity sha512-MOt5HHZYmHiRleaS8YwhEz913H4xzDCOO6MF1GO5RNZ74DYl6Bv6Y+JY4196E0THtiJ1Ibo9IvLfTIlTUrQ+Bw==
+"@cdktf/hcl2json@0.20.9":
+  version "0.20.9"
+  resolved "https://registry.yarnpkg.com/@cdktf/hcl2json/-/hcl2json-0.20.9.tgz#d9b4694eb888da0e9494fbfa35afb466a686b3fb"
+  integrity sha512-HlYqFsvEANyQJiQx8L2j05xot+bKa6T6PInc11dUCyQh8SbpVehdbGVN39TVnv1lIjdG7E2WNuxOf1L/Y3oF5w==
   dependencies:
     fs-extra "11.2.0"
 
@@ -5093,10 +5093,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.103.0:
-  version "38.103.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.103.0.tgz#8afb840da8aa9b622618287f3ccd444dcb8ecd43"
-  integrity sha512-GVLFYXbxMsmKhixeUc2artUwffiswFpQPxqzO0+ZWsAvL7DNJiLJSCN0c0qUNxsF3qk3JX/TQfJK2ryV/sBFpw==
+renovate@38.103.1:
+  version "38.103.1"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.103.1.tgz#15c1da4ba138d3337c391ac2f2ab48420207faad"
+  integrity sha512-4zsatofF3hwgFDYfwAwCJIHW+fTpGhZ+lvE3Y0VsbDlS7fsbj+EjyLTfuXCO5E8BIRQq5PhcFQBd3yLXa9xjyw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.637.0"
     "@aws-sdk/client-ec2" "3.641.0"
@@ -5105,7 +5105,7 @@ renovate@38.103.0:
     "@aws-sdk/client-s3" "3.637.0"
     "@aws-sdk/credential-providers" "3.637.0"
     "@breejs/later" "4.2.0"
-    "@cdktf/hcl2json" "0.20.8"
+    "@cdktf/hcl2json" "0.20.9"
     "@opentelemetry/api" "1.9.0"
     "@opentelemetry/context-async-hooks" "1.26.0"
     "@opentelemetry/exporter-trace-otlp-http" "0.53.0"
