@@ -25,7 +25,6 @@
     },
     {
       "groupName": "group:ruff",
-      "matchDatasources": ["github-tags", "pypi"],
       "matchManagers": ["pre-commit", "poetry"],
       "matchDepNames": ["charliermarsh/ruff-pre-commit", "ruff"],
       "matchPackageNames": ["/^ruff-/"]
