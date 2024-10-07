@@ -20,6 +20,7 @@
     {
       "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
       "groupName": "group:python",
+      "matchManagers": ["asdf"],
       "matchDepNames": ["python"]
     },
     {
