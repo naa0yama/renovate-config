@@ -14,15 +14,7 @@
   "separateMinorPatch": true,
   "platformAutomerge": true,
   "patch": {
-    "automerge": true,
-    "packageRules": [
-      {
-        "groupName": "All patch update {{depType}}",
-        "excludeManagers": ["poetry", "pre-commit"],
-        "matchUpdateTypes": ["patch"],
-        "matchPackageNames": ["*"]
-      }
-    ]
+    "automerge": true
   },
   "pin": {
     "automerge": true,
