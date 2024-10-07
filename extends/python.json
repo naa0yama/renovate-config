@@ -20,8 +20,9 @@
     {
       "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?$/",
       "groupName": "group:python",
-      "matchPackageNames": ["python"],
-      "matchManagers": ["asdf", "dockerfile", "github-tags", "poetry"]
+      "matchDatasources": ["docker", "github-releases", "github-tags", "pypi"],
+      "matchManagers": ["asdf", "docker-compose", "dockerfile", "poetry"],
+      "matchDepNames": ["python"]
     },
     {
       "groupName": "group:ruff",
