@@ -51,11 +51,6 @@
       "automerge": true,
       "separateMinorPatch": false,
       "major": { "automerge": false }
-    },
-    {
-      "groupName": "dependencies (non-major)",
-      "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "pin"
     }
   ]
 }
