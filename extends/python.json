@@ -26,8 +26,7 @@
     {
       "groupName": "group:ruff",
       "matchManagers": ["pre-commit", "poetry"],
-      "matchDepNames": ["charliermarsh/ruff-pre-commit", "ruff"],
-      "matchPackageNames": ["/^ruff-/"]
+      "matchDepNames": ["ruff", "charliermarsh/ruff-pre-commit"],
     },
     {
       "groupName": "group:sphinx",
