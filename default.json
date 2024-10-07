@@ -18,6 +18,7 @@
     "packageRules": [
       {
         "groupName": "All patch update {{depType}}",
+        "excludeManagers": ["poetry", "pre-commit"],
         "matchUpdateTypes": ["patch"],
         "matchPackageNames": ["*"]
       }
