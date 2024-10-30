@@ -4861,7 +4861,7 @@ promise-retry@^2.0.1:
     err-code "^2.0.2"
     retry "^0.12.0"
 
-protobufjs@^7.3.0:
+protobufjs@7.4.0, protobufjs@^7.3.0:
   version "7.4.0"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.4.0.tgz#7efe324ce9b3b61c82aae5de810d287bc08a248a"
   integrity sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==
@@ -5059,10 +5059,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@38.137.0:
-  version "38.137.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.137.0.tgz#25585a1e51ab062e0c81599941d0634023352405"
-  integrity sha512-qH5PxM30oHOp3QBY7oFAkVk3l+qvHCrY6lQEkoGYVw42i8NKiJtb/CiDGna9r15xWYPHMyUdyZzNRAXDZxm1OA==
+renovate@38.138.0:
+  version "38.138.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-38.138.0.tgz#db704075f0ebfecad43a0884a6eae4e9af330e77"
+  integrity sha512-bs6/dT0HlR0kUSG1Yhr5n03854tb/oyL7IAFPZDphEoFoqoNKreCJ0vlG7ODG7GCq+5sVNDAZ764GMiTxi9ZKg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.658.1"
     "@aws-sdk/client-ec2" "3.658.1"
@@ -5151,6 +5151,7 @@ renovate@38.137.0:
     p-throttle "4.1.1"
     parse-link-header "2.0.0"
     prettier "3.3.3"
+    protobufjs "7.4.0"
     redis "4.7.0"
     remark "13.0.0"
     remark-github "10.1.0"
