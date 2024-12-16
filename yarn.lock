@@ -4992,10 +4992,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@39.69.2:
-  version "39.69.2"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.69.2.tgz#3ed3ee4475667da64cfc2ebf60d5f0424b063251"
-  integrity sha512-OL0/oB6hcA8sEsTMa02sT4YzgCXE6LlES5C++RRsV4qEhGyTXW1qw+rfRaAqWc3QMwO7Qbwy2wVy/RTLEkDWcQ==
+renovate@39.69.3:
+  version "39.69.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.69.3.tgz#0eafc5b5dd433a1f2897c6ae6ecbd96ce8d6d3da"
+  integrity sha512-tpJPgbFFBm873/pogGwfcJbpIGn/99c34kN97rk31dgplojZwjWEo6lwffc5/BMa8W0en/Kf9Kpw1/O1+s+Fwg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.699.0"
     "@aws-sdk/client-ec2" "3.701.0"
