@@ -1503,15 +1503,15 @@
   dependencies:
     "@seald-io/nedb" "^4.0.4"
 
-"@renovatebot/osv-offline@1.5.11":
-  version "1.5.11"
-  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.5.11.tgz#e93346398dd1d1fd95ffc4d41e07ba6bf4a33633"
-  integrity sha512-y4lTOL90P1JpsAQ+gadSCXmeRP+tvRrFPCmKtsRUwq/00vO2HoTi9GgKRTEWS6QxtDVnKlHrQS0xbBCmdXySTA==
+"@renovatebot/osv-offline@1.5.12":
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.5.12.tgz#a18824d978b4243ddd472a40f412183f3bf4364f"
+  integrity sha512-gmPsOjHoCsaIsahv+T373WDc28GZ5WTzcA6Usxd1lDGvEF/t7JdBe3lx1ZBLurbundnGmKJ3zYBsqmr54lBR7A==
   dependencies:
     "@octokit/rest" "^20.1.1"
     "@renovatebot/osv-offline-db" "1.7.0"
     adm-zip "~0.5.16"
-    fs-extra "^11.2.0"
+    fs-extra "^11.3.0"
     got "^11.8.6"
     luxon "^3.5.0"
     node-fetch "^2.7.0"
@@ -3219,7 +3219,7 @@ fs-extra@11.2.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^11.2.0:
+fs-extra@11.3.0, fs-extra@^11.2.0, fs-extra@^11.3.0:
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.3.0.tgz#0daced136bbaf65a555a326719af931adc7a314d"
   integrity sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==
@@ -4998,10 +4998,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@39.122.1:
-  version "39.122.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.122.1.tgz#06f47d8f061eeee661cb5236031807fea2c2afdc"
-  integrity sha512-kDqYQdlItRz47paQlZEiBl4pKBIIhwWGvmO3bdWB1i4QOdojtn75EDDvieLchCr/vQKq8GsEOvjo7GjLDyKmog==
+renovate@39.123.0:
+  version "39.123.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.123.0.tgz#9f3a7e22609e65407b3ecf778829c1f5e37c650d"
+  integrity sha512-AiP2tLS2sLCdE11ae5vbiw6NLeXkgooWdxNxzF/t96rsg3J+iLADOUCKm2Y/iIa//fNQtgetPg/aa7W/c+Rgmg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.726.1"
     "@aws-sdk/client-ec2" "3.726.1"
@@ -5024,7 +5024,7 @@ renovate@39.122.1:
     "@qnighy/marshal" "0.1.3"
     "@renovatebot/detect-tools" "1.1.0"
     "@renovatebot/kbpgp" "4.0.1"
-    "@renovatebot/osv-offline" "1.5.11"
+    "@renovatebot/osv-offline" "1.5.12"
     "@renovatebot/pep440" "4.0.1"
     "@renovatebot/ruby-semver" "4.0.0"
     "@sindresorhus/is" "4.6.0"
@@ -5057,7 +5057,7 @@ renovate@39.122.1:
     extract-zip "2.0.1"
     find-packages "10.0.4"
     find-up "5.0.0"
-    fs-extra "11.2.0"
+    fs-extra "11.3.0"
     git-url-parse "16.0.0"
     github-url-from-git "1.5.0"
     glob "11.0.1"
