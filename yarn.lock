@@ -3980,12 +3980,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.6.0.tgz#e84453dbdbd716b5eac95bee702b379863059f83"
-  integrity sha512-WE7p0p7W1xji9qxkLYsvcIxZyfP48GuFrWIBQZIsbjCyf65dG1rv4n83HcOyEyhvzxJCrUoObCRNFgRNIQ5KNA==
-
-luxon@^3.6.0:
+luxon@3.6.1, luxon@^3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.6.1.tgz#d283ffc4c0076cb0db7885ec6da1c49ba97e47b0"
   integrity sha512-tJLxrKJhO2ukZ5z0gyjY1zPh3Rh88Ej9P7jNrZiHMUXHae1yvI2imgOZtL1TO8TW6biMMKfTtAOoEJANgtWBMQ==
@@ -4915,10 +4910,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@39.234.0:
-  version "39.234.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.234.0.tgz#0ebee7ce76c5fffa5f7279bea509c5210aeba989"
-  integrity sha512-SECX5OZu8J3Icbf42Ey6fDBRa1HJ79tTXnHcNOsgW5gzPgzUGPnE1s3ktg8ubhqd6xYIM84ZfLNS6RlrLUamfg==
+renovate@39.235.1:
+  version "39.235.1"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.235.1.tgz#5f88f71a968316ad462253bf785aaad770658445"
+  integrity sha512-LbW9WSrGjv2fnTdShZ5oY1XlCAxNOB2w4D1vo50YhO55zVLLMNPQbz6uX2TKL40Xtt7z3M13pjfED07nERK2DQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.777.0"
     "@aws-sdk/client-ec2" "3.779.0"
@@ -4995,7 +4990,7 @@ renovate@39.234.0:
     jsonata "2.0.6"
     jsonc-parser "3.3.1"
     klona "2.0.6"
-    luxon "3.6.0"
+    luxon "3.6.1"
     markdown-it "14.1.0"
     markdown-table "2.0.0"
     minimatch "10.0.1"
