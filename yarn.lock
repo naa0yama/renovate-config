@@ -1210,12 +1210,7 @@
     "@opentelemetry/core" "2.0.0"
     "@opentelemetry/sdk-trace-base" "2.0.0"
 
-"@opentelemetry/semantic-conventions@1.31.0":
-  version "1.31.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.31.0.tgz#26b62faa4ceee5608a43027d646cded977022615"
-  integrity sha512-cYJeP+6qN0UnBv1r09hXl0YorB8kXHv61BC0NUlBA8vxrylZ4/C8lnva3gd1E8n33DNYSaiGW+DuGoSt0QQ7Dw==
-
-"@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0":
+"@opentelemetry/semantic-conventions@1.32.0", "@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0":
   version "1.32.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.32.0.tgz#a15e8f78f32388a7e4655e7f539570e40958ca3f"
   integrity sha512-s0OpmpQFSfMrmedAn9Lhg4KWJELHCU6uU9dtIJ28N8UGhf9Y55im5X8fEzwhwDwiSqN+ZPSNrDJF7ivf/AuRPQ==
@@ -4950,10 +4945,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@39.250.0:
-  version "39.250.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.250.0.tgz#5123cb16b0271ebdc279ebd7b3baac41cef3c37e"
-  integrity sha512-u+JTXSmHxg0AcVzzcKoPebgXsdXiFtAG6T9jGhwRSFPwWkH9i//3Oo0Ypg8z+yI22aCHao9tou21jv842FBo4Q==
+renovate@39.250.2:
+  version "39.250.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-39.250.2.tgz#8f1f724a53fa5342acb07fa5cae1b2ebf1c53d41"
+  integrity sha512-oUorwsGPtWq7KQkd4M9UJ0S4D9Si2AwUG9YEppJwiEy7C5Wwu/9q+a7akoW+12QZf/of3LAVO6KIKi0yo8EuKQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.777.0"
     "@aws-sdk/client-ec2" "3.779.0"
@@ -4978,7 +4973,7 @@ renovate@39.250.0:
     "@opentelemetry/resources" "2.0.0"
     "@opentelemetry/sdk-trace-base" "2.0.0"
     "@opentelemetry/sdk-trace-node" "2.0.0"
-    "@opentelemetry/semantic-conventions" "1.31.0"
+    "@opentelemetry/semantic-conventions" "1.32.0"
     "@pnpm/parse-overrides" "1000.0.2"
     "@qnighy/marshal" "0.1.3"
     "@renovatebot/detect-tools" "1.1.0"
