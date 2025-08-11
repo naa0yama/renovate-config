@@ -20,7 +20,7 @@ jobs:
       NODE_VERSION: 20
 
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v4.3.0
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4.4.0
         with:
