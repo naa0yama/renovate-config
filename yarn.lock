@@ -2516,10 +2516,10 @@ bzip-deflate@^1.0.0:
   resolved "https://registry.yarnpkg.com/bzip-deflate/-/bzip-deflate-1.0.0.tgz#b02db007ef37bebcc29384a4b2c6f4f0f4c796c9"
   integrity sha512-9RMnpiJqMYMJcLdr4pxwowZ8Zh3P+tVswE/bnX6tZ14UGKNcdV5WVK2P+lGp2As+RCjl+i3SFJ117HyCaaHNDA==
 
-cacache@20.0.0:
-  version "20.0.0"
-  resolved "https://registry.yarnpkg.com/cacache/-/cacache-20.0.0.tgz#d4373a794fd93180249490c769c70a24388b47cb"
-  integrity sha512-2Js2sNgHK36Fdu3ItpQqJjwUXAURb0uyo9i83Tr2wUQINU4tPl4AtQYh6mCqwVFV5W8+Vgcna+bSTQeyPLG/sQ==
+cacache@20.0.1:
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/cacache/-/cacache-20.0.1.tgz#eb516a95b88bf7e90ce7f3bb38ac4f4c33b2b3fa"
+  integrity sha512-+7LYcYGBYoNqTp1Rv7Ny1YjUo5E0/ftkQtraH3vkfAGgVHc+ouWdC8okAwQgQR7EVIdW6JTzTmhKFwzb+4okAQ==
   dependencies:
     "@npmcli/fs" "^4.0.0"
     fs-minipass "^3.0.0"
@@ -2531,7 +2531,6 @@ cacache@20.0.0:
     minipass-pipeline "^1.2.4"
     p-map "^7.0.2"
     ssri "^12.0.0"
-    tar "^7.4.3"
     unique-filename "^4.0.0"
 
 cacache@^19.0.1:
@@ -5368,10 +5367,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@41.83.1:
-  version "41.83.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.83.1.tgz#52cab14311385055205cdf9691bcbf08bfc0bb88"
-  integrity sha512-AaXm96/x/r2gLZDDqcvqsTgqZ2vXcKERjuHQIvlKh3MGh+jWGAH8BGD2RnvyuRijtftCpMx1qTp17+JW5tGOHg==
+renovate@41.83.2:
+  version "41.83.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.83.2.tgz#4090465fd3ce4031a7ef0052b5aee5d2b433d40a"
+  integrity sha512-v5fzs8oc7hLOhkc+D3LSHIlFwLJcBQCa2PiB72/bfzMeva8tUjQbGfxEDXO2RLKEfLg4aZbkAYC0sO6DAAC1CA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.858.0"
     "@aws-sdk/client-ec2" "3.858.0"
@@ -5413,7 +5412,7 @@ renovate@41.83.1:
     aws4 "1.13.2"
     azure-devops-node-api "15.1.1"
     bunyan "1.8.15"
-    cacache "20.0.0"
+    cacache "20.0.1"
     chalk "5.6.0"
     changelog-filename-regex "2.0.1"
     clean-git-ref "2.0.1"
