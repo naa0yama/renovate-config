@@ -1488,16 +1488,16 @@
   dependencies:
     "@seald-io/nedb" "^4.1.2"
 
-"@renovatebot/osv-offline@1.6.9":
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.6.9.tgz#76e697b126c0a709a67ff2ee13fb90f503d8ef31"
-  integrity sha512-9fy4ud4rUFO96Do9FMvrZEtWnZjRaaPOnbHIjcO+FyEjkuGKlDxYZLJrosDXU1xB10xEdTcGv3PJ0RedIA6j0w==
+"@renovatebot/osv-offline@1.6.10":
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/@renovatebot/osv-offline/-/osv-offline-1.6.10.tgz#fbf371f4bb009465fe45dda3d19b003d418f101e"
+  integrity sha512-17hbS9EYv+3DgoWrV+x3jk3dz/8ovipBY36HRgYZlHRTYtm0s6Qmw8q/O1x8O3MGSNWKWw9lw2VGTP/X0CvVsw==
   dependencies:
     "@renovatebot/osv-offline-db" "1.7.5"
     adm-zip "~0.5.16"
     fs-extra "^11.3.1"
     got "^11.8.6"
-    luxon "^3.7.1"
+    luxon "^3.7.2"
 
 "@renovatebot/pep440@4.2.0":
   version "4.2.0"
@@ -2304,6 +2304,11 @@ adm-zip@~0.5.16:
   version "0.5.16"
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.16.tgz#0b5e4c779f07dedea5805cdccb1147071d94a909"
   integrity sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==
+
+ae-cvss-calculator@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/ae-cvss-calculator/-/ae-cvss-calculator-1.0.8.tgz#9be7ac181b48b45a39b6289b014f443beca63aa2"
+  integrity sha512-ud8g+BQTSJoeuB4nOnbhu/Fd7TnGEnnr1AYOA+uFaEDQB0IOgjxHA2ds5iOmLh5Os6ziGCJJqjEFOFeWMOVQ4Q==
 
 agent-base@^7.1.0, agent-base@^7.1.2:
   version "7.1.4"
@@ -4081,12 +4086,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-luxon@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.1.tgz#9bd09aa84a56afb00c57ea78a8ec5bd16eb24ec0"
-  integrity sha512-RkRWjA926cTvz5rAb1BqyWkKbbjzCGchDUIKMCUvNi17j6f6j8uHGDV82Aqcqtzd+icoYpELmG3ksgGiFNNcNg==
-
-luxon@^3.7.1:
+luxon@3.7.2, luxon@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.2.tgz#d697e48f478553cca187a0f8436aff468e3ba0ba"
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
@@ -5385,10 +5385,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@41.99.11:
-  version "41.99.11"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.99.11.tgz#3daea6c568eddda5af773e8424e8f5c19d60f0cf"
-  integrity sha512-K0MXi6oB4TnxOITn+i0GxLGYlOlGsrZQu5arnW2ln4RmyywaYrjsNfqHEqO8p2uN0bbX3SFK4P7ceYAZHntjkA==
+renovate@41.111.0:
+  version "41.111.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.111.0.tgz#3ba81faa5438571acdac19be9670c19b07180320"
+  integrity sha512-4stxs/ZKlxYPJHAXUanM0fcRYZAbuHZHY9Tm8slab+dw8nAGh3cICthxAusygJjQpsuw73pyj6+aP1wCBBgTQg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.879.0"
     "@aws-sdk/client-ec2" "3.879.0"
@@ -5418,12 +5418,13 @@ renovate@41.99.11:
     "@qnighy/marshal" "0.1.3"
     "@renovatebot/detect-tools" "1.1.0"
     "@renovatebot/kbpgp" "4.0.1"
-    "@renovatebot/osv-offline" "1.6.9"
+    "@renovatebot/osv-offline" "1.6.10"
     "@renovatebot/pep440" "4.2.0"
     "@renovatebot/ruby-semver" "4.1.0"
     "@sindresorhus/is" "7.0.2"
     "@yarnpkg/core" "4.4.3"
     "@yarnpkg/parsers" "3.0.3"
+    ae-cvss-calculator "1.0.8"
     agentkeepalive "4.6.0"
     async-mutex "0.5.0"
     auth-header "1.0.0"
@@ -5468,7 +5469,7 @@ renovate@41.99.11:
     jsonata "2.1.0"
     jsonc-parser "3.3.1"
     klona "2.0.6"
-    luxon "3.7.1"
+    luxon "3.7.2"
     markdown-it "14.1.0"
     markdown-table "3.0.4"
     minimatch "10.0.3"
@@ -5504,7 +5505,6 @@ renovate@41.99.11:
     upath "2.0.1"
     url-join "5.0.0"
     validate-npm-package-name "6.0.2"
-    vuln-vects "1.1.0"
     xmldoc "2.0.2"
     yaml "2.8.1"
     zod "3.25.76"
@@ -6324,11 +6324,6 @@ vfile@^6.0.0:
   dependencies:
     "@types/unist" "^3.0.0"
     vfile-message "^4.0.0"
-
-vuln-vects@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vuln-vects/-/vuln-vects-1.1.0.tgz#537d403615610446c1d687934584ea9dfb2a63ed"
-  integrity sha512-LGDwn9nRz94YoeqOn2TZqQXzyonBc5FJppSgH34S/1U+3bgPONq/vvfiCbCQ4MeBll58xx+kDmhS73ac+EHBBw==
 
 web-streams-polyfill@^3.0.3:
   version "3.3.3"
