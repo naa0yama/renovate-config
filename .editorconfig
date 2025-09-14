@@ -20,10 +20,6 @@ trim_trailing_whitespace = true
 indent_style = space
 trim_trailing_whitespace = false
 
-[{default.json,renovate.json,renovate.exsample.json,extends/**.json}]
-indent_size = 2
-indent_style = space
-
 [*.rs]
 indent_style = space
 
