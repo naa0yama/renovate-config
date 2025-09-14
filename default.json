@@ -17,7 +17,7 @@
 	// Start	pull request
 	"automergeStrategy": "squash",
 	"automergeType": "pr",
-	"minimumReleaseAge": "14 days",
+	"minimumReleaseAge": "7 days",
 	"platformAutomerge": true,
 	"prConcurrentLimit": 5,
 	"prHourlyLimit": 0,
