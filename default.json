@@ -6,41 +6,6 @@
 		"github>naa0yama/renovate-config//extends/npm",
 		"github>naa0yama/renovate-config//extends/python"
 	],
-	"minimumReleaseAge": "7 days",
-	"vulnerabilityAlerts": {
-		"enabled": true,
-		"labels": [
-			"security"
-		]
-	},
-	"osvVulnerabilityAlerts": true,
-	"prHourlyLimit": 0,
-	"prConcurrentLimit": 5,
-	"branchConcurrentLimit": 5,
-	"separateMajorMinor": true,
-	"separateMinorPatch": true,
-	"platformAutomerge": true,
-	"patch": {
-		"automerge": true
-	},
-	"pin": {
-		"automerge": true,
-		"packageRules": [
-			{
-				"groupName": "All pin update {{depType}}",
-				"matchUpdateTypes": [
-					"pin"
-				],
-				"matchPackageNames": [
-					"*"
-				]
-			}
-		]
-	},
-	"lockFileMaintenance": {
-		"enabled": true,
-		"automerge": true
-	},
 	"labels": [
 		"renovate",
 		"datasource:{{datasource}}",
@@ -49,21 +14,61 @@
 		"update-{{updateType}}",
 		"manager:{{manager}}"
 	],
-	"timezone": "Asia/Tokyo",
+	// Start	pull request
+	"automergeStrategy": "squash",
+	"automergeType": "pr",
+	"minimumReleaseAge": "14 days",
+	"platformAutomerge": true,
+	"prConcurrentLimit": 5,
+	"prHourlyLimit": 0,
+	"separateMajorMinor": true,
+	"separateMinorPatch": true,
+	"pruneBranchAfterAutomerge": true,
+	// End		pull request
+	// Start	Vulnerability
+	"osvVulnerabilityAlerts": true,
+	"vulnerabilityAlerts": {
+		"enabled": true,
+		"labels": [
+			"security"
+		]
+	},
+	// End		Vulnerability
+	"lockFileMaintenance": {
+		"automerge": true,
+		"enabled": true
+	},
 	"packageRules": [
 		{
+			"automerge": true,
 			"groupName": "All {{depType}} update",
+			"major": {
+				"automerge": false
+			},
 			"matchDepTypes": [
 				"action",
 				"dev-dependencies",
 				"devDependencies"
 			],
-			"rangeStrategy": "pin",
-			"automerge": true,
-			"separateMinorPatch": false,
-			"major": {
-				"automerge": false
-			}
+			"separateMinorPatch": false
 		}
-	]
+	],
+	"patch": {
+		"automerge": true
+	},
+	"pin": {
+		"automerge": true,
+		"packageRules": [
+			{
+				"groupName": "All pin update {{depType}}",
+				"matchPackageNames": [
+					"*"
+				],
+				"matchUpdateTypes": [
+					"pin"
+				]
+			}
+		]
+	},
+	"timezone": "Asia/Tokyo"
 }
