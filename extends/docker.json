@@ -1,21 +1,21 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"packageRules": [
-		{
-			"addLabels": [
-				"managers:dockerfile"
-			],
-			"matchManagers": [
-				"dockerfile"
-			]
-		},
-		{
-			"addLabels": [
-				"managers:docker-compose"
-			],
-			"matchManagers": [
-				"docker-compose"
-			]
-		}
-	]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "addLabels": [
+        "managers:dockerfile"
+      ],
+      "matchManagers": [
+        "dockerfile"
+      ]
+    },
+    {
+      "addLabels": [
+        "managers:docker-compose"
+      ],
+      "matchManagers": [
+        "docker-compose"
+      ]
+    }
+  ]
 }
