@@ -1,54 +1,69 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices",
-    "github>naa0yama/renovate-config//extends/docker",
-    "github>naa0yama/renovate-config//extends/npm",
-    "github>naa0yama/renovate-config//extends/python"
-  ],
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:best-practices",
+		"github>naa0yama/renovate-config//extends/docker",
+		"github>naa0yama/renovate-config//extends/npm",
+		"github>naa0yama/renovate-config//extends/python"
+	],
 	"minimumReleaseAge": "7 days",
-    "vulnerabilityAlerts": {
-    "enabled": true,
-    "labels": ["security"]
-  },
-  "osvVulnerabilityAlerts": true,
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 5,
-  "branchConcurrentLimit": 5,
-  "separateMajorMinor": true,
-  "separateMinorPatch": true,
-  "platformAutomerge": true,
-  "patch": {
-    "automerge": true
-  },
-  "pin": {
-    "automerge": true,
-    "packageRules": [
-      {
-        "groupName": "All pin update {{depType}}",
-        "matchUpdateTypes": ["pin"],
-        "matchPackageNames": ["*"]
-      }
-    ]
-  },
-  "lockFileMaintenance": { "enabled": true, "automerge": true },
-  "labels": [
-    "renovate",
-    "datasource:{{datasource}}",
-    "depType:{{depType}}",
-    "versioning:{{versioning}}",
-    "update-{{updateType}}",
-    "manager:{{manager}}"
-  ],
-  "timezone": "Asia/Tokyo",
-  "packageRules": [
-    {
-      "groupName": "All {{depType}} update",
-      "matchDepTypes": ["action", "dev-dependencies", "devDependencies"],
-      "rangeStrategy": "pin",
-      "automerge": true,
-      "separateMinorPatch": false,
-      "major": { "automerge": false }
-    }
-  ]
+	"vulnerabilityAlerts": {
+		"enabled": true,
+		"labels": [
+			"security"
+		]
+	},
+	"osvVulnerabilityAlerts": true,
+	"prHourlyLimit": 0,
+	"prConcurrentLimit": 5,
+	"branchConcurrentLimit": 5,
+	"separateMajorMinor": true,
+	"separateMinorPatch": true,
+	"platformAutomerge": true,
+	"patch": {
+		"automerge": true
+	},
+	"pin": {
+		"automerge": true,
+		"packageRules": [
+			{
+				"groupName": "All pin update {{depType}}",
+				"matchUpdateTypes": [
+					"pin"
+				],
+				"matchPackageNames": [
+					"*"
+				]
+			}
+		]
+	},
+	"lockFileMaintenance": {
+		"enabled": true,
+		"automerge": true
+	},
+	"labels": [
+		"renovate",
+		"datasource:{{datasource}}",
+		"depType:{{depType}}",
+		"versioning:{{versioning}}",
+		"update-{{updateType}}",
+		"manager:{{manager}}"
+	],
+	"timezone": "Asia/Tokyo",
+	"packageRules": [
+		{
+			"groupName": "All {{depType}} update",
+			"matchDepTypes": [
+				"action",
+				"dev-dependencies",
+				"devDependencies"
+			],
+			"rangeStrategy": "pin",
+			"automerge": true,
+			"separateMinorPatch": false,
+			"major": {
+				"automerge": false
+			}
+		}
+	]
 }
