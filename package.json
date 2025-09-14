@@ -1,16 +1,16 @@
 {
-  "name": "renovate-config",
-  "version": "0.1.0",
-  "description": "Renovate config sets",
-  "main": "None",
-  "repository": "None",
-  "author": "@naa0yama",
-  "license": "AGPL-3.0",
-  "private": true,
-  "scripts": {
-    "dryrun": "renovate --log-level debug --dry-run true --token "
-  },
-  "devDependencies": {
-    "renovate": "41.113.2"
-  }
+	"name": "renovate-config",
+	"version": "0.1.0",
+	"description": "Renovate config sets",
+	"main": "None",
+	"repository": "None",
+	"author": "@naa0yama",
+	"license": "AGPL-3.0",
+	"private": true,
+	"scripts": {
+		"dryrun": "renovate --log-level debug --dry-run true --token "
+	},
+	"devDependencies": {
+		"renovate": "41.113.2"
+	}
 }

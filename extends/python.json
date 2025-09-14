@@ -1,44 +1,86 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "packageRules": [
-    { "groupName": "group:boto3", "matchDepNames": ["boto3", "botocore"] },
-    {
-      "groupName": "group:flake8",
-      "matchDepNames": ["flake8"],
-      "matchPackageNames": ["/^flake8-/"]
-    },
-    {
-      "groupName": "group:jupyter",
-      "matchDepNames": ["jupyter"],
-      "matchPackageNames": ["/^jupyter-/"]
-    },
-    {
-      "groupName": "group:pytest",
-      "matchDepNames": ["pytest"],
-      "matchPackageNames": ["/^pytest-/"]
-    },
-    {
-      "allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?(\\-.*)?$/",
-      "groupName": "group:python",
-      "matchManagers": ["asdf", "dockerfile", "poetry"],
-      "matchDepNames": ["python"]
-    },
-    {
-      "groupName": "group:ruff",
-      "matchManagers": ["pre-commit", "poetry"],
-      "matchDepNames": ["ruff", "charliermarsh/ruff-pre-commit"]
-    },
-    {
-      "groupName": "group:sphinx",
-      "matchDepNames": ["sphinx"],
-      "matchDepTypes": ["docsDependencies"],
-      "matchPackageNames": ["/^sphinx-/"]
-    },
-    {
-      "groupName": "group:tox",
-      "matchDepNames": ["tox"],
-      "matchDepTypes": ["devDependencies"],
-      "matchPackageNames": ["/^tox-/"]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"packageRules": [
+		{
+			"groupName": "group:boto3",
+			"matchDepNames": [
+				"boto3",
+				"botocore"
+			]
+		},
+		{
+			"groupName": "group:flake8",
+			"matchDepNames": [
+				"flake8"
+			],
+			"matchPackageNames": [
+				"/^flake8-/"
+			]
+		},
+		{
+			"groupName": "group:jupyter",
+			"matchDepNames": [
+				"jupyter"
+			],
+			"matchPackageNames": [
+				"/^jupyter-/"
+			]
+		},
+		{
+			"groupName": "group:pytest",
+			"matchDepNames": [
+				"pytest"
+			],
+			"matchPackageNames": [
+				"/^pytest-/"
+			]
+		},
+		{
+			"allowedVersions": "/^3\\.([012468]{1,2})(\\.[02468]{1,2})?(\\-.*)?$/",
+			"groupName": "group:python",
+			"matchManagers": [
+				"asdf",
+				"dockerfile",
+				"poetry"
+			],
+			"matchDepNames": [
+				"python"
+			]
+		},
+		{
+			"groupName": "group:ruff",
+			"matchManagers": [
+				"pre-commit",
+				"poetry"
+			],
+			"matchDepNames": [
+				"ruff",
+				"charliermarsh/ruff-pre-commit"
+			]
+		},
+		{
+			"groupName": "group:sphinx",
+			"matchDepNames": [
+				"sphinx"
+			],
+			"matchDepTypes": [
+				"docsDependencies"
+			],
+			"matchPackageNames": [
+				"/^sphinx-/"
+			]
+		},
+		{
+			"groupName": "group:tox",
+			"matchDepNames": [
+				"tox"
+			],
+			"matchDepTypes": [
+				"devDependencies"
+			],
+			"matchPackageNames": [
+				"/^tox-/"
+			]
+		}
+	]
 }
