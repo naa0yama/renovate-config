@@ -4,7 +4,7 @@
 		{
 			"description": "Custom managers (Dockerfile) - Auto-merge disabled by default",
 			"matchManagers": [
-				"regex"
+				"custom.regex"
 			],
 			"matchDepTypes": [
 				"dockerfile"
@@ -27,8 +27,8 @@
 		{
 			"description": "Dockerfile dependencies with automerge=true",
 			"customType": "regex",
-			"fileMatch": [
-				"^Dockerfile(.*)$"
+			"managerFilePatterns": [
+				"/^Dockerfile(.*)$/"
 			],
 			"matchStrings": [
 				"## renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?\\s+automerge=true\\s*\\nARG \\S+_VERSION=(?<currentValue>\\S+)"
@@ -38,8 +38,8 @@
 		{
 			"description": "Dockerfile dependencies with automerge=false or unspecified",
 			"customType": "regex",
-			"fileMatch": [
-				"^Dockerfile(.*)$"
+			"managerFilePatterns": [
+				"/^Dockerfile(.*)$/"
 			],
 			"matchStrings": [
 				"## renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?(?:\\s+automerge=false)?\\s*\\nARG \\S+_VERSION=(?<currentValue>\\S+)"
