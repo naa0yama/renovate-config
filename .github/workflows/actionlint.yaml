@@ -1,0 +1,79 @@
+name: Lint GitHub Actions
+on:
+  pull_request:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/**.yml"
+      - ".github/workflows/**.yaml"
+      - "**/action.yml"
+      - "**/action.yaml"
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  actionlint:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Run actionlint
+        id: actionlint
+        uses: docker://rhysd/actionlint:1.7.7
+        with:
+          args: -color -format '{{range $err := .}}::error file={{$err.Filepath}},line={{$err.Line}},col={{$err.Column}}::{{$err.Message}}%0A```%0A{{replace $err.Snippet "\\n" "%0A"}}%0A```\n{{end}}' -ignore 'SC2016:'
+        continue-on-error: true # エラーでも続行
+
+  zizmor:
+    permissions:
+      contents: read
+      security-events: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Run zizmor (pedantic mode)
+        id: zizmor
+        uses: docker://ghcr.io/zizmorcore/zizmor:v1.13.0
+        with:
+          args: --pedantic .
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # APIアクセス用
+        continue-on-error: true
+
+      - name: Generate SARIF
+        if: always()
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/workspace" -w /workspace \
+            -e GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
+            ghcr.io/zizmorcore/zizmor:v1.13.0 --format sarif . > zizmor.sarif
+
+      - name: Upload SARIF to GitHub Security
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: zizmor.sarif
+          category: zizmor
+
+  summary:
+    if: always()
+    needs: [actionlint, zizmor]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Summary
+        run: |
+          echo "## Linting Results" >> $GITHUB_STEP_SUMMARY
+          echo "| Tool | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| actionlint | ${{ needs.actionlint.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| zizmor | ${{ needs.zizmor.result }} |" >> $GITHUB_STEP_SUMMARY
