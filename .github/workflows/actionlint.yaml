@@ -42,28 +42,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Run zizmor (pedantic mode)
-        id: zizmor
-        uses: docker://ghcr.io/zizmorcore/zizmor:v1.13.0
+      - name: Run zizmor 🌈
+        uses: zizmorcore/zizmor-action@e673c3917a1aef3c65c972347ed84ccd013ecda4 # v0.2.0
         with:
-          args: --pedantic .
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # APIアクセス用
-        continue-on-error: true
-
-      - name: Generate SARIF
-        if: always()
-        run: |
-          docker run --rm -v "${{ github.workspace }}:/workspace" -w /workspace \
-            -e GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" \
-            ghcr.io/zizmorcore/zizmor:v1.13.0 --format sarif . > zizmor.sarif
-
-      - name: Upload SARIF to GitHub Security
-        if: always()
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: zizmor.sarif
-          category: zizmor
+          persona: pedantic
 
   summary:
     if: always()
