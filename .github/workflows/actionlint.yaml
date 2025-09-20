@@ -72,13 +72,15 @@ jobs:
         run: |
           set -euo pipefail
 
-          {
-            echo "## Linting Results"
-            echo "| Tool | Status |"
-            echo "|------|--------|"
-            echo "| actionlint | ${NEEDS_ACTIONLINT_RESULT} |"
-            echo "| zizmor | ${NEEDS_ZIZMOR_RESULT} |"
-          } >> $GITHUB_STEP_SUMMARY
+          cat <EOF>> ${GITHUB_STEP_SUMMARY}
+          ## Linting Results
+          | Tool | Status |
+          |------|--------|
+          | actionlint | ${NEEDS_ACTIONLINT_RESULT} |
+          | zizmor | ${NEEDS_ZIZMOR_RESULT} |
+
+          EOF
+
         env:
           NEEDS_ACTIONLINT_RESULT: ${{ needs.actionlint.result }}
           NEEDS_ZIZMOR_RESULT: ${{ needs.zizmor.result }}
