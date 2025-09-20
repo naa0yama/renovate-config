@@ -72,7 +72,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          cat <EOF>> ${GITHUB_STEP_SUMMARY}
+          cat <<EOF>> ${GITHUB_STEP_SUMMARY}
           ## Linting Results
           | Tool | Status |
           |------|--------|
