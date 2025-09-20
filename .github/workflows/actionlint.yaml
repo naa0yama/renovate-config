@@ -33,7 +33,9 @@ jobs:
 
       - name: Check workflow files
         run: |
-          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/${ACTIONLINT_VERSION}/scripts/download-actionlint.bash)
+          set -euo pipefail
+
+          bash <(curl "https://raw.githubusercontent.com/rhysd/actionlint/${ACTIONLINT_VERSION}/scripts/download-actionlint.bash")
           ./actionlint -format "$(cat .github/workflows/actionlint-format.txt)" | tee results.sarif
         shell: bash
 
