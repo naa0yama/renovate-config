@@ -29,9 +29,7 @@ jobs:
         id: actionlint
         uses: docker://rhysd/actionlint:1.7.7@sha256:1d74bfc9fd1963af8f89a7c22afaaafd42f49aad711a09951d02cb996398f61d
         with:
-          args: >-
-            -color
-            -format '{{range $err := .}}::error file={{$err.Filepath}},line={{$err.Line}},col={{$err.Column}}::{{$err.Kind}}: {{$err.Message}}{{"\n"}}{{end}}'
+          args: -color -format '{{range $err := .}}::error file={{$err.Filepath}},line={{$err.Line}},col={{$err.Column}}::{{$err.Message}}{{"\n"}}{{end}}'
         continue-on-error: true # エラーでも続行
 
   zizmor:
