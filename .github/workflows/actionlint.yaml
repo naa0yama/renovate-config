@@ -17,7 +17,7 @@ jobs:
   actionlint:
     name: actionlint
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -35,7 +35,7 @@ jobs:
   zizmor:
     name: zizmor
     permissions:
-      contents: read
+      contents: read # Required to checkout the repository
       security-events: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
