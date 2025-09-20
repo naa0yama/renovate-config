@@ -76,8 +76,8 @@ jobs:
             echo "## Linting Results"
             echo "| Tool | Status |"
             echo "|------|--------|"
-            echo "| actionlint | "${NEEDS_ACTIONLINT_RESULT}" |"
-            echo "| zizmor | "${NEEDS_ZIZMOR_RESULT}" |"
+            echo "| actionlint | ${NEEDS_ACTIONLINT_RESULT} |"
+            echo "| zizmor | ${NEEDS_ZIZMOR_RESULT} |"
           } >> $GITHUB_STEP_SUMMARY
         env:
           NEEDS_ACTIONLINT_RESULT: ${{ needs.actionlint.result }}
