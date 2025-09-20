@@ -72,12 +72,12 @@ jobs:
         run: |
           set -euo pipefail
 
-          cat <<EOF>> ${GITHUB_STEP_SUMMARY}
+          cat <<EOF>> "${GITHUB_STEP_SUMMARY}"
           ## Linting Results
           | Tool | Status |
           |------|--------|
-          | actionlint | ${NEEDS_ACTIONLINT_RESULT} |
-          | zizmor | ${NEEDS_ZIZMOR_RESULT} |
+          | actionlint | "${NEEDS_ACTIONLINT_RESULT}" |
+          | zizmor | "${NEEDS_ZIZMOR_RESULT}" |
 
           EOF
 
