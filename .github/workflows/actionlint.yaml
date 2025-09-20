@@ -36,7 +36,7 @@ jobs:
     name: zizmor
     permissions:
       contents: read # Required to checkout the repository
-      security-events: write
+      security-events: write # add zizmor security events
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
