@@ -3,13 +3,13 @@ name: Renovate Validate
 on:
   pull_request:
     paths:
-      - ".github/workflows/**.yml"
-      - "extends/**.json"
-      - "renovate.exsample.json"
+      - ".github/workflows/**.ya?ml"
       - "default.json"
-      - "renovate.json"
+      - "extends/**.json"
       - "package-lock.json"
       - "package.json"
+      - "renovate.exsample.json"
+      - "renovate.json"
       - "yarn.lock"
   workflow_dispatch:
 
