@@ -1168,10 +1168,10 @@
     "@opentelemetry/resources" "^2.0.0"
     "@opentelemetry/semantic-conventions" "^1.27.0"
 
-"@opentelemetry/resource-detector-gcp@0.39.0":
-  version "0.39.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/resource-detector-gcp/-/resource-detector-gcp-0.39.0.tgz#c540f5980ae07990063c72812e36a23f3e5b00b0"
-  integrity sha512-TUgYTZ7AUIk1kZYaozXyoLQ3YQjrp/IByo9rlObQXeo+tJ8qcXErq0NYn/43/xwAxNFG3Utv2h0hcL7TzSrjuQ==
+"@opentelemetry/resource-detector-gcp@0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/resource-detector-gcp/-/resource-detector-gcp-0.40.0.tgz#b4958488fe5abfebfab6aa2fdf8847f799680215"
+  integrity sha512-uAsUV8K4R9OJ3cgPUGYDqQByxOMTz4StmzJyofIv7+W+c1dTSEc1WVjWpTS2PAmywik++JlSmd8O4rMRJZpO8Q==
   dependencies:
     "@opentelemetry/core" "^2.0.0"
     "@opentelemetry/resources" "^2.0.0"
@@ -1508,10 +1508,10 @@
   resolved "https://registry.yarnpkg.com/@renovatebot/pep440/-/pep440-4.2.0.tgz#02e2e388305986f3e6217c3641b47d0b2ffdab43"
   integrity sha512-hT7WcjHbZdx3U9iRKuGwgm1l2wFS+FrWEdX+EQ5i+VAI6tWdcktFtdwDTNIqSwklOW1Vng55om8c4RrPHCmiIQ==
 
-"@renovatebot/ruby-semver@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@renovatebot/ruby-semver/-/ruby-semver-4.1.0.tgz#1292d95957bb3c56b2f69751c3b650ba1b35d87e"
-  integrity sha512-7yee1ceXSLy/fAyQtNgdqjrajMz66UyXypMfdsJGAJQf2nzr8UgXUpcnV5pZmE4MeKGWI9jKL1GFFwadBBQnEw==
+"@renovatebot/ruby-semver@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@renovatebot/ruby-semver/-/ruby-semver-4.1.2.tgz#7ab5fcde43723d0a8ddabf71418c1442c066ceee"
+  integrity sha512-zTK2X2r6fQTgQ1lqM0jaF/MgxmXCp0UrfiE1Ks3rQOBQjci4Xez1Zzsy4MgtjhMiHcdDi4lbBvtlPnksvEU8GQ==
 
 "@seald-io/binary-search-tree@^1.0.3":
   version "1.0.3"
@@ -5403,10 +5403,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@41.116.6:
-  version "41.116.6"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.116.6.tgz#523698e70b9cfacd2c5e08c8c27410c6c7063209"
-  integrity sha512-3msuYtEDhrbZ/zBx8Bt7iri+NRvmN5H8AWBKyKGXf6yLYOlrDh463AlkqbRvdkHXG/svCdCLIyxXYbjw6H4RDw==
+renovate@41.116.8:
+  version "41.116.8"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.116.8.tgz#d1ed070db820a34dff4668143577797696dbbf58"
+  integrity sha512-LRkV7XIVFze4xdK2VDbKxGM3yJOCAJRrkO4M7FDHPUkVSY7+GTXJ1ZQxKN4UMKLfm+mZsLTckkJG3UTCtKLJpw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.879.0"
     "@aws-sdk/client-ec2" "3.879.0"
@@ -5426,7 +5426,7 @@ renovate@41.116.6:
     "@opentelemetry/instrumentation-http" "0.205.0"
     "@opentelemetry/resource-detector-aws" "2.5.0"
     "@opentelemetry/resource-detector-azure" "0.12.0"
-    "@opentelemetry/resource-detector-gcp" "0.39.0"
+    "@opentelemetry/resource-detector-gcp" "0.40.0"
     "@opentelemetry/resource-detector-github" "0.31.0"
     "@opentelemetry/resources" "2.1.0"
     "@opentelemetry/sdk-trace-base" "2.1.0"
@@ -5438,7 +5438,7 @@ renovate@41.116.6:
     "@renovatebot/kbpgp" "4.0.1"
     "@renovatebot/osv-offline" "1.6.10"
     "@renovatebot/pep440" "4.2.0"
-    "@renovatebot/ruby-semver" "4.1.0"
+    "@renovatebot/ruby-semver" "4.1.2"
     "@sindresorhus/is" "7.0.2"
     "@yarnpkg/core" "4.4.3"
     "@yarnpkg/parsers" "3.0.3"
