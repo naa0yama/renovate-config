@@ -4926,10 +4926,10 @@ openpgp@6.2.2:
   resolved "https://registry.yarnpkg.com/openpgp/-/openpgp-6.2.2.tgz#329f4fab075f9746a94e584df8cfbda70a0dcaf3"
   integrity sha512-P/dyEqQ3gfwOCo+xsqffzXjmUhGn4AZTOJ1LCcN21S23vAk+EAvMJOQTsb/C8krL6GjOSBxqGYckhik7+hneNw==
 
-p-all@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/p-all/-/p-all-5.0.0.tgz#3fcbdf28177a09442fc7f4ec9e252e0eed5ecfc5"
-  integrity sha512-pofqu/1FhCVa+78xNAptCGc9V45exFz2pvBRyIvgXkNM0Rh18Py7j8pQuSjA+zpabI46v9hRjNWmL9EAFcEbpw==
+p-all@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/p-all/-/p-all-5.0.1.tgz#688c4032f32d321fc69ef3d896aa5b2fe0b8406b"
+  integrity sha512-LMT7WX9ZSaq3J1zjloApkIVmtz0ZdMFSIqbuiEa3txGYPLjUPOvgOPOx3nFjo+f37ZYL+1aY666I2SG7GVwLOA==
   dependencies:
     p-map "^6.0.0"
 
@@ -5377,10 +5377,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@41.130.0:
-  version "41.130.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.130.0.tgz#c88794a44e3bbe83362ae8ce54b2192b4467f6e2"
-  integrity sha512-9Phravx8NTVTTVcrixblOWsgiDyeZMr9XGOTX3w2zkqNq/Q4lN28U4WL2dHtOZN2z9AvM7GFujVFIK/FTgc5cw==
+renovate@41.130.1:
+  version "41.130.1"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.130.1.tgz#29940cf072d8c07dab0bbc26c74b3e4075a382b7"
+  integrity sha512-yXsUppr5Nx4it2RoRHd1jZBs91M9qXiCfuBggqmXDSUcR6oUubqryCB3z4NvRcf5ITAZSWt2ObX+mlUSHBh4cA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.879.0"
     "@aws-sdk/client-ec2" "3.879.0"
@@ -5470,7 +5470,7 @@ renovate@41.130.0:
     nanoid "5.1.5"
     neotraverse "0.6.18"
     node-html-parser "7.0.1"
-    p-all "5.0.0"
+    p-all "5.0.1"
     p-map "7.0.3"
     p-queue "8.1.1"
     p-throttle "8.0.0"
