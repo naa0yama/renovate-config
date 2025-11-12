@@ -4606,10 +4606,10 @@ minimatch@10.0.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.0.3.tgz#cf7a0314a16c4d9ab73a7730a0e8e3c3502d47aa"
-  integrity sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==
+minimatch@10.1.1, minimatch@^10.0.3:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.1.1.tgz#e6e61b9b0c1dcab116b5a7d1458e8b6ae9e73a55"
+  integrity sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==
   dependencies:
     "@isaacs/brace-expansion" "^5.0.0"
 
@@ -4619,13 +4619,6 @@ minimatch@10.0.3:
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
-
-minimatch@^10.0.3:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.1.1.tgz#e6e61b9b0c1dcab116b5a7d1458e8b6ae9e73a55"
-  integrity sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==
-  dependencies:
-    "@isaacs/brace-expansion" "^5.0.0"
 
 minimatch@^9.0.4:
   version "9.0.5"
@@ -5370,10 +5363,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@41.170.0:
-  version "41.170.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.170.0.tgz#981c564737941ef59832a4f5b50310b20d654aa6"
-  integrity sha512-cE8iEuep5AolmVOkDIGF17SiNyBY5gKtizpf12AAr7sQDltfKGqwrgRCgFSM9erPkGKBZADiF2NJV4CDyxbSuA==
+renovate@41.171.2:
+  version "41.171.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-41.171.2.tgz#55428d4ccceb1a87cac82c9a25f59327fc5ed992"
+  integrity sha512-2rsti5R9+99rMsrBGsj8FDvDFDZNNV+Kpe1b4ry0D982D7rKA+offcWZkocjgqdgoHNWqccnmlSMrs0bSJAT0g==
   dependencies:
     "@aws-sdk/client-codecommit" "3.922.0"
     "@aws-sdk/client-ec2" "3.922.0"
@@ -5457,7 +5450,7 @@ renovate@41.170.0:
     luxon "3.7.2"
     markdown-it "14.1.0"
     markdown-table "3.0.4"
-    minimatch "10.0.3"
+    minimatch "10.1.1"
     moo "0.5.2"
     ms "2.1.3"
     nanoid "5.1.6"
