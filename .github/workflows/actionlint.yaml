@@ -28,7 +28,7 @@ jobs:
     env:
       ACTIONLINT_VERSION: 03d0035246f3e81f36aed592ffb4bebf33a03106 # v1.7.7
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
 
@@ -42,7 +42,7 @@ jobs:
 
       - name: Upload to GitHub security events
         if: success() || failure()
-        uses: github/codeql-action/upload-sarif@2588666de8825e1e9dc4e2329a4c985457d55b32 # v3.32.1
+        uses: github/codeql-action/upload-sarif@6bc82e05fd0ea64601dd4b465378bbcf57de0314 # v4.32.1
         with:
           sarif_file: results.sarif
           category: actionlint
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
 
