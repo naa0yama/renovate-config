@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group Rust version updates (rust-toolchain.toml + Dockerfile) into a single PR",
+      "matchDepNames": ["rust"],
+      "groupName": "rust"
+    }
+  ]
+}
