@@ -4,6 +4,7 @@
 		"config:best-practices",
 		"github>naa0yama/renovate-config//extends/docker-regex",
 		"github>naa0yama/renovate-config//extends/docker",
+		"github>naa0yama/renovate-config//extends/mise",
 		"github>naa0yama/renovate-config//extends/npm",
 		"github>naa0yama/renovate-config//extends/python",
 		"github>naa0yama/renovate-config//extends/rust"
