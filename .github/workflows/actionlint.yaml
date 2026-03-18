@@ -65,6 +65,7 @@ jobs:
           persona: pedantic
 
   summary:
+    name: summary
     if: always()
     needs: [actionlint, zizmor]
     runs-on: ubuntu-latest
