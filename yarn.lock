@@ -2433,24 +2433,7 @@ byte-counter@^0.1.0:
   resolved "https://registry.yarnpkg.com/byte-counter/-/byte-counter-0.1.0.tgz#c49760b5790e50e942a0d57a57b3fc0e94488dcc"
   integrity sha512-jheRLVMeUKrDBjVw2O5+k4EvR4t9wtxHL+bo/LxfkxsVeuGMy3a5SEGgXdAFA4FSzTrU8rQXQIrsZ3oBq5a0pQ==
 
-cacache@20.0.3:
-  version "20.0.3"
-  resolved "https://registry.yarnpkg.com/cacache/-/cacache-20.0.3.tgz#bd65205d5e6d86e02bbfaf8e4ce6008f1b81d119"
-  integrity sha512-3pUp4e8hv07k1QlijZu6Kn7c9+ZpWWk4j3F8N3xPuCExULobqJydKYOTj1FTq58srkJsXvO7LbGAH4C0ZU3WGw==
-  dependencies:
-    "@npmcli/fs" "^5.0.0"
-    fs-minipass "^3.0.0"
-    glob "^13.0.0"
-    lru-cache "^11.1.0"
-    minipass "^7.0.3"
-    minipass-collect "^2.0.1"
-    minipass-flush "^1.0.5"
-    minipass-pipeline "^1.2.4"
-    p-map "^7.0.2"
-    ssri "^13.0.0"
-    unique-filename "^5.0.0"
-
-cacache@^20.0.1:
+cacache@20.0.4, cacache@^20.0.1:
   version "20.0.4"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-20.0.4.tgz#9b547dc3db0c1f87cba6dbbff91fb17181b4bbb1"
   integrity sha512-M3Lab8NPYlZU2exsL3bMVvMrMqgwCnMWfdZbK28bn3pK6APT/Te/I8hjRPNu1uwORY9a1eEQoifXbKPQMfMTOA==
@@ -5129,10 +5112,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.91.0:
-  version "43.91.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.91.0.tgz#b4656ab11a09755fff8f64cf1ccc2166d3f46f49"
-  integrity sha512-O9fOJrx4HNkHlOUdLQ9XzrVmfY7nE2IALlKN1wwh0dTvYeAjLiZ0XpdBj58pfCfevCK+d0kW4hoKvhe+oFi8PQ==
+renovate@43.91.2:
+  version "43.91.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.91.2.tgz#a30c43dfd1bc856bee75579db16c994fb81d59ed"
+  integrity sha512-qMnU9PNhcXdaZNIeauJ5Ff6zn+J51DaDQT9vCBbi/oV6jXWsxz5qEB29sSv4YPz0Sekn7JniWskAHXxmadGiTg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1000.0"
     "@aws-sdk/client-ec2" "3.1000.0"
@@ -5177,7 +5160,7 @@ renovate@43.91.0:
     aws4 "1.13.2"
     azure-devops-node-api "15.1.2"
     bunyan "1.8.15"
-    cacache "20.0.3"
+    cacache "20.0.4"
     changelog-filename-regex "2.0.1"
     clean-git-ref "2.0.1"
     commander "14.0.3"
@@ -5873,20 +5856,6 @@ unified@^11.0.0:
     is-plain-obj "^4.0.0"
     trough "^2.0.0"
     vfile "^6.0.0"
-
-unique-filename@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/unique-filename/-/unique-filename-5.0.0.tgz#8b17bbde1a7ca322dd1a1d23fe17c2b798c43f8f"
-  integrity sha512-2RaJTAvAb4owyjllTfXzFClJ7WsGxlykkPvCr9pA//LD9goVq+m4PPAeBgNodGZ7nSrntT/auWpJ6Y5IFXcfjg==
-  dependencies:
-    unique-slug "^6.0.0"
-
-unique-slug@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/unique-slug/-/unique-slug-6.0.0.tgz#f46fd688a9bd972fd356c23d95812a3a4862ed88"
-  integrity sha512-4Lup7Ezn8W3d52/xBhZBVdx323ckxa7DEvd9kPQHppTkLoJXw6ltrBCyj5pnrxj0qKDxYMJ56CoxNuFCscdTiw==
-  dependencies:
-    imurmurhash "^0.1.4"
 
 unist-util-is@^6.0.0:
   version "6.0.1"
