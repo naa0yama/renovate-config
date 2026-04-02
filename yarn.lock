@@ -1416,10 +1416,10 @@
   dependencies:
     cluster-key-slot "1.1.2"
 
-"@renovatebot/detect-tools@1.2.9":
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/@renovatebot/detect-tools/-/detect-tools-1.2.9.tgz#6db11cc3417653c33e725ec0c70c91baf0778e17"
-  integrity sha512-GKkts6FCkyUwBeRXrUfkPIAwACoE64y8EH66em5wZ9+KkRBi8YdC4jpY8lPrDgj5cgTzfsyArHETeavKzmmLBg==
+"@renovatebot/detect-tools@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@renovatebot/detect-tools/-/detect-tools-2.0.0.tgz#227070f9258fb96d251ba4de166d047194674ba4"
+  integrity sha512-bdf6QcWyfXqBl4/8l96XCzyR+u28tIgKFnR+sJFeGht8u+e9fOWf5ZAZ+Mkq3qSXT4xBRwbYYE3udZC0wU2UIw==
   dependencies:
     fs-extra "^11.3.4"
     toml-eslint-parser "^0.12.0"
@@ -2805,10 +2805,10 @@ devlop@^1.0.0, devlop@^1.1.0:
   dependencies:
     dequal "^2.0.0"
 
-diff@8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-8.0.3.tgz#c7da3d9e0e8c283bb548681f8d7174653720c2d5"
-  integrity sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==
+diff@8.0.4:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-8.0.4.tgz#4f5baf3188b9b2431117b962eb20ba330fadf696"
+  integrity sha512-DPi0FmjiSU5EvQV0++GFDOJ9ASQUVFh5kD+OzOnYdi7n3Wpm9hWWGfB/O2blfHcMVTL5WkQXSnRiK9makhrcnw==
 
 diff@^5.1.0:
   version "5.2.2"
@@ -5109,10 +5109,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.100.0:
-  version "43.100.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.100.0.tgz#59b210059c1b091dc0505e248da37d61bf23e39f"
-  integrity sha512-ta0VHFlydPWyCXeaWCCrnDZCvvjBx+AL8DequhGuwQzpxfq08FxRm6C8Ca7wk/TvGoExlghJmNL3Jqw92/P8AA==
+renovate@43.101.0:
+  version "43.101.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.101.0.tgz#e82efd4c7bf929d5712b1fc51ac8f2a671497c48"
+  integrity sha512-cGXCk2atvVOhxCuKhcSwVV8mb+8tnbagdAbU6NssD0NVGHLghfr4DpqYdozyJ5GV7qPhLTTmlciNVWaw6STczw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1000.0"
     "@aws-sdk/client-ec2" "3.1000.0"
@@ -5142,7 +5142,7 @@ renovate@43.100.0:
     "@pnpm/parse-overrides" "1001.0.3"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "5.11.0"
-    "@renovatebot/detect-tools" "1.2.9"
+    "@renovatebot/detect-tools" "2.0.0"
     "@renovatebot/good-enough-parser" "1.2.0"
     "@renovatebot/osv-offline" "2.4.0"
     "@renovatebot/pep440" "4.2.2"
@@ -5167,7 +5167,7 @@ renovate@43.100.0:
     deepmerge "4.3.1"
     dequal "2.0.3"
     detect-indent "7.0.2"
-    diff "8.0.3"
+    diff "8.0.4"
     editorconfig "3.0.2"
     email-addresses "5.0.0"
     emoji-regex "10.6.0"
