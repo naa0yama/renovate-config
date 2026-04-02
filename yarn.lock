@@ -1426,15 +1426,15 @@
     upath "^2.0.1"
     zod "^3.25.76"
 
-"@renovatebot/good-enough-parser@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@renovatebot/good-enough-parser/-/good-enough-parser-1.2.0.tgz#edd6dbec8927e528f9c0fc0882352324048ed36e"
-  integrity sha512-5HrZJqZJzjzhghtJ85nNG8/dE97MQ1LOvo+T4dMGZg1s56HnZEZkm5KENNhQ+dwqC6vk5DdOcZ8J0oQOcn8gng==
+"@renovatebot/good-enough-parser@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@renovatebot/good-enough-parser/-/good-enough-parser-2.0.0.tgz#f8dc7635b0baaa70c403ebb4ca700548b7ffcfde"
+  integrity sha512-3GiqYMmerr9IsF5Rl98l5lGX/A/s9DQo5gHMgdteNPwL8VR3TZjn22hU+14jttST0mrua1g0aNrVWnpKdGM4Hw==
   dependencies:
     "@thi.ng/zipper" "1.0.3"
     "@types/moo" "0.5.10"
     klona "2.0.6"
-    moo "0.5.2"
+    moo "0.5.3"
 
 "@renovatebot/osv-offline-db@2.4.0":
   version "2.4.0"
@@ -4507,11 +4507,6 @@ moment@^2.19.3:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
   integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
-moo@0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.2.tgz#f9fe82473bc7c184b0d32e2215d3f6e67278733c"
-  integrity sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==
-
 moo@0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.3.tgz#dfcdb40ff6f1a03c34af5df7f9717cecfa88c38c"
@@ -5109,10 +5104,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.101.0:
-  version "43.101.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.101.0.tgz#e82efd4c7bf929d5712b1fc51ac8f2a671497c48"
-  integrity sha512-cGXCk2atvVOhxCuKhcSwVV8mb+8tnbagdAbU6NssD0NVGHLghfr4DpqYdozyJ5GV7qPhLTTmlciNVWaw6STczw==
+renovate@43.101.2:
+  version "43.101.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.101.2.tgz#ab3ebab21bc3bb1e3f6c0565b24ed1c6ee181e56"
+  integrity sha512-x9koGX/573W3B/iQZSy2f++E+T77zoUHPivrJODyvR/Y3pAvafSkLti090Pz+B1AYIx6ABR9GiNVRp4I3jwOSg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1000.0"
     "@aws-sdk/client-ec2" "3.1000.0"
@@ -5143,7 +5138,7 @@ renovate@43.101.0:
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "5.11.0"
     "@renovatebot/detect-tools" "2.0.0"
-    "@renovatebot/good-enough-parser" "1.2.0"
+    "@renovatebot/good-enough-parser" "2.0.0"
     "@renovatebot/osv-offline" "2.4.0"
     "@renovatebot/pep440" "4.2.2"
     "@renovatebot/pgp" "1.3.4"
