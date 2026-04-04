@@ -1409,15 +1409,15 @@
   dependencies:
     cluster-key-slot "1.1.2"
 
-"@renovatebot/detect-tools@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@renovatebot/detect-tools/-/detect-tools-2.0.1.tgz#a2283a440d0ef68e54ea0bd017ffc449f04f2b04"
-  integrity sha512-9cvKD85YA0h8UGeI/hPaHT2xqg/DrWtHhFE7FMIov9+sg67PwqUmr5Gtl6e8FE6ZZTQWeCawJCAqNRoSU8kX8A==
+"@renovatebot/detect-tools@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@renovatebot/detect-tools/-/detect-tools-3.0.0.tgz#0fc2c57d732955598892f0885a94151567aff42b"
+  integrity sha512-cuUQLbUj97SHKk+IN2fd+oA7y7LOXHTl1GfsYJXAjf3Z6d50tMXKP20Liosl9u5smi0zFIIioxiUhYO2/v07zA==
   dependencies:
     fs-extra "^11.3.4"
     toml-eslint-parser "^0.12.0"
     upath "^2.0.1"
-    zod "^3.25.76"
+    zod "^4.3.6"
 
 "@renovatebot/good-enough-parser@2.0.0":
   version "2.0.0"
@@ -5087,10 +5087,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.102.4:
-  version "43.102.4"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.102.4.tgz#d53a7a83fa99278be9b030a12bada2041c018a40"
-  integrity sha512-ERlj0kyprQjGCmoSnz7hASR0owrbz9TT+fcgv/mQIkNmkezCBsKZe1CVQOMGUfcldYATe9BxVKHF88ZiaMR4tw==
+renovate@43.102.6:
+  version "43.102.6"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.102.6.tgz#0550ebf8d0a73496f91568eb9ebb5078d1bfaec7"
+  integrity sha512-2qqBJ6gXjt2s0xQ2DaaA5IpqRci366KSp/SXB3k0wpqjSYYdoZAt8tRD7wIMgeDxltYjf3EVFyXG2OnSh199ZA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1021.0"
     "@aws-sdk/client-ec2" "3.1021.0"
@@ -5120,7 +5120,7 @@ renovate@43.102.4:
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "5.11.0"
-    "@renovatebot/detect-tools" "2.0.1"
+    "@renovatebot/detect-tools" "3.0.0"
     "@renovatebot/good-enough-parser" "2.0.0"
     "@renovatebot/osv-offline" "2.4.0"
     "@renovatebot/pep440" "4.2.2"
@@ -6015,15 +6015,10 @@ yocto-queue@^1.0.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-1.2.2.tgz#3e09c95d3f1aa89a58c114c99223edf639152c00"
   integrity sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==
 
-zod@4.3.6:
+zod@4.3.6, zod@^4.3.6:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/zod/-/zod-4.3.6.tgz#89c56e0aa7d2b05107d894412227087885ab112a"
   integrity sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==
-
-zod@^3.25.76:
-  version "3.25.76"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.76.tgz#26841c3f6fd22a6a2760e7ccb719179768471e34"
-  integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
 
 zwitch@^2.0.0:
   version "2.0.4"
