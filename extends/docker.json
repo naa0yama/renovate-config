@@ -1,21 +1,27 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"description": "rust-toolchain.toml channel version",
+			"customType": "regex",
+			"managerFilePatterns": [
+				"/^rust-toolchain\\.toml$/"
+			],
+			"matchStrings": [
+				"channel\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+			],
+			"depNameTemplate": "rust",
+			"packageNameTemplate": "rust-lang/rust",
+			"datasourceTemplate": "github-releases"
+		}
+	],
 	"packageRules": [
 		{
-			"addLabels": [
-				"managers:dockerfile"
+			"description": "Group Rust version updates (rust-toolchain.toml + Dockerfile) into a single PR",
+			"matchDepNames": [
+				"rust"
 			],
-			"matchManagers": [
-				"dockerfile"
-			]
-		},
-		{
-			"addLabels": [
-				"managers:docker-compose"
-			],
-			"matchManagers": [
-				"docker-compose"
-			]
+			"groupName": "rust"
 		}
 	]
 }
