@@ -4783,10 +4783,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.110.4:
-  version "43.110.4"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.110.4.tgz#a9531936dfd893183af64014239e57617f965c0f"
-  integrity sha512-T8Opu2Gye0bFqH3xOOFEVoQzloUwL1fKwov3r2qwbtWHNSRgYK3BVwrgS0jFzDh6JiO8af8gAHKQ4OoI3InBJg==
+renovate@43.110.6:
+  version "43.110.6"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.110.6.tgz#86253bf4a539c42efb77f7bd68dc9f3add3edea3"
+  integrity sha512-+j23wHBd0A61eLoG1cAoHiqb1tJfYms/Tiz2FR6WcQqXaZV2M48Eek0oSPQw5s3V1rV+xIuIh7+vImsIYy9NUg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1021.0"
     "@aws-sdk/client-ec2" "3.1021.0"
@@ -4893,7 +4893,7 @@ renovate@43.110.4:
     semver-utils "1.1.4"
     shlex "3.0.0"
     simple-git "3.33.0"
-    slugify "1.6.8"
+    slugify "1.6.9"
     source-map-support "0.5.21"
     strip-json-comments "5.0.3"
     toml-eslint-parser "1.0.3"
@@ -5116,10 +5116,10 @@ simple-git@3.33.0:
     "@kwsites/promise-deferred" "^1.1.1"
     debug "^4.4.0"
 
-slugify@1.6.8:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.8.tgz#0e43855ebc7df24102d04082e0bcc3a344353604"
-  integrity sha512-HVk9X1E0gz3mSpoi60h/saazLKXKaZThMLU3u/aNwoYn8/xQyX2MGxL0ui2eaokkD7tF+Zo+cKTHUbe1mmmGzA==
+slugify@1.6.9:
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.9.tgz#610957dea21e56b65e3a153215ef7b265715c8e8"
+  integrity sha512-vZ7rfeehZui7wQs438JXBckYLkIIdfHOXsaVEUMyS5fHo1483l1bMdo0EDSWYclY0yZKFOipDy4KHuKs6ssvdg==
 
 smart-buffer@^4.2.0:
   version "4.2.0"
