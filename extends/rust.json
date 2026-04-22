@@ -20,7 +20,8 @@
 			"matchDepNames": [
 				"rust"
 			],
-			"groupName": "rust"
+			"groupName": "rust",
+			"separateMinorPatch": false
 		}
 	]
 }
