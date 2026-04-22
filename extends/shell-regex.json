@@ -1,0 +1,37 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"description": "Shell script dependencies with automerge=true",
+			"customType": "regex",
+			"managerFilePatterns": ["/.+\\.sh$/"],
+			"matchStrings": [
+				"## renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?\\s+automerge=true\\s*\\n\\S+_VERSION=\"(?<currentValue>[^\"]+)\""
+			],
+			"depTypeTemplate": "shell-automerge"
+		},
+		{
+			"description": "Shell script dependencies with automerge=false or unspecified",
+			"customType": "regex",
+			"managerFilePatterns": ["/.+\\.sh$/"],
+			"matchStrings": [
+				"## renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?(?:\\s+automerge=false)?\\s*\\n\\S+_VERSION=\"(?<currentValue>[^\"]+)\""
+			],
+			"depTypeTemplate": "shell"
+		}
+	],
+	"packageRules": [
+		{
+			"description": "Custom managers (Shell) - Auto-merge disabled by default",
+			"matchManagers": ["custom.regex"],
+			"matchDepTypes": ["shell"],
+			"automerge": false
+		},
+		{
+			"description": "Custom managers (Shell) - Auto-merge for automerge=true",
+			"matchDepTypes": ["shell-automerge"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"automerge": true
+		}
+	]
+}

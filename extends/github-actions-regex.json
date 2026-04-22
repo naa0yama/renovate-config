@@ -1,0 +1,37 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"description": "GitHub Actions with: version pinning (automerge=true)",
+			"customType": "regex",
+			"managerFilePatterns": ["/.github/workflows/.+\\.ya?ml$/"],
+			"matchStrings": [
+				"# renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?\\s+automerge=true\\s*\\n\\s+version:\\s+(?<currentValue>\\S+)"
+			],
+			"depTypeTemplate": "gha-version-automerge"
+		},
+		{
+			"description": "GitHub Actions with: version pinning (automerge=false or unspecified)",
+			"customType": "regex",
+			"managerFilePatterns": ["/.github/workflows/.+\\.ya?ml$/"],
+			"matchStrings": [
+				"# renovate: datasource=(?<datasource>\\S+)\\s+packageName=(?<packageName>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?(?:\\s+automerge=false)?\\s*\\n\\s+version:\\s+(?<currentValue>\\S+)"
+			],
+			"depTypeTemplate": "gha-version"
+		}
+	],
+	"packageRules": [
+		{
+			"description": "Custom managers (GHA version) - Auto-merge disabled by default",
+			"matchManagers": ["custom.regex"],
+			"matchDepTypes": ["gha-version"],
+			"automerge": false
+		},
+		{
+			"description": "Custom managers (GHA version) - Auto-merge for automerge=true",
+			"matchDepTypes": ["gha-version-automerge"],
+			"matchUpdateTypes": ["minor", "patch"],
+			"automerge": true
+		}
+	]
+}
