@@ -22,6 +22,98 @@
 			],
 			"groupName": "rust",
 			"separateMinorPatch": false
+		},
+		{
+			"description": "Group clap crates (clap_complete depends on clap, same version releases)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"clap"
+			],
+			"matchPackageNames": [
+				"/^clap[_-]/"
+			],
+			"groupName": "group:clap"
+		},
+		{
+			"description": "Group OpenTelemetry crates (same release cycle, mutual dependencies)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"opentelemetry",
+				"tracing-opentelemetry"
+			],
+			"matchPackageNames": [
+				"/^opentelemetry-/",
+				"/^opentelemetry_/"
+			],
+			"groupName": "group:opentelemetry"
+		},
+		{
+			"description": "Group tracing crates (tracing-subscriber and tracing-mock depend on tracing)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"tracing",
+				"tracing-subscriber",
+				"tracing-mock"
+			],
+			"groupName": "group:tracing"
+		},
+		{
+			"description": "Group serde crates (serde_json and serde_yml depend on serde)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"serde"
+			],
+			"matchPackageNames": [
+				"/^serde_/",
+				"/^serde-/"
+			],
+			"groupName": "group:serde"
+		},
+		{
+			"description": "Group assert_cmd and predicates (assert_cmd depends on predicates)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"assert_cmd",
+				"predicates"
+			],
+			"matchPackageNames": [
+				"/^predicates/"
+			],
+			"groupName": "group:assert_cmd"
+		},
+		{
+			"description": "Group ratatui and crossterm (ratatui depends on crossterm as backend)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"ratatui",
+				"crossterm"
+			],
+			"groupName": "group:ratatui"
+		},
+		{
+			"description": "Group tokio crates (tokio-stream and tokio-util depend on tokio)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchDepNames": [
+				"tokio"
+			],
+			"matchPackageNames": [
+				"/^tokio-/"
+			],
+			"groupName": "group:tokio"
 		}
 	]
 }
