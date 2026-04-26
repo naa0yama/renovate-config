@@ -3430,9 +3430,9 @@ ini@~1.3.0:
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 install-artifact-from-github@^1.4.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/install-artifact-from-github/-/install-artifact-from-github-1.5.0.tgz#139676e4dd5780912bfab84189175cd56fb89dbc"
-  integrity sha512-lYchhkreaOzx3+83TiTX8ftN/tGipMlGONpJYYPUsW1eVwzB/7kRib1tCK0B4FMOIZhPHQiowqn3QH9XT7OUwg==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/install-artifact-from-github/-/install-artifact-from-github-1.6.0.tgz#18232b55eaaa9892d429216c40b0082e3654eb7e"
+  integrity sha512-wKsuzN8fy8QK7iEUqyWTQmvZ1QFGPn1xyl3/1iIIDthDjS7Hn9HoPwHlNakZirWbCsbad0lZMkr6Xfbpe1pUzw==
 
 is-arrayish@^0.2.1:
   version "0.2.1"
