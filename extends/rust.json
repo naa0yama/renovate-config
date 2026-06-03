@@ -28,10 +28,8 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
-				"clap"
-			],
 			"matchPackageNames": [
+				"clap",
 				"/^clap[_-]/"
 			],
 			"groupName": "group:clap"
@@ -41,11 +39,9 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
-				"opentelemetry",
-				"tracing-opentelemetry"
-			],
 			"matchPackageNames": [
+				"opentelemetry",
+				"tracing-opentelemetry",
 				"/^opentelemetry-/",
 				"/^opentelemetry_/"
 			],
@@ -56,7 +52,7 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
+			"matchPackageNames": [
 				"tracing",
 				"tracing-subscriber",
 				"tracing-mock"
@@ -68,10 +64,8 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
-				"serde"
-			],
 			"matchPackageNames": [
+				"serde",
 				"/^serde_/",
 				"/^serde-/"
 			],
@@ -82,11 +76,9 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
-				"assert_cmd",
-				"predicates"
-			],
 			"matchPackageNames": [
+				"assert_cmd",
+				"predicates",
 				"/^predicates/"
 			],
 			"groupName": "group:assert_cmd"
@@ -96,7 +88,7 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
+			"matchPackageNames": [
 				"ratatui",
 				"crossterm"
 			],
@@ -107,10 +99,8 @@
 			"matchDatasources": [
 				"crate"
 			],
-			"matchDepNames": [
-				"tokio"
-			],
 			"matchPackageNames": [
+				"tokio",
 				"/^tokio-/"
 			],
 			"groupName": "group:tokio"
