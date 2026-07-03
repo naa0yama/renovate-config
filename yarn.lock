@@ -3674,10 +3674,10 @@ proc-log@^7.0.0:
   resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-7.0.0.tgz#46c9cc943ed4127272b49b34faa8855b44e3a976"
   integrity sha512-FYgfaA69XZ93zaXLoMNQ+ViDXGGBgR8aLh03txzcFhV+9xOXx7+8DLCULrKKpR9+GsH9ZfHm82aSUPpozX0Ztg==
 
-protobufjs@8.6.4:
-  version "8.6.4"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.6.4.tgz#61c1589f095d096cf89e77d1e6dfa5ca1c0d70bf"
-  integrity sha512-/+XMv9JalknuncEJSwsyEVlwcxVLKx2iaoSUXFZA86MJkdqyOdfrlB1sB7S6aKyUk9tl20YY+SgQe5J2sJHTcg==
+protobufjs@8.6.5:
+  version "8.6.5"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.6.5.tgz#7709c9ff77914c00010129888e620c9ccf7c294c"
+  integrity sha512-zeE5LPpencAGXvsxyOYmEgJhxzHY8IsmPAFzstZVhDSVT8QH03q6gMZwZRaQGApevZbAL6u28ugs4CC+YKB2jQ==
   dependencies:
     long "^5.3.2"
 
@@ -3792,10 +3792,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.249.1:
-  version "43.249.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.249.1.tgz#7cf8790e81fb873e4a1d448adfbdcd175a040d6c"
-  integrity sha512-aAWnyLK23NWAq24p4UeaH3anDB63GJS7ttftbD0jXr723k1gepu5C1rczeBcbTU9dazGnR7BcN3cz/GRlFU/2g==
+renovate@43.249.3:
+  version "43.249.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.249.3.tgz#9c0ffa17b40df3e0f7ad2edb34a521fc6e939d6a"
+  integrity sha512-ZIK3QdKEtRJ4vfaCRkiTqiMaAQ6tM7AHhWgEgrsAvuCT292aR6faqDyUJeXTV1qMZhIhb701CXngm/MeJ8jZcA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1053.0"
     "@aws-sdk/client-ec2" "3.1053.0"
@@ -3891,7 +3891,7 @@ renovate@43.249.1:
     p-throttle "8.1.0"
     parse-link-header "2.0.0"
     prettier "3.8.1"
-    protobufjs "8.6.4"
+    protobufjs "8.6.5"
     punycode "2.3.1"
     remark "15.0.1"
     remark-gfm "4.0.1"
