@@ -1301,10 +1301,10 @@ adm-zip@~0.5.17:
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.18.tgz#283a05f2bf1e3fd315f0f31cde29b7a6e3c1619d"
   integrity sha512-ufJnssQGbxzLNS1Ho9bCtX4rQKCCvoVuDLHoJyc3F9dOGDB4BkWs2Ci0kv53lqocAEQ/Cbi+I2XCsNYGqVYqng==
 
-ae-cvss-calculator@1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/ae-cvss-calculator/-/ae-cvss-calculator-1.0.12.tgz#b4f779fc4391f371a47c0344c5d99bb6bc45171e"
-  integrity sha512-YVO+dhb8sZubNeL9pqSlN5hyZGC8hkAwnThnd3EimUGZtJEMeuy4kMb7zMCAsBiMr/RxklH0oY7DCsFV/B7peg==
+ae-cvss-calculator@1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/ae-cvss-calculator/-/ae-cvss-calculator-1.0.13.tgz#077bd0b4b9314b3e07a73d505a4a64e19a9f8854"
+  integrity sha512-QnPO1O5gZ/1NM+X4fbfqN/y5rImEZ8CSkbSk7Arv4RrmxPzxLXr9RSLmsQJykDtXFUXn9wHLxC0/fe/pO78t3w==
 
 agent-base@^7.1.2:
   version "7.1.4"
@@ -3760,10 +3760,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.251.0:
-  version "43.251.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.251.0.tgz#e25f4b994a79479d56582f96d7f69ad3e827df61"
-  integrity sha512-LJ72e8QdJjSg7cE6z7MV0c/T9ahmkqK/4lh4L+VQrm6SvwBPyrADvAxCLQP5I2ainTrz0HX46/UYbPvebRguVg==
+renovate@43.251.3:
+  version "43.251.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.251.3.tgz#30502f45e501a931cf8dc1e8c6fc472a03d6521b"
+  integrity sha512-TAgaJGO3k5Knvgq5H8N4ETx6ksCmDj20JIxK9OIKVlWm7q6o5hI+osQqV1VjnfkpKe5rl9BRUu8ZvB+pfQDA/g==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3803,7 +3803,7 @@ renovate@43.251.0:
     "@yarnpkg/core" "4.9.0"
     "@yarnpkg/parsers" "3.0.3"
     adm-zip "0.5.17"
-    ae-cvss-calculator "1.0.12"
+    ae-cvss-calculator "1.0.13"
     agentkeepalive "4.6.0"
     async-mutex "0.5.0"
     aws4 "1.13.2"
