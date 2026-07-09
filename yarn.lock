@@ -1291,12 +1291,7 @@ abbrev@^5.0.0:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-5.0.0.tgz#bab70805adca6637a33eeecdb8b7b5474d6d6425"
   integrity sha512-/XrFJgzQQQHpti1raDJC6m4ws6aNktmjBlhk8Fdlk7LwCEuDoieEJJY9OFHjfiFJFFRM2tK+Ky/IsfbbmlMu1w==
 
-adm-zip@0.5.17:
-  version "0.5.17"
-  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.17.tgz#5c0b65f37aeec5c2a94995c024f931f62e4bbc5a"
-  integrity sha512-+Ut8d9LLqwEvHHJl1+PIHqoyDxFgVN847JTVM3Izi3xHDWPE4UtzzXysMZQs64DMcrJfBeS/uoEP4AD3HQHnQQ==
-
-adm-zip@~0.5.17:
+adm-zip@0.5.18, adm-zip@~0.5.17:
   version "0.5.18"
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.18.tgz#283a05f2bf1e3fd315f0f31cde29b7a6e3c1619d"
   integrity sha512-ufJnssQGbxzLNS1Ho9bCtX4rQKCCvoVuDLHoJyc3F9dOGDB4BkWs2Ci0kv53lqocAEQ/Cbi+I2XCsNYGqVYqng==
@@ -3760,10 +3755,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.252.1:
-  version "43.252.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.252.1.tgz#8f4735798ab4ccbf606802c4b063a71e072c634f"
-  integrity sha512-VMp8vXuiK5G2/rEInBZXj7M/hth4MG3URL4dyp0/iRYboRkqQ8t2Fmru6B59qk6gQ5+N6Wm4YwYSPGvzefAzhA==
+renovate@43.252.2:
+  version "43.252.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.252.2.tgz#aabbb2f2f253b0af04d9ba388b16c13812f1ae40"
+  integrity sha512-Kf5WW6mPMVOO5RxmDbWZcSw1W5V5MozRSkmkAR065Sk5hoRJIfJLx8KgPEwZ+IpY8pd3h7O+roO2S+IlYdiA2A==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3802,7 +3797,7 @@ renovate@43.252.1:
     "@sindresorhus/is" "8.1.0"
     "@yarnpkg/core" "4.9.0"
     "@yarnpkg/parsers" "3.0.3"
-    adm-zip "0.5.17"
+    adm-zip "0.5.18"
     ae-cvss-calculator "1.0.13"
     agentkeepalive "4.6.0"
     async-mutex "0.5.0"
