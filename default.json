@@ -61,7 +61,17 @@
 			"description": "Group mise CLI version updates across all file types",
 			"groupName": "mise",
 			"matchPackageNames": ["jdx/mise"],
-			"matchManagers": ["custom.regex"]
+			"matchManagers": ["custom.regex"],
+			"automerge": true
+		},
+		{
+			"description": "CalVer packages: date-based versions carry no semver API contract",
+			"matchCurrentVersion": "/^\\d{4}\\.\\d+\\.\\d+/",
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
 		}
 	],
 	"patch": {

@@ -16,6 +16,20 @@
 			"matchManagers": [
 				"docker-compose"
 			]
+		},
+		{
+			"description": "Dockerfile syntax pragma: automerge minor/patch (# syntax=docker/dockerfile:x.y)",
+			"matchManagers": [
+				"dockerfile"
+			],
+			"matchDepTypes": [
+				"syntax"
+			],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
 		}
 	]
 }

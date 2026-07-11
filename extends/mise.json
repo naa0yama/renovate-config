@@ -12,5 +12,29 @@
 			],
 			"depTypeTemplate": "mise-tool"
 		}
+	],
+	"packageRules": [
+		{
+			"description": "mise-managed tools: automerge minor/patch (dev tools, no production impact)",
+			"matchManagers": [
+				"mise"
+			],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
+		},
+		{
+			"description": "Custom regex mise tools (depType:mise-tool): automerge minor/patch",
+			"matchDepTypes": [
+				"mise-tool"
+			],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
+		}
 	]
 }
