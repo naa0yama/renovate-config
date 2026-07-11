@@ -104,6 +104,17 @@
 				"/^tokio-/"
 			],
 			"groupName": "group:tokio"
+		},
+		{
+			"description": "Rust crates: automerge minor/patch (CI gate)",
+			"matchDatasources": [
+				"crate"
+			],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
 		}
 	]
 }
