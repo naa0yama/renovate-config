@@ -750,7 +750,12 @@
     "@opentelemetry/resources" "2.9.0"
     "@opentelemetry/semantic-conventions" "^1.29.0"
 
-"@opentelemetry/semantic-conventions@1.41.1", "@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0", "@opentelemetry/semantic-conventions@^1.37.0":
+"@opentelemetry/semantic-conventions@1.42.0":
+  version "1.42.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.42.0.tgz#38f10edd26f02931bf3b7d664ba59bea6279a384"
+  integrity sha512-icc5xCzndZfhuJMy5oqk5AvloWquR7jtae74qzpkKkhGp8BivK+oCcEXgGnjCdTfp8hA44l+w8gE8yYJbocJJw==
+
+"@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0", "@opentelemetry/semantic-conventions@^1.37.0":
   version "1.41.1"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.41.1.tgz#b04e7151c5913a7a006d4f465479da75efb98a7a"
   integrity sha512-/UhIkaZgPutTFmQ7RnIJGgDXZmtEJ7Dvi86xNTFWcnRxVRNk/aotsqDJYeEvDP+FSMB2SdW+pQzNMcWP0rwuNA==
@@ -3624,10 +3629,10 @@ proc-log@^7.0.0:
   resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-7.0.0.tgz#46c9cc943ed4127272b49b34faa8855b44e3a976"
   integrity sha512-FYgfaA69XZ93zaXLoMNQ+ViDXGGBgR8aLh03txzcFhV+9xOXx7+8DLCULrKKpR9+GsH9ZfHm82aSUPpozX0Ztg==
 
-protobufjs@8.6.6:
-  version "8.6.6"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.6.6.tgz#c606f56d65e1f5f01e35146e648dea1e4fdc2406"
-  integrity sha512-RkLIhE+Tdc2Kpq1F4Uw6OnpAXPca7B+GSDov/GqGCqNBpVyDskQ9yReZfgM+C7xw9AAix873iQZXbBWXj6NzYQ==
+protobufjs@8.7.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-8.7.0.tgz#a4595e4ac8fc052c6039de61b955fe201d1e6d10"
+  integrity sha512-uu52JNxLh3vsL7tXU/h0gDaywufvuUCTbGSi0NKQKBZ2ZopkmrWQJSQO/EFqzu/5YhiwgVM8rq/a/iVpx4eZ0g==
   dependencies:
     long "^5.3.2"
 
@@ -3742,10 +3747,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.260.3:
-  version "43.260.3"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.260.3.tgz#3064d5ce7aeaa085cd9c392ed0d2a730b1bb113f"
-  integrity sha512-0Q9gLdhdddSLKxqh+XkuOMKz5Umxu8n36lH1+9knvfzxM7HBalmNZivBjAwpvncvPOzEwrHHGsq6lX/9C/Ljiw==
+renovate@43.261.4:
+  version "43.261.4"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.261.4.tgz#2e1205368ede37193830150e1a1c0888c3d165c0"
+  integrity sha512-z01lUCjtfLvJGrJmg7/6184L2vCuBn11WNuDQAS0+Zb2thMqxXwhTupjWyBHnkh3LBeUC3xuXDhPdhRgIfcf2Q==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3771,7 +3776,7 @@ renovate@43.260.3:
     "@opentelemetry/resources" "2.9.0"
     "@opentelemetry/sdk-trace-base" "2.9.0"
     "@opentelemetry/sdk-trace-node" "2.9.0"
-    "@opentelemetry/semantic-conventions" "1.41.1"
+    "@opentelemetry/semantic-conventions" "1.42.0"
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "5.12.1"
@@ -3841,7 +3846,7 @@ renovate@43.260.3:
     p-throttle "8.1.0"
     parse-link-header "2.0.0"
     prettier "3.8.1"
-    protobufjs "8.6.6"
+    protobufjs "8.7.0"
     punycode "2.3.1"
     remark "15.0.1"
     remark-gfm "4.0.1"
