@@ -3677,10 +3677,10 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-re2@1.25.1:
-  version "1.25.1"
-  resolved "https://registry.yarnpkg.com/re2/-/re2-1.25.1.tgz#f1e30e58759c487f6662769b2ea600de829f002c"
-  integrity sha512-/OUvD2RHfRIJGSdKB67chVmvhMHiXB9Xb0gSnQbN6fimFM/c50r/gmxrXFlMKbZKJ5s8SYNqLAojE7GvbqEl7g==
+re2@1.25.2:
+  version "1.25.2"
+  resolved "https://registry.yarnpkg.com/re2/-/re2-1.25.2.tgz#db4f908ff220cea85fa7725b8204265cb72a2462"
+  integrity sha512-t75KS05wrPM0S7IRbM0l/WUYlHftJj3WAzQJAcSH8CrDP/jFYicZbMYTKohJ8w/3kFGwkY/G8/dGtC6CdShDlw==
   dependencies:
     install-artifact-from-github "^1.6.0"
     nan "^2.27.0"
@@ -3747,10 +3747,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.263.3:
-  version "43.263.3"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.263.3.tgz#2e9b933e9c17b75fb92e18aa7a2d7d8afa1cfa19"
-  integrity sha512-pQltxb1uWghuYWpFu7cCRdm0y+Ozwloq6Smoog9wJHxkzXOLqLHdzDy88PWAlOniTmkQYFuCAL/Hcrw6FBVa+A==
+renovate@43.263.5:
+  version "43.263.5"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.263.5.tgz#0c4fa6ccdf394ebd69e54dbb98e229a79d99f55a"
+  integrity sha512-dF/NxghL3D/kRjMURDIfL4SlXrFSJonWipGs7M1AcX2hy8E43sY3mdrl3ziLiehIbX7SrrZCofIIv0Qs5MhAdA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3871,7 +3871,7 @@ renovate@43.263.3:
     zod "4.4.3"
   optionalDependencies:
     openpgp "6.3.1"
-    re2 "1.25.1"
+    re2 "1.25.2"
 
 require-in-the-middle@^8.0.0:
   version "8.0.1"
