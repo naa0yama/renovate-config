@@ -2745,15 +2745,20 @@ lowercase-keys@^4.0.1:
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-4.0.1.tgz#03f169f2bfc01709582366ede4f58d79ab6e766b"
   integrity sha512-wI9Nui/L8VfADa/cr/7NQruaASk1k23/Uh1khQ02BCVYiiy8F4AhOGnQzJy3Fl/c44GnYSbZHv8g7EcG3kJ1Qg==
 
-lru-cache@11.5.1, lru-cache@^11.0.0, lru-cache@^11.1.0:
-  version "11.5.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.5.1.tgz#f3daa3540847b9737ebc02499ddb36765e54db4a"
-  integrity sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A==
+lru-cache@11.5.2:
+  version "11.5.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.5.2.tgz#00e16665c90c620fba14a3c368732a976493f760"
+  integrity sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g==
 
 lru-cache@^10.2.0:
   version "10.4.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
+
+lru-cache@^11.0.0, lru-cache@^11.1.0:
+  version "11.5.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.5.1.tgz#f3daa3540847b9737ebc02499ddb36765e54db4a"
+  integrity sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A==
 
 luxon@3.7.2, luxon@^3.7.2:
   version "3.7.2"
@@ -3747,10 +3752,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.263.5:
-  version "43.263.5"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.263.5.tgz#0c4fa6ccdf394ebd69e54dbb98e229a79d99f55a"
-  integrity sha512-dF/NxghL3D/kRjMURDIfL4SlXrFSJonWipGs7M1AcX2hy8E43sY3mdrl3ziLiehIbX7SrrZCofIIv0Qs5MhAdA==
+renovate@43.263.6:
+  version "43.263.6"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.263.6.tgz#ae52582953260cb34315083c45d2982d483115f4"
+  integrity sha512-K8JXOnSvYX61/eR7W4cCe77qw9tR3LUsLgdjA0SVCiCK67Xax98yj2D710COvaLCuM4o/T1y1mcJimkHIzzW/g==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3831,7 +3836,7 @@ renovate@43.263.5:
     jsonata "2.2.1"
     jsonc-weaver "0.2.4"
     klona "2.0.6"
-    lru-cache "11.5.1"
+    lru-cache "11.5.2"
     luxon "3.7.2"
     markdown-it "14.3.0"
     markdown-table "3.0.4"
