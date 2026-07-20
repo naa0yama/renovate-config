@@ -1292,7 +1292,12 @@ abbrev@^5.0.0:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-5.0.0.tgz#bab70805adca6637a33eeecdb8b7b5474d6d6425"
   integrity sha512-/XrFJgzQQQHpti1raDJC6m4ws6aNktmjBlhk8Fdlk7LwCEuDoieEJJY9OFHjfiFJFFRM2tK+Ky/IsfbbmlMu1w==
 
-adm-zip@0.5.18, adm-zip@~0.5.18:
+adm-zip@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.6.0.tgz#bbc5c6c333755e967a06dd98747f431e1d53a3cf"
+  integrity sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==
+
+adm-zip@~0.5.18:
   version "0.5.18"
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.5.18.tgz#283a05f2bf1e3fd315f0f31cde29b7a6e3c1619d"
   integrity sha512-ufJnssQGbxzLNS1Ho9bCtX4rQKCCvoVuDLHoJyc3F9dOGDB4BkWs2Ci0kv53lqocAEQ/Cbi+I2XCsNYGqVYqng==
@@ -2445,10 +2450,10 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-ignore@7.0.5:
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.5.tgz#4cb5f6cd7d4c7ab0365738c7aea888baa6d7efd9"
-  integrity sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==
+ignore@7.0.6:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.6.tgz#6a57aaef4c90df27ac3590875d29e8f11988c88e"
+  integrity sha512-BAg6QkE8W+TuQLrrw0Ugr7HegXduRuuj8/ti2kSOc+jz1dmx8/WNcjr6XGnq5YpDWxFwwaavqD0+jIUOKelTsw==
 
 import-in-the-middle@^3.0.0:
   version "3.3.0"
@@ -3747,10 +3752,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.265.4:
-  version "43.265.4"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.265.4.tgz#fef134c5638ee88b413e54933434f38c76ffaabd"
-  integrity sha512-G6VNIgNSIX3Ab3+83zcfCXFWv4N8GmoTBBco5Vx20cBx0Hclt+u0YXJ0yXGG8Ak/Rml2maacOA4xdRhTm78q0w==
+renovate@43.268.5:
+  version "43.268.5"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.268.5.tgz#d92208b3556c03be82fbbac200c8c05afb803c3b"
+  integrity sha512-/17wcXQntzlrEDfxubSrGgzgLl2Q9nDl87TNQNttNYryuFpB03SXLLI3G6r6g3FyHHqEghPRW/8SsFEzKnJIXw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3789,7 +3794,7 @@ renovate@43.265.4:
     "@sindresorhus/is" "8.1.0"
     "@yarnpkg/core" "4.9.0"
     "@yarnpkg/parsers" "3.0.3"
-    adm-zip "0.5.18"
+    adm-zip "0.6.0"
     ae-cvss-calculator "1.0.13"
     agentkeepalive "4.6.0"
     async-mutex "0.5.0"
@@ -3823,7 +3828,7 @@ renovate@43.265.4:
     got "14.6.6"
     graph-data-structure "4.5.0"
     handlebars "4.7.9"
-    ignore "7.0.5"
+    ignore "7.0.6"
     ini "6.0.0"
     json-dup-key-validator "1.0.3"
     json-stringify-pretty-compact "4.0.0"
