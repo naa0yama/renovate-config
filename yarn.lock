@@ -3349,7 +3349,7 @@ mv@~2:
     ncp "~2.0.0"
     rimraf "~2.4.0"
 
-nan@^2.14.0, nan@^2.27.0:
+nan@^2.14.0, nan@^2.28.0:
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.28.0.tgz#126717fd359d5a03d3edf7c44e6ce9b707fb57f5"
   integrity sha512-fTsDz99OTq2sVePhGdp4qQhggZFtKr64ZNVyVajRKtMOkJxYekplBh577PiJB12v/D3s2E5cGtOI45LWp6rnLQ==
@@ -3383,7 +3383,7 @@ node-fetch@^3.3.2:
     fetch-blob "^3.1.4"
     formdata-polyfill "^4.0.10"
 
-node-gyp@^13.0.0:
+node-gyp@^13.0.1:
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-13.0.1.tgz#ac7be7930de3ab3acaa8bd6b0c06d177d623f10e"
   integrity sha512-piOr0S10qy5THB+q5BdqkoOx65XL/tjTMUAit3vciPNp+snTOBnGunWH1Rz7XZUxf2T9uFrfT/Ty4+aC3yPeyg==
@@ -3691,14 +3691,14 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-re2@1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/re2/-/re2-1.26.0.tgz#3c96e00bcf538dd5e854ac42ed8cbc6f08c7d81a"
-  integrity sha512-QTEfFp0nu1eT/HKKZC+2BKM9Lb8uqprGkcHhro9r3giiKS+1SnNZBZ1m7C7Axi/VR1YGXiu3mp35UA53yHAuNw==
+re2@1.26.1:
+  version "1.26.1"
+  resolved "https://registry.yarnpkg.com/re2/-/re2-1.26.1.tgz#3a39db1d869f6cde8bada7831d1f5c1cc3e73c87"
+  integrity sha512-oi79a4h6EO3PAwNsDMWgeCcsRGQEUa52DIgOiFTZGDEZocEXG9h+oXy0qZqndo47huUeJuVWSoOJIEhOupqOcg==
   dependencies:
     install-artifact-from-github "^1.7.0"
-    nan "^2.27.0"
-    node-gyp "^13.0.0"
+    nan "^2.28.0"
+    node-gyp "^13.0.1"
 
 read-yaml-file@^2.1.0:
   version "2.1.0"
@@ -3761,10 +3761,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.285.3:
-  version "43.285.3"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.285.3.tgz#a7c6136f197b3d92cd2fb1b44e5d3b4b8869f355"
-  integrity sha512-n0Oy5PapMFHsaXgtwGKMKF51Ce506TNEjHeOp3bhUxIsz1DqV2dPL8ozgBo4fD1F+LtoxD4uU1U3yvFo7HknlQ==
+renovate@43.285.4:
+  version "43.285.4"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.285.4.tgz#974b731e3e68020447300861e7e212e0e4b01e6c"
+  integrity sha512-ETigQ6fuwfyEAsDMwqbgFun43skzUW8o5VN3usvtpcX9WqXtSEP/kT2RHPKOAyVw1PjgDIAZOORvCY6z46tvfQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3886,7 +3886,7 @@ renovate@43.285.3:
     zod "4.4.3"
   optionalDependencies:
     openpgp "6.3.1"
-    re2 "1.26.0"
+    re2 "1.26.1"
 
 require-in-the-middle@^8.0.0:
   version "8.0.1"
