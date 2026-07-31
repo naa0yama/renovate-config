@@ -3512,10 +3512,10 @@ p-locate@^6.0.0:
   dependencies:
     p-limit "^4.0.0"
 
-p-map@7.0.5:
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/p-map/-/p-map-7.0.5.tgz#e48bd09bfddf2b5f5de393aad109bd5a9041507a"
-  integrity sha512-e8vJF4XdVkzqqSHguEMz41mQO1wKwxKm5ENrUJQUu9kLDCtn83cxbyHZcszr4QC5zEA7WffRRC4gsTecC7J9oA==
+p-map@7.0.6, p-map@^7.0.2:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-7.0.6.tgz#5b6ee7f1a775faa48599c8d4420f6a39833cd387"
+  integrity sha512-I4Prw6ivkd6p8PiYR1tXASOAOBzIJwu0TB7fqaX0c/8c3QAehNYmX57EijyGGGBt3c/BIowGwV03RVBtXvHEVg==
 
 p-map@^2.0.0:
   version "2.1.0"
@@ -3526,11 +3526,6 @@ p-map@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-6.0.0.tgz#4d9c40d3171632f86c47601b709f4b4acd70fed4"
   integrity sha512-T8BatKGY+k5rU+Q/GTYgrEf2r4xRMevAN5mtXc2aPc4rS1j3s+vWTaO2Wag94neXuCAUAs8cxBL9EeB5EA6diw==
-
-p-map@^7.0.2:
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/p-map/-/p-map-7.0.6.tgz#5b6ee7f1a775faa48599c8d4420f6a39833cd387"
-  integrity sha512-I4Prw6ivkd6p8PiYR1tXASOAOBzIJwu0TB7fqaX0c/8c3QAehNYmX57EijyGGGBt3c/BIowGwV03RVBtXvHEVg==
 
 p-queue@9.3.1:
   version "9.3.1"
@@ -3766,10 +3761,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@43.285.1:
-  version "43.285.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.285.1.tgz#bb3d2f1ee196fa5423de54d4c2f74d1d4d36ea72"
-  integrity sha512-IPRzsK5Y/UGkxrO+RrvyKNdekC1/apFZR5eyBOjlOB/gvG2Jg36x8ugu2rrnP6sWZipoMEf+eaUz1oJ+3VMKUQ==
+renovate@43.285.3:
+  version "43.285.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-43.285.3.tgz#a7c6136f197b3d92cd2fb1b44e5d3b4b8869f355"
+  integrity sha512-n0Oy5PapMFHsaXgtwGKMKF51Ce506TNEjHeOp3bhUxIsz1DqV2dPL8ozgBo4fD1F+LtoxD4uU1U3yvFo7HknlQ==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1075.0"
     "@aws-sdk/client-ec2" "3.1075.0"
@@ -3861,7 +3856,7 @@ renovate@43.285.1:
     neotraverse "0.6.18"
     node-html-parser "7.1.0"
     p-all "5.0.1"
-    p-map "7.0.5"
+    p-map "7.0.6"
     p-queue "9.3.1"
     p-throttle "8.1.0"
     parse-link-header "2.0.0"
