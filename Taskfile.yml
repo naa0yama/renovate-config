@@ -62,7 +62,7 @@ tasks:
           (
             cd "${scratch}/repo"
             RENOVATE_CONFIG_FILE="${scratch}/config.json" GITHUB_COM_TOKEN="${token}" \
-              LOG_LEVEL=debug LOG_FORMAT=json \
+              LOG_LEVEL=trace LOG_FORMAT=json \
               "${root}/node_modules/.bin/renovate" --platform=local --dry-run=lookup --require-config=ignored \
               >"${scratch}/renovate.log"
           )
@@ -74,7 +74,7 @@ tasks:
                updates: [(.updates // [])[] | {newValue, newDigest, releaseTimestamp, branchName}]}'\'' "${scratch}/renovate.log"
           jq -c '\''select(.msg == "packageFiles with updates") | .config.nix[]?.deps[]?
             | {manager: "nix", depName, updates: [(.updates // [])[] | {updateType, branchName}]}'\'' "${scratch}/renovate.log" >&2
-          jq -cs '\''{branches: [.[] | select(.msg == "Branch is not pending, removing pending upgrades") | .branch]}'\'' "${scratch}/renovate.log" >&2
+          node scripts/accept.mjs branches "${scratch}/renovate.log" >&2
         '
 
   accept:compare:

@@ -11,6 +11,7 @@ const ZERO_SHA = "0".repeat(40);
 const usage = `usage:
   accept.mjs config <out-path>
   accept.mjs annotations <flake.nix>
+  accept.mjs branches <renovate-log>
   accept.mjs judge <scratch-dir> [--now <epoch>]`;
 
 const fail = (message) => {
@@ -69,6 +70,16 @@ const runAnnotations = (args) => {
 		(a) => `${a.depName}\t${a.packageName}\t${a.branch}\n`,
 	);
 	process.stdout.write(lines.join(""));
+};
+
+const runBranches = (args) => {
+	const [path] = args;
+	if (!path) fail(usage);
+	if (!existsSync(path)) fail(`accept:branches: no such file: ${path}`);
+	const branches = parseJsonLines(readFileSync(path, "utf8"))
+		.filter((entry) => entry.msg === "generateBranchConfig")
+		.flatMap((entry) => entry.config.map((upgrade) => upgrade.branchName));
+	process.stdout.write(`${JSON.stringify({ branches: [...new Set(branches)] })}\n`);
 };
 
 const excludedReasons = (page, now) => {
@@ -242,6 +253,11 @@ const runJudge = (args) => {
 };
 
 const [subcommand, ...rest] = process.argv.slice(2);
-const subcommands = { config: runConfig, annotations: runAnnotations, judge: runJudge };
+const subcommands = {
+	config: runConfig,
+	annotations: runAnnotations,
+	branches: runBranches,
+	judge: runJudge,
+};
 if (!Object.hasOwn(subcommands, subcommand)) fail(usage);
 subcommands[subcommand](rest);
