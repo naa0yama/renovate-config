@@ -108,11 +108,13 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 `extends/nix.json` は、`flake.nix` の input を commit に固定したまま、branch の先頭に上げる preset です。
 `default.json` の extends から読み込まれます。
 提案される rev は、branch の先頭になってから 7 日以上たったものだけです。
+この 7 日は `default.json` の `minimumReleaseAge` から来ます。
 
 #### 注記の書式
 
 更新したい input の `url` 行の直前に、次の形式のコメントを 1 行置きます。
 値は空白で区切り、各値は空白を含みません。
+key は次の表の順 (`datasource`、`depName`、`packageName`、`branch`、`version`) に固定です。
 
 | key           | 内容                                                                      |
 | :------------ | :------------------------------------------------------------------------ |
@@ -147,6 +149,10 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 位置が違うと regex に一致せず、その input は更新されません。
 たとえば `url` 行の前に別の属性 (`inputs.<name>.follows` など) の行が挟まる場合です。
 
+key の順を変えた注記も同じ理由で抽出されず、renovate はエラーを出しません。
+その input は黙って更新されなくなります。
+この状態は `task accept:compare` が `missing lookup row or plan line` の MISMATCH として拾います。
+
 #### 検査と受け入れの task
 
 どの task も `PATH` に `nix` が必要です。
@@ -175,8 +181,6 @@ task accept:compare
 ```shell
 ACCEPT_SOURCE=git@github.com:example-org/example-repo.git task accept:lookup
 ```
-
-`accept:compare` の branch 一覧は renovate の debug message `Branch is not pending` から作るため、`minimumReleaseAge` で全体が保留中の branch は一覧に出ません。
 
 ## extends
 
