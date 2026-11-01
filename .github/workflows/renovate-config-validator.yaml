@@ -2,15 +2,6 @@ name: Renovate Validate
 
 on:
   pull_request:
-    paths:
-      - ".github/workflows/**.ya?ml"
-      - "default.json"
-      - "extends/**.json"
-      - "package-lock.json"
-      - "package.json"
-      - "renovate.exsample.json"
-      - "renovate.json"
-      - "yarn.lock"
   workflow_dispatch:
 
 permissions: {}
@@ -25,6 +16,7 @@ jobs:
     permissions:
       contents: read # Required to checkout the repository
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       NODE_VERSION: 24
 
@@ -51,11 +43,20 @@ jobs:
 
       - name: Run renovate-config-validator
         run: |
-          set -eu
+          set -euo pipefail
 
-          for file in $(find . -maxdepth 2 -type f -name "*.json" -not -name package.json -not -name package-lock.json | sort); do
-            echo -e "Validate ${file}\n"
-            set -x
-            npx --yes --package renovate -- renovate-config-validator --strict "${file}"
-            set +x
-          done
+          while IFS= read -r file; do
+            echo "Validate ${file}"
+            node_modules/.bin/renovate-config-validator --strict "${file}"
+          done < <(find . -maxdepth 2 -type f -name "*.json" -not -name package.json -not -name package-lock.json | sort)
+
+      - name: Run node tests
+        run: node --test "tests/*.test.mjs"
+
+      - name: Install bats
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends bats
+
+      - name: Run bats tests
+        run: bats tests/
