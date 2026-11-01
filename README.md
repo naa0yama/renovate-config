@@ -153,7 +153,7 @@ key の順を変えた注記も同じ理由で抽出されず、renovate はエ�
 その input は黙って更新されなくなります。
 この状態は `task accept:compare` が `missing lookup row or plan line` の MISMATCH として拾います。
 ただし `accept:compare` が検査するのは、`ACCEPT_SOURCE` の repo (未指定なら既定の参照元 repo) の `flake.nix` だけです。
-この repo 自身の `flake.nix` や、他の repo の `flake.nix` は検査しません。
+この repo 自身の `flake.nix` は検査しません。
 
 #### 検査と受け入れの task
 
@@ -183,7 +183,7 @@ task accept:compare
 - token が取れないと、どちらも exit 非 0 で止まります
 - どちらも `check:all` には含まれません
 - `accept:compare` は `nix develop` で参照元の devkit を使います
-- 参照元は環境変数 `ACCEPT_SOURCE` に git の URL を渡すと変えられます。未指定のときは Taskfile に書かれた既定の repo を使います
+- 参照元は環境変数 `ACCEPT_SOURCE` に git の URL を渡すと変えられます。未指定のときは `scripts/accept-lookup.sh` と `scripts/accept-compare.sh` に書かれた既定の repo を使います
 
 ```shell
 ACCEPT_SOURCE=git@github.com:example-org/example-repo.git task accept:lookup
