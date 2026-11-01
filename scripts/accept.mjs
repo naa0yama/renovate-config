@@ -4,19 +4,37 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-const WINDOW_DAYS = 7;
-const WINDOW_SECONDS = WINDOW_DAYS * 86400;
+const defaultsPath = join(root, "default.json");
 const ZERO_SHA = "0".repeat(40);
 
 const usage = `usage:
-  accept.mjs config <out-path>
+  accept.mjs config <out-path> [--defaults <path>]
   accept.mjs annotations <flake.nix>
   accept.mjs branches <renovate-log>
-  accept.mjs judge <scratch-dir> [--now <epoch>]`;
+  accept.mjs judge <scratch-dir> [--defaults <path>] [--now <epoch>]`;
 
 const fail = (message) => {
 	process.stderr.write(`${message}\n`);
 	process.exit(1);
+};
+
+const optionValue = (args, name) => {
+	const at = args.indexOf(name);
+	return at === -1 ? undefined : args[at + 1];
+};
+
+const positionals = (args) =>
+	args.filter((a, i) => !a.startsWith("--") && !["--now", "--defaults"].includes(args[i - 1]));
+
+const readWindow = (args) => {
+	const path = optionValue(args, "--defaults") ?? defaultsPath;
+	if (!existsSync(path)) fail(`accept: no such defaults file: ${path}`);
+	const age = /"minimumReleaseAge"\s*:\s*"([^"]*)"/.exec(readFileSync(path, "utf8"))?.[1] ?? "";
+	const days = /^(\d+) days?$/.exec(age)?.[1];
+	if (days === undefined) {
+		fail(`accept: minimumReleaseAge "${age}" in ${path} must match ^\\d+ days?$`);
+	}
+	return { age, seconds: Number(days) * 86400 };
 };
 
 const parseAnnotations = (text) =>
@@ -48,15 +66,16 @@ const parseJsonLines = (text) =>
 		.map((line) => JSON.parse(line));
 
 const runConfig = (args) => {
-	const [outPath] = args;
+	const [outPath] = positionals(args);
 	if (!outPath) fail(usage);
+	const window = readWindow(args);
 	const preset = JSON.parse(readFileSync(join(root, "extends", "nix.json"), "utf8"));
 	delete preset.$schema;
 	writeFileSync(
 		outPath,
 		JSON.stringify({
 			...preset,
-			minimumReleaseAge: `${WINDOW_DAYS} days`,
+			minimumReleaseAge: window.age,
 			onboarding: false,
 		}),
 	);
@@ -82,10 +101,10 @@ const runBranches = (args) => {
 	process.stdout.write(`${JSON.stringify({ branches: [...new Set(branches)] })}\n`);
 };
 
-const excludedReasons = (page, now) => {
+const excludedReasons = (page, now, windowSeconds) => {
 	const timestamps = page.map((entry) => epoch(entry.timestamp));
 	const reasons = [];
-	if (page.length === 100 && Math.min(...timestamps) >= now - WINDOW_SECONDS) {
+	if (page.length === 100 && Math.min(...timestamps) >= now - windowSeconds) {
 		reasons.push("bad-1");
 	}
 	const counts = new Map();
@@ -123,9 +142,9 @@ const keyValues = (line) => {
 
 const compareDep = (ctx, annotation) => {
 	const { depName: dep, version } = annotation;
-	const { lookupRows, planLines, branches, now } = ctx;
+	const { lookupRows, planLines, branches, now, window } = ctx;
 	const page = JSON.parse(readFileSync(join(ctx.scratch, `page-${dep}.json`), "utf8"));
-	const excluded = excludedReasons(page, now);
+	const excluded = excludedReasons(page, now, window.seconds);
 	const row = lookupRows.find((r) => r.depName === dep);
 	const plan = planLines.find((line) => line.startsWith(`input=${dep} `));
 	if (row === undefined || plan === undefined) {
@@ -182,9 +201,9 @@ const compareDep = (ctx, annotation) => {
 		} else if (newValue !== planValue || newDigest !== planRev) {
 			verdict = "MISMATCH";
 			detail = `lookup ${newValue} ${newDigest} vs pin ${planValue} ${planRev}`;
-		} else if (releaseEpoch > now - WINDOW_SECONDS) {
+		} else if (releaseEpoch > now - window.seconds) {
 			verdict = "MISMATCH";
-			detail = `releaseTimestamp ${releaseTs} is within ${WINDOW_DAYS} days of the run`;
+			detail = `releaseTimestamp ${releaseTs} is within ${window.age} of the run`;
 		} else if (branchCount !== 1) {
 			verdict = "MISMATCH";
 			detail = `${branchCount} version branch(es) for ${dep} (${updateBranch})`;
@@ -200,11 +219,12 @@ const compareDep = (ctx, annotation) => {
 };
 
 const runJudge = (args) => {
-	const scratch = args.find((a, i) => !a.startsWith("--") && args[i - 1] !== "--now");
+	const [scratch] = positionals(args);
 	if (!scratch) fail(usage);
 	const nowIndex = args.indexOf("--now");
 	const now = nowIndex === -1 ? Math.floor(Date.now() / 1000) : Number(args[nowIndex + 1]);
 	if (!Number.isInteger(now)) fail("accept:judge: --now needs an integer epoch");
+	const window = readWindow(args);
 
 	const inputs = ["lookup.out", "lookup.err", "plan.txt", join("src", "flake.nix")];
 	const missing = inputs.filter((name) => !existsSync(join(scratch, name)));
@@ -226,7 +246,7 @@ const runJudge = (args) => {
 	const planLines = readFileSync(join(scratch, "plan.txt"), "utf8").split("\n");
 	process.stderr.write(`accept:compare: branches ${JSON.stringify(branches)}\n`);
 
-	const ctx = { scratch, lookupRows, planLines, branches, now };
+	const ctx = { scratch, lookupRows, planLines, branches, now, window };
 	const results = annotations.map((annotation) => compareDep(ctx, annotation));
 	const digestBranches = branches.filter((b) => b.endsWith("-digest"));
 	const branchesRow =
