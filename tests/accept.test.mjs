@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { cpSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
+import { cpSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { describe, it } from "node:test";
@@ -211,6 +211,63 @@ describe("accept-annotations", () => {
 			.map((row) => row.slice("accept:compare: ".length).split("|")[0])
 			.filter((dep) => dep !== "(branches)");
 		assert.deepEqual(new Set(annotated), new Set(judged));
+	});
+});
+
+const branchLog = (name) => join(fixtures, "branches", name, "renovate.jsonl");
+
+const branchesOf = (name) => {
+	const result = run(["branches", branchLog(name)]);
+	return { ...result, branches: JSON.parse(result.stdout).branches };
+};
+
+describe("accept-branches", () => {
+	it("includes_the_all_pending_digest_branch_and_the_mixed_branch_when_log_has_other_sources", () => {
+		assert.deepEqual(branchesOf("all-pending").branches.sort(), [
+			"renovate/up-mixed-main",
+			"renovate/up-ok-digest",
+		]);
+	});
+
+	it("excludes_the_branch_when_its_update_is_disabled_by_a_rule", () => {
+		assert.deepEqual(branchesOf("disabled-update").branches, ["renovate/up-off-main"]);
+	});
+
+	it("lists_the_branch_once_when_it_appears_in_two_logs", () => {
+		assert.deepEqual(branchesOf("duplicate").branches, ["renovate/twice-main"]);
+	});
+
+	it("prints_one_json_line_to_stdout_when_branches_runs", () => {
+		const { stdout } = run(["branches", branchLog("duplicate")]);
+		assert.equal(lines(stdout).length, 1);
+		assert.ok(stdout.endsWith("\n"));
+	});
+
+	it("names_the_path_on_stderr_and_prints_nothing_when_the_log_is_absent", () => {
+		const missing = join(fixtures, "branches", "absent", "renovate.jsonl");
+		const result = run(["branches", missing]);
+		assert.notEqual(result.status, 0);
+		assert.ok(result.stderr.includes(missing));
+		assert.equal(result.stdout, "");
+	});
+
+	it("leaves_the_fixture_unchanged_when_branches_runs", () => {
+		const dir = join(fixtures, "branches");
+		const before = snapshot(dir);
+		run(["branches", branchLog("all-pending")]);
+		assert.deepEqual(snapshot(dir), before);
+	});
+
+	it("turns_the_judge_branches_row_mismatch_when_branches_output_has_a_digest_branch", () => {
+		const dir = mkdtempSync(join(tmpdir(), "accept-test-"));
+		try {
+			cpSync(join(fixtures, "mixed"), dir, { recursive: true });
+			writeFileSync(join(dir, "lookup.err"), run(["branches", branchLog("all-pending")]).stdout);
+			const row = rowFor(run(["judge", dir, "--now", String(NOW)]).stdout, "(branches)");
+			assert.ok(row?.endsWith("|MISMATCH"));
+		} finally {
+			rmSync(dir, { recursive: true, force: true });
+		}
 	});
 });
 
