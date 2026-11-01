@@ -38,6 +38,8 @@ setup() {
 @test "accept-compare skips judge when lookup fails" {
   export STUB_TASK_EXIT=1
   run --separate-stderr bash scripts/accept-compare.sh
+  [ "${status}" -eq 1 ]
+  grep -q '^task accept:lookup' "${STUB_DIR}/calls.log"
   ! grep -q '^node scripts/accept.mjs judge ' "${STUB_DIR}/calls.log"
 }
 
@@ -53,6 +55,8 @@ setup() {
 @test "accept-compare skips judge when pin fails" {
   export STUB_NIX_PIN_EXIT=1
   run --separate-stderr bash scripts/accept-compare.sh
+  [ "${status}" -eq 1 ]
+  grep -q '^task accept:lookup' "${STUB_DIR}/calls.log"
   ! grep -q '^node scripts/accept.mjs judge ' "${STUB_DIR}/calls.log"
 }
 

@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-# stub for `yarn`: records the call and succeeds.
 . "$(dirname "$0")/_record"

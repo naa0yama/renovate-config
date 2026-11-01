@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# stub for `gh`: `gh auth token` prints $STUB_GH_TOKEN (empty means logged out).
 . "$(dirname "$0")/_record"
 printf '%s' "${STUB_GH_TOKEN:-}"

@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# stub for `curl`: records argv and environment, and appends stdin to $STUB_DIR/curl.stdin.
 . "$(dirname "$0")/_record"
 cat >>"${STUB_DIR}/curl.stdin"

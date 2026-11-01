@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# stub for `nix develop`: the `devkit-flake-pin` call prints $STUB_NIX_PIN_OUTPUT and
-# exits with $STUB_NIX_PIN_EXIT; every other call succeeds.
 . "$(dirname "$0")/_record"
 case "$*" in
   *devkit-flake-pin*)
