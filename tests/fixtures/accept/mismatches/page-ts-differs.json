@@ -1,0 +1,10 @@
+[
+	{
+		"id": 1,
+		"before": "0000000000000000000000000000000000000000",
+		"after": "cccccccccccccccccccccccccccccccccccccccc",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-04-02T00:00:00Z",
+		"activity_type": "push"
+	}
+]
