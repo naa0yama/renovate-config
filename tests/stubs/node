@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+case "${2:-}" in
+  branches)
+    cp "$3" "${STUB_DIR}/branches-input.log"
+    printf '%s\n' "${STUB_NODE_BRANCHES:-}"
+    ;;
+  annotations)
+    printf '%s' "${STUB_NODE_ANNOTATIONS:-}"
+    ;;
+  judge)
+    exit "${STUB_NODE_JUDGE_EXIT:-0}"
+    ;;
+esac

@@ -1,0 +1,4 @@
+{"name":"renovate","level":20,"msg":"packageFiles with updates","config":{"nix":[{"deps":[{"depName":"up-ok","updates":[{"updateType":"digest","branchName":"renovate/up-ok-digest"}]}]}]}}
+{"name":"renovate","level":20,"branch":"renovate/up-mixed-main","msg":"Branch is not pending, removing pending upgrades"}
+{"name":"renovate","level":10,"msg":"generateBranchConfig","config":[{"branchName":"renovate/up-mixed-main","depName":"up-mixed","updateType":"major"}]}
+{"name":"renovate","level":10,"msg":"generateBranchConfig","config":[{"branchName":"renovate/up-ok-digest","depName":"up-ok","updateType":"digest","pendingChecks":["minimumReleaseAge"]}]}

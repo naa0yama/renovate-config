@@ -1,0 +1,2 @@
+{"name":"renovate","level":20,"msg":"packageFiles with updates","config":{"nix":[{"deps":[{"depName":"up-off","updates":[{"updateType":"digest","enabled":false,"branchName":"renovate/up-off-digest"},{"updateType":"major","branchName":"renovate/up-off-main"}]}]}]}}
+{"name":"renovate","level":10,"msg":"generateBranchConfig","config":[{"branchName":"renovate/up-off-main","depName":"up-off","updateType":"major"}]}

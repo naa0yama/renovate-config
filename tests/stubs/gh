@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+printf '%s' "${STUB_GH_TOKEN:-}"

@@ -1,0 +1,2 @@
+{"name":"renovate","level":10,"msg":"generateBranchConfig","config":[{"branchName":"renovate/twice-main","depName":"twice","updateType":"major"}]}
+{"name":"renovate","level":10,"msg":"generateBranchConfig","config":[{"branchName":"renovate/twice-main","depName":"twice","updateType":"major"},{"branchName":"renovate/twice-main","depName":"twice-extra","updateType":"major"}]}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+printf '%s\n' "${STUB_TASK_STDERR:-}" >&2
+exit "${STUB_TASK_EXIT:-0}"
