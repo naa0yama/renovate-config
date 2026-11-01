@@ -1,0 +1,58 @@
+[
+	{
+		"id": 3001,
+		"before": "1111111111111111111111111111111111111111",
+		"after": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-03-05T09:15:30+09:00",
+		"activity_type": "push"
+	},
+	{
+		"id": 3002,
+		"before": "1111111111111111111111111111111111111111",
+		"after": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-03-06T10:00:00Z",
+		"activity_type": "force_push"
+	},
+	{
+		"id": 3003,
+		"before": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+		"after": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-04-10T23:59:59Z",
+		"activity_type": "push"
+	},
+	{
+		"id": 3004,
+		"before": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+		"after": "0000000000000000000000000000000000000000",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-05-01T00:00:00Z",
+		"activity_type": "branch_deletion"
+	},
+	{
+		"id": 3005,
+		"before": "0000000000000000000000000000000000000000",
+		"after": "cccccccccccccccccccccccccccccccccccccccc",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-06-20T08:07:06Z",
+		"activity_type": "branch_creation"
+	},
+	{
+		"id": 3006,
+		"before": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+		"after": "cccccccccccccccccccccccccccccccccccccccc",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-06-21T08:07:06Z",
+		"activity_type": "push"
+	},
+	{
+		"id": 3007,
+		"before": "cccccccccccccccccccccccccccccccccccccccc",
+		"after": "cccccccccccccccccccccccccccccccccccccccc",
+		"ref": "refs/heads/main",
+		"timestamp": "2026-06-19T08:07:06Z",
+		"activity_type": "push"
+	}
+]
