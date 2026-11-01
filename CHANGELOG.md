@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-01 nix preset の受け入れ検査の整備
+
+### Changed
+
+- `task accept:compare` の branch 一覧を、renovate が実際に生成する branch から作るようにした。更新がすべて保留中の branch も一覧に入り、packageRules で無効にした branch は入らない。このため `task accept:lookup` は renovate を trace ログレベルで走らせる。
+- 受け入れ検査の待ち日数を、固定の 7 日ではなく `default.json` の `minimumReleaseAge` から読むようにした。値が `N days` の形でないときは、その値を示すメッセージを出して止まる。`default.json` の値は変えていない。
+- `task accept:lookup` と `task accept:compare` の処理を `scripts/` の shell と `scripts/accept.mjs` に移した。判定の規則と出力は変わらない。
+- `task check:all` (`check:staged`、`check:merge` も同じ) が `node --test` の後に `tests/` の bats の検査も走らせる。`nix shell` に `bats` と `jq` が加わる。
+- README の nix preset の節に、注記の key の固定順 (`datasource`、`depName`、`packageName`、`branch`、`version`) を書いた。順を変えた注記は抽出されず renovate もエラーを出さないこと、`task accept:compare` がそれを MISMATCH として報告すること、7 日の待ちが `default.json` の `minimumReleaseAge` から来ることも書いた。
+
 ## 2026-11-01 nix preset の追加
 
 ### Added
