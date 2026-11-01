@@ -44,7 +44,7 @@ grep '^accept:lookup: source commit' "${scratch}/lookup.err" >&2 || true
 grep '^input=' "${scratch}/pin.log" >"${scratch}/plan.txt" || true
 cat "${scratch}/plan.txt" >&2
 
-grep '^{' "${scratch}/lookup.err" | jq -c 'select(.manager == "nix")' >&2
+{ grep '^{' "${scratch}/lookup.err" || true; } | jq -c 'select(.manager == "nix")' >&2
 
 while IFS=$'\t' read -r dep package branch; do
   printf 'header = "Authorization: Bearer %s"\n' "${token}" \

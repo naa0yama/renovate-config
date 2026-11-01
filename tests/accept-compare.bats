@@ -60,6 +60,13 @@ setup() {
   ! grep -q '^node scripts/accept.mjs judge ' "${STUB_DIR}/calls.log"
 }
 
+@test "accept-compare calls judge when lookup stderr has no JSON line" {
+  export STUB_TASK_STDERR="accept:lookup: source commit 0123456789abcdef0123456789abcdef01234567"
+  run --separate-stderr bash scripts/accept-compare.sh
+  [ "${status}" -eq 0 ]
+  grep -q '^node scripts/accept.mjs judge ' "${STUB_DIR}/calls.log"
+}
+
 @test "accept-compare prints the source commit on stderr" {
   run --separate-stderr bash scripts/accept-compare.sh
   [[ "${stderr}" == *"accept:compare: source commit ${STUB_GIT_SHA}"* ]]
@@ -122,8 +129,8 @@ setup() {
   [ "${status}" -eq 0 ]
   [ -s "${STUB_DIR}/git.env" ]
   [ -s "${STUB_DIR}/nix.env" ]
-  ! grep -q '^GIT_' "${STUB_DIR}/git.env"
-  ! grep -q '^GIT_' "${STUB_DIR}/nix.env"
+  run ! grep -q '^GIT_' "${STUB_DIR}/git.env"
+  run ! grep -q '^GIT_' "${STUB_DIR}/nix.env"
 }
 
 @test "accept-compare leaves no scratch dir after a successful run" {

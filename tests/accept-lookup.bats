@@ -73,7 +73,7 @@ setup() {
   GIT_DIR=/nonexistent run --separate-stderr bash scripts/accept-lookup.sh
   [ "${status}" -eq 0 ]
   [ -s "${STUB_DIR}/git.env" ]
-  ! grep -q '^GIT_' "${STUB_DIR}/git.env"
+  run ! grep -q '^GIT_' "${STUB_DIR}/git.env"
 }
 
 @test "accept-lookup leaves no scratch dir after a successful run" {
