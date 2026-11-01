@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# stub for `renovate`: prints the contents of $STUB_RENOVATE_LOG and exits with $STUB_RENOVATE_EXIT.
+. "$(dirname "$0")/_record"
+if [ -n "${STUB_RENOVATE_LOG:-}" ]; then
+  cat "${STUB_RENOVATE_LOG}"
+fi
+exit "${STUB_RENOVATE_EXIT:-0}"

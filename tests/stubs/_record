@@ -1,0 +1,5 @@
+# Sourced by the stubs: appends "<name> <argv>" to $STUB_DIR/calls.log and the
+# environment to $STUB_DIR/<name>.env so tests can assert on both.
+stub_name="$(basename "$0")"
+printf '%s %s\n' "${stub_name}" "$*" >>"${STUB_DIR}/calls.log"
+env >>"${STUB_DIR}/${stub_name}.env"

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# stub for `node scripts/accept.mjs <subcommand> ...`:
+#   branches    copies its input file to $STUB_DIR/branches-input.log and prints $STUB_NODE_BRANCHES
+#   annotations prints $STUB_NODE_ANNOTATIONS (tab-separated dep, package, branch lines)
+#   judge       exits with $STUB_NODE_JUDGE_EXIT
+. "$(dirname "$0")/_record"
+case "${2:-}" in
+  branches)
+    cp "$3" "${STUB_DIR}/branches-input.log"
+    printf '%s\n' "${STUB_NODE_BRANCHES:-}"
+    ;;
+  annotations)
+    printf '%s' "${STUB_NODE_ANNOTATIONS:-}"
+    ;;
+  judge)
+    exit "${STUB_NODE_JUDGE_EXIT:-0}"
+    ;;
+esac

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# stub for `task accept:lookup`: prints $STUB_TASK_STDERR on stderr and exits with $STUB_TASK_EXIT.
+. "$(dirname "$0")/_record"
+printf '%s\n' "${STUB_TASK_STDERR:-}" >&2
+exit "${STUB_TASK_EXIT:-0}"
