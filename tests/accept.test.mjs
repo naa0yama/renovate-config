@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { cpSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { describe, it } from "node:test";
@@ -40,6 +40,17 @@ const snapshot = (dir) => {
 	};
 	walk(dir);
 	return entries;
+};
+
+const withDefaults = (age, body) => {
+	const dir = mkdtempSync(join(tmpdir(), "accept-test-"));
+	try {
+		const defaults = join(dir, "default.json");
+		writeFileSync(defaults, `{\n\t// pull request\n\t"minimumReleaseAge": "${age}"\n}\n`);
+		return body(defaults, dir);
+	} finally {
+		rmSync(dir, { recursive: true, force: true });
+	}
 };
 
 const gitStatus = () =>
@@ -299,5 +310,72 @@ describe("accept-config", () => {
 		} finally {
 			rmSync(dir, { recursive: true, force: true });
 		}
+	});
+});
+
+describe("accept-window", () => {
+	const DAY = 86400;
+	const SKIP_RECENT_OLDEST = Date.parse("2026-05-27T20:00:00Z") / 1000;
+
+	const judgeWithWindow = (fixture, age, now) =>
+		withDefaults(age, (defaults) =>
+			run(["judge", join(fixtures, fixture), "--defaults", defaults, "--now", String(now)]),
+		);
+
+	it("marks_a_dep_ok_when_its_release_is_older_than_the_injected_window", () => {
+		const { stdout } = judgeWithWindow("mismatches", "3 days", NOW + 2 * DAY);
+		assert.ok(rowFor(stdout, "wait")?.endsWith("|ok"));
+	});
+
+	it("marks_a_dep_mismatch_naming_the_window_when_its_release_is_inside_the_injected_window", () => {
+		const { stdout } = judgeWithWindow("mismatches", "3 days", NOW);
+		const row = rowFor(stdout, "wait");
+		assert.ok(row?.endsWith("|MISMATCH"));
+		assert.ok(row.includes("within 3 days of the run"));
+	});
+
+	it("keeps_a_bad_1_dep_in_when_the_oldest_record_is_older_than_the_injected_window", () => {
+		const { stdout } = judgeWithWindow("mismatches", "3 days", SKIP_RECENT_OLDEST + 5 * DAY);
+		assert.ok(rowFor(stdout, "skip-recent")?.startsWith("accept:compare: skip-recent|-|"));
+	});
+
+	it("writes_the_injected_window_into_the_config_when_defaults_is_given", () => {
+		withDefaults("3 days", (defaults, dir) => {
+			const out = join(dir, "config.json");
+			const result = run(["config", out, "--defaults", defaults]);
+			assert.equal(result.status, 0);
+			assert.equal(JSON.parse(readFileSync(out, "utf8")).minimumReleaseAge, "3 days");
+		});
+	});
+
+	it("fails_naming_value_and_form_without_writing_when_config_window_is_not_in_days", () => {
+		withDefaults("1 week", (defaults, dir) => {
+			const out = join(dir, "config.json");
+			const result = run(["config", out, "--defaults", defaults]);
+			assert.notEqual(result.status, 0);
+			assert.ok(result.stderr.includes("1 week"));
+			assert.ok(result.stderr.includes("^\\d+ days?$"));
+			assert.equal(result.stdout, "");
+			assert.equal(existsSync(out), false);
+		});
+	});
+
+	it("fails_with_the_config_message_and_no_table_when_judge_window_is_not_in_days", () => {
+		withDefaults("1 week", (defaults, dir) => {
+			const config = run(["config", join(dir, "config.json"), "--defaults", defaults]);
+			const result = run(["judge", join(fixtures, "all-match"), "--defaults", defaults, "--now", String(NOW)]);
+			assert.notEqual(result.status, 0);
+			assert.equal(result.stderr, config.stderr);
+			assert.equal(result.stdout, "");
+		});
+	});
+
+	it("leaves_the_defaults_file_unchanged_when_config_and_judge_read_it", () => {
+		withDefaults("3 days", (defaults, dir) => {
+			const before = readFileSync(defaults, "utf8");
+			run(["config", join(dir, "config.json"), "--defaults", defaults]);
+			run(["judge", join(fixtures, "all-match"), "--defaults", defaults, "--now", String(NOW)]);
+			assert.equal(readFileSync(defaults, "utf8"), before);
+		});
 	});
 });
