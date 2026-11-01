@@ -58,7 +58,7 @@ describe("nix preset rules", () => {
 });
 
 describe("default preset extends", () => {
-	it("extends_lists_nix_between_mise_and_npm", () => {
+	it("extends_lists_nix_between_mise_and_npm_when_default_preset_loaded", () => {
 		const text = readFileSync(join(root, "default.json"), "utf8");
 		const extendsBlock = text.slice(text.indexOf('"extends"'), text.indexOf("]"));
 		const entries = [...extendsBlock.matchAll(/"(github>[^"]+)"/g)].map((m) => m[1]);
