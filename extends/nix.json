@@ -13,5 +13,34 @@
 			"registryUrlTemplate": "https://api.github.com/repos/{{packageName}}/activity?ref=refs/heads/{{branch}}&per_page=100",
 			"versioningTemplate": "loose"
 		}
+	],
+	"nix": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchDatasources": [
+				"custom.github-branch-tip"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"enabled": false
+		},
+		{
+			"matchDatasources": [
+				"custom.github-branch-tip"
+			],
+			"separateMajorMinor": false
+		},
+		{
+			"matchManagers": [
+				"nix"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"enabled": false
+		}
 	]
 }
