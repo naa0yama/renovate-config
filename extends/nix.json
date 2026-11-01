@@ -14,6 +14,16 @@
 			"versioningTemplate": "loose"
 		}
 	],
+	"customDatasources": {
+		"github-branch-tip": {
+			"defaultRegistryUrlTemplate": "https://api.github.com/repos/{{packageName}}/activity?per_page=100",
+			"transformTemplates": [
+				"[$filter($, function($r) { $r.after != \"0000000000000000000000000000000000000000\" })]",
+				"$ { after: $min(timestamp.$toMillis()) }",
+				"{ \"releases\": [$each($, function($millis, $after) { { \"version\": $fromMillis($millis, \"[Y0001].[M01].[D01].[H01].[m01].[s01]\", \"+0000\"), \"digest\": $after, \"releaseTimestamp\": $fromMillis($millis) } })] }"
+			]
+		}
+	},
 	"nix": {
 		"enabled": true
 	},
