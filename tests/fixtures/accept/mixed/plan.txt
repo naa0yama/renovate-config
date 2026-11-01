@@ -1,0 +1,4 @@
+input=up-ok rev=bbbbbbbbbbbb tip_at=2026-05-01T00:00:00Z result=ok
+input=still-ok rev=cccccccccccc tip_at=2026-04-01T00:00:00Z result=ok
+input=skip-recent rev=ffffffffffff tip_at=2026-05-31T00:00:00Z result=ok
+input=skip-dup rev=222222222222 tip_at=2026-05-01T00:00:00Z result=ok
