@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+if [ -n "${STUB_RENOVATE_LOG:-}" ]; then
+  cat "${STUB_RENOVATE_LOG}"
+fi
+exit "${STUB_RENOVATE_EXIT:-0}"

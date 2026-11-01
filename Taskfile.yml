@@ -23,13 +23,14 @@ tasks:
         msg: "nix not found in PATH; install nix to run the checks"
     cmds:
       - |
-        nix shell nixpkgs#nodejs_24 nixpkgs#yarn -c bash -euc '
+        nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#bats nixpkgs#jq -c bash -euc '
           yarn install --frozen-lockfile --non-interactive
           while IFS= read -r file; do
             echo "Validate ${file}"
             node_modules/.bin/renovate-config-validator --strict "${file}"
           done < <(find . -maxdepth 2 -type f -name "*.json" -not -name package.json -not -name package-lock.json | sort)
           node --test "tests/*.test.mjs"
+          bats tests/
         '
 
   accept:lookup:
@@ -38,44 +39,7 @@ tasks:
       - sh: command -v nix >/dev/null 2>&1
         msg: "nix not found in PATH; install nix to run the lookup"
     cmds:
-      - |
-        nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#jq -c bash -euc '
-          for name in $(compgen -e | grep "^GIT_" || true); do unset "${name}"; done
-
-          token="$(gh auth token 2>/dev/null || true)"
-          if [ -z "${token}" ]; then
-            echo "accept:lookup: no GitHub token from '\''gh auth token'\''; run '\''gh auth login'\''" >&2
-            exit 1
-          fi
-
-          root="$(pwd)"
-          scratch="$(mktemp -d "${TMPDIR:-/tmp}/accept-lookup.XXXXXX")"
-          trap '\''rm -rf "${scratch}"'\'' EXIT
-          source="${ACCEPT_SOURCE:-git@github.com:naa0yama-org/boilerplate-rust.git}"
-
-          yarn install --frozen-lockfile --non-interactive >&2
-          git clone --quiet --depth 1 "${source}" "${scratch}/repo" >&2
-          echo "accept:lookup: source commit $(git -C "${scratch}/repo" rev-parse HEAD)" >&2
-
-          node scripts/accept.mjs config "${scratch}/config.json"
-
-          (
-            cd "${scratch}/repo"
-            RENOVATE_CONFIG_FILE="${scratch}/config.json" GITHUB_COM_TOKEN="${token}" \
-              LOG_LEVEL=trace LOG_FORMAT=json \
-              "${root}/node_modules/.bin/renovate" --platform=local --dry-run=lookup --require-config=ignored \
-              >"${scratch}/renovate.log"
-          )
-
-          jq -c '\''select(.msg == "getReleases statistics summary") | .datasources[].registryUrls | to_entries[]
-            | {request: .key, count: .value.stats.count}'\'' "${scratch}/renovate.log" >&2
-          jq -c '\''select(.msg == "packageFiles with updates") | .config.regex[].deps[]
-            | {depName, currentValue, currentDigest, currentVersionTimestamp,
-               updates: [(.updates // [])[] | {newValue, newDigest, releaseTimestamp, branchName}]}'\'' "${scratch}/renovate.log"
-          jq -c '\''select(.msg == "packageFiles with updates") | .config.nix[]?.deps[]?
-            | {manager: "nix", depName, updates: [(.updates // [])[] | {updateType, branchName}]}'\'' "${scratch}/renovate.log" >&2
-          node scripts/accept.mjs branches "${scratch}/renovate.log" >&2
-        '
+      - nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#jq -c bash -c 'PATH="${PWD}/node_modules/.bin:${PATH}" exec scripts/accept-lookup.sh'
 
   accept:compare:
     desc: Compare the nix preset's lookup against devkit-flake-pin update on a source repo clone (needs network, ssh, a gh token and nix develop; not part of check:all)
@@ -85,58 +49,4 @@ tasks:
     env:
       TASK_BIN: "{{.TASK_EXE}}"
     cmds:
-      - |
-        nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#jq -c bash -euc '
-          for name in $(compgen -e | grep "^GIT_" || true); do unset "${name}"; done
-
-          token="$(gh auth token 2>/dev/null || true)"
-          if [ -z "${token}" ]; then
-            echo "accept:compare: no GitHub token from '\''gh auth token'\''; run '\''gh auth login'\''" >&2
-            exit 1
-          fi
-
-          scratch="$(mktemp -d "${TMPDIR:-/tmp}/accept-compare.XXXXXX")"
-          trap '\''rm -rf "${scratch}"'\'' EXIT
-          source="${ACCEPT_SOURCE:-git@github.com:naa0yama-org/boilerplate-rust.git}"
-
-          git clone --quiet --depth 1 "${source}" "${scratch}/src" >&2
-          source_sha="$(git -C "${scratch}/src" rev-parse HEAD)"
-          echo "accept:compare: source commit ${source_sha}" >&2
-          cp -a "${scratch}/src" "${scratch}/pin"
-
-          nix develop "${scratch}/pin" -c true >&2
-
-          now="$(date -u +%s)"
-          echo "accept:compare: run at $(date -u -d "@${now}" +%Y-%m-%dT%H:%M:%SZ)" >&2
-
-          ACCEPT_SOURCE="file://${scratch}/src" "${TASK_BIN}" accept:lookup \
-            >"${scratch}/lookup.out" 2>"${scratch}/lookup.err" &
-          lookup_pid=$!
-          (cd "${scratch}/pin" && nix develop . -c devkit-flake-pin update) >"${scratch}/pin.log" 2>&1 &
-          pin_pid=$!
-          lookup_rc=0
-          pin_rc=0
-          wait "${lookup_pid}" || lookup_rc=$?
-          wait "${pin_pid}" || pin_rc=$?
-          if [ "${lookup_rc}" -ne 0 ] || [ "${pin_rc}" -ne 0 ]; then
-            echo "accept:compare: lookup exit ${lookup_rc}, devkit-flake-pin exit ${pin_rc}" >&2
-            echo "--- lookup stderr" >&2
-            cat "${scratch}/lookup.err" >&2
-            echo "--- devkit-flake-pin output" >&2
-            cat "${scratch}/pin.log" >&2
-            exit 1
-          fi
-          grep '\''^accept:lookup: source commit'\'' "${scratch}/lookup.err" >&2 || true
-          grep '\''^input='\'' "${scratch}/pin.log" >"${scratch}/plan.txt" || true
-          cat "${scratch}/plan.txt" >&2
-
-          grep '\''^{'\'' "${scratch}/lookup.err" | jq -c '\''select(.manager == "nix")'\'' >&2
-
-          while IFS=$'\''\t'\'' read -r dep package branch; do
-            printf '\''header = "Authorization: Bearer %s"\n'\'' "${token}" \
-              | curl -sS -f --max-time 30 -K - -H '\''Accept: application/vnd.github+json'\'' \
-                -o "${scratch}/page-${dep}.json" "https://api.github.com/repos/${package}/activity?ref=refs/heads/${branch}&per_page=100"
-          done < <(node scripts/accept.mjs annotations "${scratch}/src/flake.nix")
-
-          node scripts/accept.mjs judge "${scratch}" --now "${now}"
-        '
+      - nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#jq -c bash -c 'PATH="${PWD}/node_modules/.bin:${PATH}" exec scripts/accept-compare.sh'

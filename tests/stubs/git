@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+case "$*" in
+  clone*) mkdir -p "${*: -1}" ;;
+  *"rev-parse HEAD") printf '%s\n' "${STUB_GIT_SHA:-0123456789abcdef0123456789abcdef01234567}" ;;
+esac
