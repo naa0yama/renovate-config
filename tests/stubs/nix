@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")/_record"
+case "$*" in
+  *devkit-flake-pin*)
+    printf '%s\n' "${STUB_NIX_PIN_OUTPUT:-}"
+    exit "${STUB_NIX_PIN_EXIT:-0}"
+    ;;
+esac
