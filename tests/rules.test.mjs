@@ -41,18 +41,18 @@ describe("nix preset rules", () => {
 		assert.equal(rules.length, 1);
 	});
 
-	it("nix_manager_is_enabled", () => {
+	it("nix_manager_is_enabled_when_preset_loaded", () => {
 		assert.equal(preset.nix?.enabled, true);
 	});
 
-	it("package_rules_have_no_lock_file_maintenance_update_type", () => {
+	it("package_rules_have_no_lock_file_maintenance_update_type_when_preset_loaded", () => {
 		const rules = packageRules.filter((rule) =>
 			(rule.matchUpdateTypes ?? []).includes("lockFileMaintenance"),
 		);
 		assert.equal(rules.length, 0);
 	});
 
-	it("preset_has_no_lock_file_maintenance_key", () => {
+	it("preset_has_no_lock_file_maintenance_key_when_preset_loaded", () => {
 		assert.equal("lockFileMaintenance" in preset, false);
 	});
 });
