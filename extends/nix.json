@@ -1,0 +1,17 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"description": "flake.nix inputs pinned to a commit, annotated with a renovate comment on the line above the url",
+			"customType": "regex",
+			"managerFilePatterns": [
+				"/(^|/)flake\\.nix$/"
+			],
+			"matchStrings": [
+				"#[ \\t]*renovate:[ \\t]+datasource=(?<datasource>\\S+)[ \\t]+depName=(?<depName>\\S+)[ \\t]+packageName=(?<packageName>\\S+)[ \\t]+branch=(?<branch>\\S+)[ \\t]+version=(?<currentValue>\\S+)[ \\t]*\\n[ \\t]*(?:[\\w-]+\\.)?url[ \\t]*=[ \\t]*\"github:[^/\"\\s]+/[^/\"\\s]+/(?<currentDigest>[0-9a-f]{40})\";"
+			],
+			"registryUrlTemplate": "https://api.github.com/repos/{{packageName}}/activity?ref=refs/heads/{{branch}}&per_page=100",
+			"versioningTemplate": "loose"
+		}
+	]
+}
