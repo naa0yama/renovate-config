@@ -1,0 +1,56 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"description": "flake.nix inputs pinned to a commit, annotated with a renovate comment on the line above the url",
+			"customType": "regex",
+			"managerFilePatterns": [
+				"/(^|/)flake\\.nix$/"
+			],
+			"matchStrings": [
+				"#[ \\t]*renovate:[ \\t]+datasource=(?<datasource>\\S+)[ \\t]+depName=(?<depName>\\S+)[ \\t]+packageName=(?<packageName>\\S+)[ \\t]+branch=(?<branch>\\S+)[ \\t]+version=(?<currentValue>\\S+)[ \\t]*\\n[ \\t]*(?:[\\w-]+\\.)?url[ \\t]*=[ \\t]*\"github:[^/\"\\s]+/[^/\"\\s]+/(?<currentDigest>[0-9a-f]{40})\";"
+			],
+			"registryUrlTemplate": "https://api.github.com/repos/{{packageName}}/activity?ref=refs/heads/{{branch}}&per_page=100",
+			"versioningTemplate": "loose"
+		}
+	],
+	"customDatasources": {
+		"github-branch-tip": {
+			"defaultRegistryUrlTemplate": "https://api.github.com/repos/{{packageName}}/activity?per_page=100",
+			"transformTemplates": [
+				"[$filter($, function($r) { $r.after != \"0000000000000000000000000000000000000000\" })]",
+				"$ { after: $min(timestamp.$toMillis()) }",
+				"{ \"releases\": [$each($, function($millis, $after) { { \"version\": $fromMillis($millis, \"[Y0001].[M01].[D01].[H01].[m01].[s01]\", \"+0000\"), \"digest\": $after, \"releaseTimestamp\": $fromMillis($millis) } })] }"
+			]
+		}
+	},
+	"nix": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchDatasources": [
+				"custom.github-branch-tip"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"enabled": false
+		},
+		{
+			"matchDatasources": [
+				"custom.github-branch-tip"
+			],
+			"separateMajorMinor": false
+		},
+		{
+			"matchManagers": [
+				"nix"
+			],
+			"matchUpdateTypes": [
+				"digest"
+			],
+			"enabled": false
+		}
+	]
+}

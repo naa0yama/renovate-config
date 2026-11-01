@@ -1,0 +1,8 @@
+# Declares that this repository is inside the English-required prose scope.
+/.gitattributes prose-lint-scope=repo
+
+# Human-readable documents are written in Japanese, so they are exempt from
+# the English-required rule. Everything else (code, config, tests) stays English.
+/docs/** prose-ja=allow
+/README.md prose-ja=allow
+/CHANGELOG*.md prose-ja=allow
