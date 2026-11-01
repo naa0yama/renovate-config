@@ -72,7 +72,7 @@ tasks:
             cd "${scratch}/repo"
             RENOVATE_CONFIG_FILE="${scratch}/config.json" GITHUB_COM_TOKEN="${token}" \
               LOG_LEVEL=debug LOG_FORMAT=json \
-              "${root}/node_modules/.bin/renovate" --platform=local --dry-run=lookup --require-config=optional \
+              "${root}/node_modules/.bin/renovate" --platform=local --dry-run=lookup --require-config=ignored \
               >"${scratch}/renovate.log"
           )
 
@@ -81,4 +81,179 @@ tasks:
           jq -c '\''select(.msg == "packageFiles with updates") | .config.regex[].deps[]
             | {depName, currentValue, currentDigest, currentVersionTimestamp,
                updates: [(.updates // [])[] | {newValue, newDigest, releaseTimestamp, branchName}]}'\'' "${scratch}/renovate.log"
+          jq -c '\''select(.msg == "packageFiles with updates") | .config.nix[]?.deps[]?
+            | {manager: "nix", depName, updates: [(.updates // [])[] | {updateType, branchName}]}'\'' "${scratch}/renovate.log" >&2
+          jq -cs '\''{branches: [.[] | select(.msg == "Branch is not pending, removing pending upgrades") | .branch]}'\'' "${scratch}/renovate.log" >&2
+        '
+
+  accept:compare:
+    desc: Compare the nix preset's lookup against devkit-flake-pin update on a source repo clone (needs network, ssh, a gh token and nix develop; not part of check:all)
+    preconditions:
+      - sh: command -v nix >/dev/null 2>&1
+        msg: "nix not found in PATH; install nix to run the comparison"
+    env:
+      TASK_BIN: "{{.TASK_EXE}}"
+    cmds:
+      - |
+        nix shell nixpkgs#nodejs_24 nixpkgs#yarn nixpkgs#jq -c bash -euc '
+          for name in $(compgen -e | grep "^GIT_" || true); do unset "${name}"; done
+
+          token="$(gh auth token 2>/dev/null || true)"
+          if [ -z "${token}" ]; then
+            echo "accept:compare: no GitHub token from '\''gh auth token'\''; run '\''gh auth login'\''" >&2
+            exit 1
+          fi
+
+          scratch="$(mktemp -d "${TMPDIR:-/tmp}/accept-compare.XXXXXX")"
+          trap '\''rm -rf "${scratch}"'\'' EXIT
+          source="${ACCEPT_SOURCE:-git@github.com:naa0yama-org/boilerplate-rust.git}"
+          zero=0000000000000000000000000000000000000000
+          cooldown=604800
+
+          git clone --quiet --depth 1 "${source}" "${scratch}/src" >&2
+          source_sha="$(git -C "${scratch}/src" rev-parse HEAD)"
+          echo "accept:compare: source commit ${source_sha}" >&2
+          cp -a "${scratch}/src" "${scratch}/pin"
+
+          nix develop "${scratch}/pin" -c true >&2
+
+          now="$(date -u +%s)"
+          echo "accept:compare: run at $(date -u -d "@${now}" +%Y-%m-%dT%H:%M:%SZ)" >&2
+
+          ACCEPT_SOURCE="file://${scratch}/src" "${TASK_BIN}" accept:lookup \
+            >"${scratch}/lookup.out" 2>"${scratch}/lookup.err" &
+          lookup_pid=$!
+          (cd "${scratch}/pin" && nix develop . -c devkit-flake-pin update) >"${scratch}/pin.log" 2>&1 &
+          pin_pid=$!
+          lookup_rc=0
+          pin_rc=0
+          wait "${lookup_pid}" || lookup_rc=$?
+          wait "${pin_pid}" || pin_rc=$?
+          if [ "${lookup_rc}" -ne 0 ] || [ "${pin_rc}" -ne 0 ]; then
+            echo "accept:compare: lookup exit ${lookup_rc}, devkit-flake-pin exit ${pin_rc}" >&2
+            echo "--- lookup stderr" >&2
+            cat "${scratch}/lookup.err" >&2
+            echo "--- devkit-flake-pin output" >&2
+            cat "${scratch}/pin.log" >&2
+            exit 1
+          fi
+          grep '\''^accept:lookup: source commit'\'' "${scratch}/lookup.err" >&2 || true
+          grep '\''^input='\'' "${scratch}/pin.log" >"${scratch}/plan.txt" || true
+          cat "${scratch}/plan.txt" >&2
+
+          branches="$(grep '\''^{'\'' "${scratch}/lookup.err" | jq -c '\''select(has("branches")) | .branches'\'')"
+          echo "accept:compare: branches ${branches}" >&2
+          grep '\''^{'\'' "${scratch}/lookup.err" | jq -c '\''select(.manager == "nix")'\'' >&2
+
+          annotations="$(grep -E '\''^[[:space:]]*#[[:space:]]*renovate:'\'' "${scratch}/src/flake.nix" \
+            | sed -E '\''s/^[[:space:]]*#[[:space:]]*renovate:[[:space:]]*//'\'' \
+            | jq -Rn '\''[inputs | split(" ") | map(select(length > 0) | split("=") | {(.[0]): .[1]}) | add]'\'')"
+
+          fail=0
+          updating=0
+          rows=()
+          for dep in $(jq -r '\''.[].depName'\'' <<<"${annotations}"); do
+            package="$(jq -r --arg d "${dep}" '\''.[] | select(.depName == $d) | .packageName'\'' <<<"${annotations}")"
+            branch="$(jq -r --arg d "${dep}" '\''.[] | select(.depName == $d) | .branch'\'' <<<"${annotations}")"
+            version="$(jq -r --arg d "${dep}" '\''.[] | select(.depName == $d) | .version'\'' <<<"${annotations}")"
+            page="${scratch}/page-${dep}.json"
+            printf '\''header = "Authorization: Bearer %s"\n'\'' "${token}" \
+              | curl -sS -f --max-time 30 -K - -H '\''Accept: application/vnd.github+json'\'' \
+                -o "${page}" "https://api.github.com/repos/${package}/activity?ref=refs/heads/${branch}&per_page=100"
+
+            excluded="$(jq -r --argjson now "${now}" --argjson cd "${cooldown}" --arg zero "${zero}" '\''
+              ([.[].timestamp | fromdateiso8601]) as $t
+              | [ (if length == 100 and ($t | min) >= ($now - $cd) then "bad-1" else empty end),
+                  (if ([.[] | select(.after != null and .after != $zero) | .after] | group_by(.) | map(length) | max // 0) >= 2
+                   then "bad-5" else empty end) ] | join(",")'\'' "${page}")"
+
+            row="$(jq -c --arg d "${dep}" '\''select(.depName == $d)'\'' "${scratch}/lookup.out")"
+            plan="$(grep "^input=${dep} " "${scratch}/plan.txt" || true)"
+            if [ -z "${row}" ] || [ -z "${plan}" ]; then
+              rows+=("${dep}|-|missing lookup row or plan line|MISMATCH")
+              fail=1
+              continue
+            fi
+            plan_result="$(sed -E '\''s/.* result=([^ ]*).*/\1/'\'' <<<"${plan}")"
+            plan_rev="$(sed -E '\''s/.* rev=([^ ]*) .*/\1/'\'' <<<"${plan}")"
+            plan_tip="$(sed -E '\''s/.* tip_at=([^ ]*) .*/\1/'\'' <<<"${plan}")"
+            plan_value="$(tr -- '\''-:T'\'' '\''...'\'' <<<"${plan_tip}" | sed '\''s/Z$//'\'')"
+            cur_digest="$(jq -r '\''.currentDigest'\'' <<<"${row}")"
+            update_count="$(jq '\''.updates | length'\'' <<<"${row}")"
+            pin_update=no
+            [ "${plan_rev}" = "${cur_digest:0:12}" ] || pin_update=yes
+
+            if [ -n "${excluded}" ]; then
+              rows+=("${dep}|excluded:${excluded}|pin=${pin_update} plan=${plan_rev} lookup_updates=${update_count}|SKIP")
+              continue
+            fi
+
+            verdict=ok
+            detail=""
+            if [ "${plan_result}" != ok ]; then
+              verdict=MISMATCH
+              detail="plan result ${plan_result}"
+            elif [ "${pin_update}" = no ]; then
+              release_at="$(jq -r --arg zero "${zero}" --arg v "${version}" '\''
+                [.[] | select(.after != null and .after != $zero)] | group_by(.after)
+                | map(map(.timestamp | fromdateiso8601) | min)
+                | map(select(strftime("%Y.%m.%d.%H.%M.%S") == $v)) | .[0] // empty | todate'\'' "${page}")"
+              lookup_at="$(jq -r '\''.currentVersionTimestamp[0:19] + "Z"'\'' <<<"${row}")"
+              if [ "${update_count}" -ne 0 ]; then
+                verdict=MISMATCH
+                detail="lookup has ${update_count} update(s), pin has none"
+              elif [ "${release_at}" != "${lookup_at}" ]; then
+                verdict=MISMATCH
+                detail="currentVersionTimestamp ${lookup_at} vs release ${release_at:-not-on-page-1}"
+              else
+                detail="current ${lookup_at}"
+              fi
+            else
+              updating=$((updating + 1))
+              new_value="$(jq -r '\''.updates[0].newValue // ""'\'' <<<"${row}")"
+              new_digest="$(jq -r '\''.updates[0].newDigest // ""'\'' <<<"${row}")"
+              release_ts="$(jq -r '\''.updates[0].releaseTimestamp // ""'\'' <<<"${row}")"
+              update_branch="$(jq -r '\''.updates[0].branchName // ""'\'' <<<"${row}")"
+              release_epoch="$(date -u -d "${release_ts}" +%s 2>/dev/null || echo 0)"
+              branch_count="$(jq --arg p "renovate/${dep}-" '\''[.[] | select(startswith($p) and (endswith("-digest") | not))] | length'\'' <<<"${branches}")"
+              if [ "${update_count}" -ne 1 ]; then
+                verdict=MISMATCH
+                detail="lookup has ${update_count} update(s), pin has one"
+              elif [ "${new_value}" != "${plan_value}" ] || [ "${new_digest:0:12}" != "${plan_rev}" ]; then
+                verdict=MISMATCH
+                detail="lookup ${new_value} ${new_digest:0:12} vs pin ${plan_value} ${plan_rev}"
+              elif [ "${release_epoch}" -gt "$((now - cooldown))" ]; then
+                verdict=MISMATCH
+                detail="releaseTimestamp ${release_ts} is within 7 days of the run"
+              elif [ "${branch_count}" -ne 1 ]; then
+                verdict=MISMATCH
+                detail="${branch_count} version branch(es) for ${dep} (${update_branch})"
+              else
+                detail="${new_value} ${new_digest:0:12} release ${release_ts} branch ${update_branch}"
+              fi
+            fi
+            [ "${verdict}" = ok ] || fail=1
+            rows+=("${dep}|-|pin=${pin_update} plan=${plan_rev} lookup_updates=${update_count} ${detail}|${verdict}")
+          done
+
+          digest_branches="$(jq -c '\''[.[] | select(endswith("-digest"))]'\'' <<<"${branches}")"
+          if [ "${digest_branches}" != "[]" ]; then
+            rows+=("(branches)|-|digest branches present ${digest_branches}|MISMATCH")
+            fail=1
+          else
+            rows+=("(branches)|-|no digest branch in ${branches}|ok")
+          fi
+
+          echo "accept:compare: dep|exclusion|observation|verdict"
+          printf '\''accept:compare: %s\n'\'' "${rows[@]}"
+
+          if [ "${updating}" -lt 1 ]; then
+            echo "accept:compare: no non-excluded dep has an update in devkit-flake-pin; the comparison proves nothing" >&2
+            exit 1
+          fi
+          if [ "${fail}" -ne 0 ]; then
+            echo "accept:compare: mismatch between the preset and devkit-flake-pin" >&2
+            exit 1
+          fi
+          echo "accept:compare: all compared deps match"
         '
