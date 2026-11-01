@@ -6,3 +6,4 @@ input=value-differs rev=bbbbbbbbbbbb tip_at=2026-05-01T00:00:00Z result=ok
 input=two-branches rev=bbbbbbbbbbbb tip_at=2026-05-01T00:00:00Z result=ok
 input=wait rev=bbbbbbbbbbbb tip_at=2026-05-30T00:00:00Z result=ok
 input=skip-recent rev=ffffffffffff tip_at=2026-05-31T00:00:00Z result=ok
+input=empty-ts rev=bbbbbbbbbbbb tip_at=2026-05-01T00:00:00Z result=ok

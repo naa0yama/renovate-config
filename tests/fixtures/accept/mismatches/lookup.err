@@ -1,2 +1,2 @@
 {"request":"https://api.github.com/repos/example-org/up-ok/activity","count":1}
-{"branches":["renovate/count-bad-main","renovate/count-bad-next","renovate/value-differs-main","renovate/two-branches-main","renovate/two-branches-next","renovate/wait-main","renovate/wait-main-digest"]}
+{"branches":["renovate/count-bad-main","renovate/count-bad-next","renovate/value-differs-main","renovate/two-branches-main","renovate/two-branches-next","renovate/wait-main","renovate/wait-main-digest","renovate/empty-ts-main"]}

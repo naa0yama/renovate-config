@@ -18,7 +18,6 @@ const fail = (message) => {
 	process.exit(1);
 };
 
-// Reads each "# renovate:" line as a set of space-separated key=value pairs.
 const parseAnnotations = (text) =>
 	text
 		.split("\n")
@@ -102,8 +101,14 @@ const releaseAt = (page, version) => {
 	return match === undefined ? "" : todate(match);
 };
 
-const sedLast = (text, key, trailingSpace) =>
-	text.replace(new RegExp(`.* ${key}=([^ ]*)${trailingSpace ? " " : ""}.*`), "$1");
+const keyValues = (line) => {
+	const fields = {};
+	for (const token of line.split(" ").filter((t) => t.length > 0)) {
+		const at = token.indexOf("=");
+		if (at > 0) fields[token.slice(0, at)] = token.slice(at + 1);
+	}
+	return fields;
+};
 
 const compareDep = (ctx, annotation) => {
 	const { depName: dep, version } = annotation;
@@ -115,9 +120,10 @@ const compareDep = (ctx, annotation) => {
 	if (row === undefined || plan === undefined) {
 		return { text: `${dep}|-|missing lookup row or plan line|MISMATCH`, verdict: "MISMATCH" };
 	}
-	const planResult = sedLast(plan, "result", false);
-	const planRev = sedLast(plan, "rev", true);
-	const planValue = dotted(sedLast(plan, "tip_at", true));
+	const fields = keyValues(plan);
+	const planResult = fields.result ?? "";
+	const planRev = fields.rev ?? "";
+	const planValue = dotted(fields.tip_at ?? "");
 	const curDigest = String(row.currentDigest ?? "null");
 	const updates = row.updates ?? [];
 	const updateCount = updates.length;
@@ -155,7 +161,8 @@ const compareDep = (ctx, annotation) => {
 		const newDigest = String(first.newDigest ?? "").slice(0, 12);
 		const releaseTs = first.releaseTimestamp ?? "";
 		const updateBranch = first.branchName ?? "";
-		const releaseEpoch = Number.isNaN(Date.parse(releaseTs)) ? 0 : epoch(releaseTs);
+		const parsedRelease = releaseTs === "" ? now : epoch(releaseTs);
+		const releaseEpoch = Number.isNaN(parsedRelease) ? 0 : parsedRelease;
 		const prefix = `renovate/${dep}-`;
 		const branchCount = branches.filter((b) => b.startsWith(prefix) && !b.endsWith("-digest")).length;
 		if (updateCount !== 1) {

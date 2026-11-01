@@ -24,5 +24,8 @@
     # renovate: datasource=custom.github-branch-tip depName=skip-recent packageName=example-org/skip-recent branch=main version=2026.04.01.00.00.00
     skip-recent.url = "github:example-org/skip-recent/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
 
+    # renovate: datasource=custom.github-branch-tip depName=empty-ts packageName=example-org/empty-ts branch=main version=2026.04.01.00.00.00
+    empty-ts.url = "github:example-org/empty-ts/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+
   };
 }

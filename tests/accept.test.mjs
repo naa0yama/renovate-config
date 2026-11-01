@@ -10,8 +10,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const script = join(root, "scripts", "accept.mjs");
 const fixtures = join(root, "tests", "fixtures", "accept");
 
-// 2026-06-01T00:00:00Z
-const NOW = 1780272000;
+const NOW = Date.parse("2026-06-01T00:00:00Z") / 1000;
 const WINDOW = 604800;
 
 const run = (args) => spawnSync("node", [script, ...args], { cwd: root, encoding: "utf8" });
@@ -78,6 +77,8 @@ describe("accept-judge MISMATCH branches", () => {
 		"two-branches":
 			"accept:compare: two-branches|-|pin=yes plan=bbbbbbbbbbbb lookup_updates=1 2 version branch(es) for two-branches (renovate/two-branches-main)|MISMATCH",
 		wait: "accept:compare: wait|-|pin=yes plan=bbbbbbbbbbbb lookup_updates=1 releaseTimestamp 2026-05-30T00:00:00.000Z is within 7 days of the run|MISMATCH",
+		"empty-ts":
+			"accept:compare: empty-ts|-|pin=yes plan=bbbbbbbbbbbb lookup_updates=1 releaseTimestamp  is within 7 days of the run|MISMATCH",
 		"(branches)":
 			'accept:compare: (branches)|-|digest branches present ["renovate/wait-main-digest"]|MISMATCH',
 	};
@@ -126,7 +127,7 @@ describe("accept-judge exit status and final line", () => {
 		assert.ok(!result.stderr.includes("mismatch between the preset and devkit-flake-pin"));
 	});
 
-	it("prints_one_branches_line_on_stderr", () => {
+	it("prints_one_branches_line_on_stderr_when_judge_runs", () => {
 		const result = judge("all-match");
 		const branchLines = lines(result.stderr).filter((line) =>
 			line.startsWith("accept:compare: branches "),
@@ -159,11 +160,16 @@ describe("accept-judge inputs", () => {
 		assert.deepEqual(snapshot(dir), before);
 	});
 
-	it("moves_the_verdicts_when_now_is_shifted_past_the_window", () => {
+	it("turns_a_waiting_dep_ok_when_now_is_shifted_past_the_window", () => {
 		const base = judge("mismatches");
 		const shifted = judge("mismatches", ["--now", String(NOW + 4 * WINDOW)]);
 		assert.ok(rowFor(base.stdout, "wait")?.endsWith("|MISMATCH"));
 		assert.ok(rowFor(shifted.stdout, "wait")?.endsWith("|ok"));
+	});
+
+	it("stops_excluding_bad_1_dep_when_now_is_shifted_past_the_window", () => {
+		const base = judge("mismatches");
+		const shifted = judge("mismatches", ["--now", String(NOW + 4 * WINDOW)]);
 		assert.ok(rowFor(base.stdout, "skip-recent")?.includes("|excluded:bad-1|"));
 		assert.ok(rowFor(shifted.stdout, "skip-recent")?.startsWith("accept:compare: skip-recent|-|"));
 	});
@@ -172,7 +178,7 @@ describe("accept-judge inputs", () => {
 describe("accept-annotations", () => {
 	const flake = join(fixtures, "mixed", "src", "flake.nix");
 
-	it("prints_dep_package_branch_tab_separated_in_file_order", () => {
+	it("prints_dep_package_branch_tab_separated_in_file_order_when_flake_has_annotations", () => {
 		const result = run(["annotations", flake]);
 		assert.equal(result.status, 0);
 		assert.deepEqual(lines(result.stdout), [
@@ -192,14 +198,18 @@ describe("accept-annotations", () => {
 		assert.equal(result.stdout, "");
 	});
 
-	it("leaves_the_fixture_unchanged_and_matches_the_judge_dep_set", () => {
+	it("leaves_the_fixture_unchanged_when_annotations_runs", () => {
 		const dir = join(fixtures, "mixed");
 		const before = snapshot(dir);
+		run(["annotations", flake]);
+		assert.deepEqual(snapshot(dir), before);
+	});
+
+	it("lists_the_same_deps_as_the_judge_table_when_given_the_same_flake", () => {
 		const annotated = lines(run(["annotations", flake]).stdout).map((line) => line.split("\t")[0]);
 		const judged = rowsOf(judge("mixed").stdout)
 			.map((row) => row.slice("accept:compare: ".length).split("|")[0])
 			.filter((dep) => dep !== "(branches)");
-		assert.deepEqual(snapshot(dir), before);
 		assert.deepEqual(new Set(annotated), new Set(judged));
 	});
 });
@@ -223,7 +233,7 @@ describe("accept-config", () => {
 		}
 	});
 
-	it("changes_nothing_in_the_repo_besides_the_out_path", () => {
+	it("changes_nothing_in_the_repo_besides_the_out_path_when_config_runs", () => {
 		const dir = mkdtempSync(join(tmpdir(), "accept-test-"));
 		try {
 			const before = gitStatus();
