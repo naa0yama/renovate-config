@@ -103,6 +103,81 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 
 主に SemVer に従ってなく `21.3.1` 21年.3月.1日 のようなバージョンで出してくる物やグループ化したいものを設定している
 
+### nix preset
+
+`extends/nix.json` は、`flake.nix` の input を commit に固定したまま、branch の先頭に上げる preset です。
+`default.json` の extends から読み込まれます。
+提案される rev は、branch の先頭になってから 7 日以上たったものだけです。
+
+#### 注記の書式
+
+更新したい input の `url` 行の直前に、次の形式のコメントを 1 行置きます。
+値は空白で区切り、各値は空白を含みません。
+
+| key           | 内容                                                                      |
+| :------------ | :------------------------------------------------------------------------ |
+| `datasource`  | `custom.github-branch-tip` を指定する                                     |
+| `depName`     | 依存の名前                                                                |
+| `packageName` | GitHub の `<owner>/<repo>`                                                |
+| `branch`      | 追う branch 名                                                            |
+| `version`     | 現在の rev が branch の先頭になった UTC 時刻 `YYYY.MM.DD.HH.MM.SS` (6 欄) |
+
+```nix
+{
+  inputs = {
+    # renovate: datasource=custom.github-branch-tip depName=nixpkgs packageName=NixOS/nixpkgs branch=nixpkgs-unstable version=2026.01.02.03.04.05
+    nixpkgs.url = "github:NixOS/nixpkgs/0123456789abcdef0123456789abcdef01234567";
+
+    example-lib = {
+      # renovate: datasource=custom.github-branch-tip depName=example-lib packageName=NixOS/nixpkgs branch=nixos-unstable version=2026.02.03.04.05.06
+      url = "github:NixOS/nixpkgs/89abcdef0123456789abcdef0123456789abcdef";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+}
+```
+
+- `url` は `github:<owner>/<repo>/<40 桁の commit SHA>` の形にします
+- `<name>.url = "..."` 形と、`<name> = { url = "..."; }` 形のどちらも対象です
+- 注記の無い input は更新されません
+
+#### 注記の位置の制約
+
+注記は `url` 行の直前の行に置きます。
+位置が違うと regex に一致せず、その input は更新されません。
+たとえば `url` 行の前に別の属性 (`inputs.<name>.follows` など) の行が挟まる場合です。
+
+#### 検査と受け入れの task
+
+どの task も `PATH` に `nix` が必要です。
+`nix` が無いと task は exit 非 0 で止まります。
+node と yarn は task が `nix shell` で取得します。
+
+| task                                         | 内容                                                                                   |
+| :------------------------------------------- | :------------------------------------------------------------------------------------- |
+| `check:staged` / `check:merge` / `check:all` | 対象の JSON を `renovate-config-validator --strict` で検証し、`node --test` を流す     |
+| `accept:lookup`                              | 参照元 repo の clone に `renovate --dry-run=lookup` をかけ、dep ごとの結果を出す       |
+| `accept:compare`                             | 同じ clone で `devkit-flake-pin update` を走らせ、`accept:lookup` の結果と突き合わせる |
+
+```shell
+task check:all
+task accept:lookup
+task accept:compare
+```
+
+- `check:*` の 3 task は同じ検査本体を呼びます
+- `accept:lookup` と `accept:compare` は network、ssh、`gh auth token` で取れる GitHub token を使います
+- token が取れないと、どちらも exit 非 0 で止まります
+- どちらも `check:all` には含まれません
+- `accept:compare` は `nix develop` で参照元の devkit を使います
+- 参照元は環境変数 `ACCEPT_SOURCE` に git の URL を渡すと変えられます。未指定のときは Taskfile に書かれた既定の repo を使います
+
+```shell
+ACCEPT_SOURCE=git@github.com:example-org/example-repo.git task accept:lookup
+```
+
+`accept:compare` の branch 一覧は renovate の debug message `Branch is not pending` から作るため、`minimumReleaseAge` で全体が保留中の branch は一覧に出ません。
+
 ## extends
 
 - 各言語の設定を作成する
