@@ -152,6 +152,8 @@ key は次の表の順 (`datasource`、`depName`、`packageName`、`branch`、`v
 key の順を変えた注記も同じ理由で抽出されず、renovate はエラーを出しません。
 その input は黙って更新されなくなります。
 この状態は `task accept:compare` が `missing lookup row or plan line` の MISMATCH として拾います。
+ただし `accept:compare` が検査するのは、`ACCEPT_SOURCE` の repo (未指定なら既定の参照元 repo) の `flake.nix` だけです。
+この repo 自身の `flake.nix` は検査しません。
 
 #### 検査と受け入れの task
 
@@ -159,11 +161,15 @@ key の順を変えた注記も同じ理由で抽出されず、renovate はエ�
 `nix` が無いと task は exit 非 0 で止まります。
 node と yarn は task が `nix shell` で取得します。
 
-| task                                         | 内容                                                                                   |
-| :------------------------------------------- | :------------------------------------------------------------------------------------- |
-| `check:staged` / `check:merge` / `check:all` | 対象の JSON を `renovate-config-validator --strict` で検証し、`node --test` を流す     |
-| `accept:lookup`                              | 参照元 repo の clone に `renovate --dry-run=lookup` をかけ、dep ごとの結果を出す       |
-| `accept:compare`                             | 同じ clone で `devkit-flake-pin update` を走らせ、`accept:lookup` の結果と突き合わせる |
+| task                                         | 内容                                                                                                       |
+| :------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `check:staged` / `check:merge` / `check:all` | 対象の JSON を `renovate-config-validator --strict` で検証し、`node --test` と `bats` を流す               |
+| `accept:lookup`                              | 参照元 repo の clone に `renovate --dry-run=lookup` をかけ、dep ごとの結果と更新される branch の一覧を出す |
+| `accept:compare`                             | 同じ clone で `devkit-flake-pin update` を走らせ、`accept:lookup` の結果と突き合わせる                     |
+
+受け入れの判定と renovate の config 生成は `scripts/accept.mjs` が担います。
+lookup と比較の shell は `scripts/accept-lookup.sh` と `scripts/accept-compare.sh` にあります。
+`tests/` の `node --test` (`tests/*.test.mjs`) と `bats` (`tests/*.bats`) がこれらを検査します。
 
 ```shell
 task check:all
@@ -172,11 +178,12 @@ task accept:compare
 ```
 
 - `check:*` の 3 task は同じ検査本体を呼びます
+- `accept:lookup` の branch 一覧は、renovate の trace の log にある `generateBranchConfig` の entry から作ります
 - `accept:lookup` と `accept:compare` は network、ssh、`gh auth token` で取れる GitHub token を使います
 - token が取れないと、どちらも exit 非 0 で止まります
 - どちらも `check:all` には含まれません
 - `accept:compare` は `nix develop` で参照元の devkit を使います
-- 参照元は環境変数 `ACCEPT_SOURCE` に git の URL を渡すと変えられます。未指定のときは Taskfile に書かれた既定の repo を使います
+- 参照元は環境変数 `ACCEPT_SOURCE` に git の URL を渡すと変えられます。未指定のときは `scripts/accept-lookup.sh` と `scripts/accept-compare.sh` に書かれた既定の repo を使います
 
 ```shell
 ACCEPT_SOURCE=git@github.com:example-org/example-repo.git task accept:lookup
