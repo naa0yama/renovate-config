@@ -295,7 +295,7 @@ describe("accept-config", () => {
 			delete preset.$schema;
 			assert.deepEqual(JSON.parse(readFileSync(out, "utf8")), {
 				...preset,
-				minimumReleaseAge: "7 days",
+				minimumReleaseAge: "3 days",
 				onboarding: false,
 			});
 		} finally {
