@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-15 既定の minimumReleaseAge を 3 日に短縮
+
+### Changed
+
+- `default.json` の `minimumReleaseAge` を `7 days` から `3 days` に変えた。この設定を extends する repo では、新しい release が出てから Renovate が更新を提案するまでの待機が 7 日から 3 日になる。
+- 受け入れ検査の判定テストが、実際の `default.json` ではなく、待機を 7 日に固定した専用の defaults ファイル (`tests/fixtures/accept/defaults/default.json`) を読むようにした。`default.json` の `minimumReleaseAge` を変えても判定テストは落ちない。生成した nix preset を調べるテストだけが、実際の値に追従する。
+
 ## 2026-11-01 nix preset の受け入れ検査の整備
 
 ### Changed

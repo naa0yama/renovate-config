@@ -15,8 +15,10 @@ const WINDOW = 604800;
 
 const run = (args) => spawnSync("node", [script, ...args], { cwd: root, encoding: "utf8" });
 
+const JUDGE_DEFAULTS = join(fixtures, "defaults", "default.json");
+
 const judge = (name, extra = ["--now", String(NOW)]) =>
-	run(["judge", join(fixtures, name), ...extra]);
+	run(["judge", join(fixtures, name), "--defaults", JUDGE_DEFAULTS, ...extra]);
 
 const lines = (text) => text.split("\n").filter((line) => line !== "");
 
@@ -154,7 +156,7 @@ describe("accept-judge inputs", () => {
 			try {
 				cpSync(join(fixtures, "all-match"), dir, { recursive: true });
 				rmSync(join(dir, missing));
-				const result = run(["judge", dir, "--now", String(NOW)]);
+				const result = run(["judge", dir, "--defaults", JUDGE_DEFAULTS, "--now", String(NOW)]);
 				assert.notEqual(result.status, 0);
 				assert.ok(result.stderr.includes(missing));
 				assert.equal(result.stdout, "");
@@ -274,7 +276,7 @@ describe("accept-branches", () => {
 		try {
 			cpSync(join(fixtures, "mixed"), dir, { recursive: true });
 			writeFileSync(join(dir, "lookup.err"), run(["branches", branchLog("all-pending")]).stdout);
-			const row = rowFor(run(["judge", dir, "--now", String(NOW)]).stdout, "(branches)");
+			const row = rowFor(run(["judge", dir, "--defaults", JUDGE_DEFAULTS, "--now", String(NOW)]).stdout, "(branches)");
 			assert.ok(row?.endsWith("|MISMATCH"));
 		} finally {
 			rmSync(dir, { recursive: true, force: true });
@@ -293,7 +295,7 @@ describe("accept-config", () => {
 			delete preset.$schema;
 			assert.deepEqual(JSON.parse(readFileSync(out, "utf8")), {
 				...preset,
-				minimumReleaseAge: "7 days",
+				minimumReleaseAge: "3 days",
 				onboarding: false,
 			});
 		} finally {
