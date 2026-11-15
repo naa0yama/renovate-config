@@ -395,10 +395,10 @@
   dependencies:
     fs-extra "11.3.0"
 
-"@containerbase/base@14.66.16":
-  version "14.66.16"
-  resolved "https://registry.yarnpkg.com/@containerbase/base/-/base-14.66.16.tgz#48d768263ff00c492bc1ca2963bdd49f2433f528"
-  integrity sha512-90xFit8D4PnfOll2GrE5O9v4bhZvlRm6C5Q/kq0yXrTq4LJ4l8+rqODA0i3cUMq2KXC73dVR72UBkkkJ25gxHQ==
+"@containerbase/base@14.66.18":
+  version "14.66.18"
+  resolved "https://registry.yarnpkg.com/@containerbase/base/-/base-14.66.18.tgz#c1211e32c4781716413193050853c843ed3fc349"
+  integrity sha512-znv1iQAdvSrUm9fS15LFZxJwI9dzT5MPy96+6EqRcfZVMHU5QHnTUI73WDpEUQam33avuAh5ocF9ssxvZ/Nt9A==
   dependencies:
     semver "^7.8.5"
 
@@ -890,12 +890,12 @@
   resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.1.tgz#2c77b3835ddfecb7024b0518d363f0fba07fadb7"
   integrity sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==
 
-"@renovatebot/base-image@13.165.1":
-  version "13.165.1"
-  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.165.1.tgz#03af937d6838d9445da71174a2c3cf1752fa6179"
-  integrity sha512-gdbx3RjL3t+XRi4Q4OM+WonoSawGPGSrm211UgdqV6kqvFfxUmWCTwSItsr7HoD2NYr5S96cZvkjN5zUt/+aVw==
+"@renovatebot/base-image@13.165.3":
+  version "13.165.3"
+  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.165.3.tgz#a9646c2c036bd700c116dbbf40d34cc05abec871"
+  integrity sha512-CgyzRUUBWZfqM6vw65BLTidzoHy8EnEkLoQQeSb41LJyQPGvPpcslEqMcYnV96unMzNCa0xqp/CIxsdEhSRpAw==
   dependencies:
-    "@containerbase/base" "14.66.16"
+    "@containerbase/base" "14.66.18"
 
 "@renovatebot/detect-tools@5.0.0":
   version "5.0.0"
@@ -3766,10 +3766,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.235.2:
-  version "44.235.2"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.235.2.tgz#8e4ed151485690893213a1d979e17cf74467edce"
-  integrity sha512-kH6D7Nt2g1eV6CvZY+P5ocP/p61Kjp6SzdHsNAZ5HtxMKRx3c+vRle5LSjXBpFfSpMQoyXDNy6BjbgkbqqBuiw==
+renovate@44.236.0:
+  version "44.236.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.236.0.tgz#faf7054a618a1c52631802fd688d9322f17e3cd5"
+  integrity sha512-NBxQmIxRNWj8jjpT8Rij+ku7nneqQgN2IMOfH8IB9XRAA+lboTp+pfQ3/p2y3rlA327G77mjSMxaslp1HmTZOg==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3802,7 +3802,7 @@ renovate@44.235.2:
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "6.3.1"
-    "@renovatebot/base-image" "13.165.1"
+    "@renovatebot/base-image" "13.165.3"
     "@renovatebot/detect-tools" "5.0.0"
     "@renovatebot/good-enough-parser" "4.0.3"
     "@renovatebot/osv-offline" "4.5.10"
