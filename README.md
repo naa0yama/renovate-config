@@ -107,8 +107,8 @@ Renovate では、 `config:base` という便利設定を出してるが、一�
 
 `extends/nix.json` は、`flake.nix` の input を commit に固定したまま、branch の先頭に上げる preset です。
 `default.json` の extends から読み込まれます。
-提案される rev は、branch の先頭になってから 7 日以上たったものだけです。
-この 7 日は `default.json` の `minimumReleaseAge` から来ます。
+提案される rev は、branch の先頭になってから一定の期間以上たったものだけです。
+この期間の日数は `default.json` の `minimumReleaseAge` から来ます。
 
 #### 注記の書式
 
