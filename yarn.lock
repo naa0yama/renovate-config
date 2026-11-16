@@ -395,14 +395,7 @@
   dependencies:
     fs-extra "11.3.0"
 
-"@containerbase/base@14.66.22":
-  version "14.66.22"
-  resolved "https://registry.yarnpkg.com/@containerbase/base/-/base-14.66.22.tgz#49c2c0bf3dfbcb19c96ed7bd6376339c3cc0721e"
-  integrity sha512-dHDtgyBmMge9Jf4QhI2aDdGMER4hlOz+B6TNRbm6wLuAitR3DdVhXH/1bnDshYjdOwFFGr31K2pDhR+LbGOUgA==
-  dependencies:
-    semver "^7.8.5"
-
-"@containerbase/base@^14.62.0":
+"@containerbase/base@14.66.25", "@containerbase/base@^14.62.0":
   version "14.66.25"
   resolved "https://registry.yarnpkg.com/@containerbase/base/-/base-14.66.25.tgz#acf9f5ea5be35ea1d6af0abca4ada75132fe2809"
   integrity sha512-UcvT+lvEWtbiDHvo4Hhhw1kqtflRTBXmBSn4YumHZ1ghgV1HImHpDl7a6QL+3c/TWDR4O+jO1n0UO771LZighg==
@@ -898,12 +891,12 @@
   resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.1.tgz#2c77b3835ddfecb7024b0518d363f0fba07fadb7"
   integrity sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==
 
-"@renovatebot/base-image@13.166.0":
-  version "13.166.0"
-  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.166.0.tgz#29178b040269ca469b570e4eef5ee8084bc71e0a"
-  integrity sha512-EDLMeMhqdLvzTu+osctIUwuc7WnUlkFurTT4wBbPeZC5ohp7uq+BRHUjEq8JAtwfYbf3BOSYJW1Vi44Mpt7OUQ==
+"@renovatebot/base-image@13.166.3":
+  version "13.166.3"
+  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.166.3.tgz#81fe009d572bf178f90a6216d0bc186231b56168"
+  integrity sha512-V2ZsLdmHVCdz9hOmWGNhSSDr+w/l5FSk/toDCyyw+565kfFXbRoGkszixW1tLRCbQYQHRjJXbsLMy9Th1YKHRg==
   dependencies:
-    "@containerbase/base" "14.66.22"
+    "@containerbase/base" "14.66.25"
 
 "@renovatebot/detect-tools@5.0.0":
   version "5.0.0"
@@ -3381,10 +3374,10 @@ node-gyp@^13.0.2:
     undici "^8.4.1"
     which "^7.0.0"
 
-node-html-parser@9.0.6:
-  version "9.0.6"
-  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-9.0.6.tgz#1b2120fc5ef1588380db86c64d55855dcc640ba2"
-  integrity sha512-q3ETJ2gU+VlERyYbiJ5JQ6+mMVV1Bc6mZQ7MdJ30moq+h3oN0kQGj3rWDORaSX1SOLSkPbY/bN+sBzDlliVOBA==
+node-html-parser@9.0.7:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-9.0.7.tgz#a3ba0212bb9f60ad98a308c0f0c81500cf2cd24c"
+  integrity sha512-0Io6nKYNN2e+QSoJFxU991Z8kX4H2Ogy3l14Ow0XxR2Wonk9l5qBonx1dYO97UyVfYJ1U9H0WHZOIZW6q5KPrA==
   dependencies:
     css-select "^5.1.0"
     entities "^8.0.0"
@@ -3766,10 +3759,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.237.0:
-  version "44.237.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.237.0.tgz#fab86d2d1cca32cf807980aae2fb623d8093961c"
-  integrity sha512-bALErWUFqWle8X9DqQD4zq2O4xjq3IcAKkY7G83N3pryHkf9iqLUBx6dRv/vNP6Zkq8Zw2SJ9VxdLINRiKyweg==
+renovate@44.237.3:
+  version "44.237.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.237.3.tgz#c115eecb1c57129d061755d923db164f4f322734"
+  integrity sha512-vHHEpnoLEfVz5kFWTuW+yvczvKcEgsT456UDYZVX4mnihW1wuIjKArvqetNriz3+skyHWxcuWl46/FX9RMZGmA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3802,7 +3795,7 @@ renovate@44.237.0:
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "6.3.1"
-    "@renovatebot/base-image" "13.166.0"
+    "@renovatebot/base-image" "13.166.3"
     "@renovatebot/detect-tools" "5.0.0"
     "@renovatebot/good-enough-parser" "4.0.3"
     "@renovatebot/osv-offline" "4.5.10"
@@ -3862,7 +3855,7 @@ renovate@44.237.0:
     moo "0.5.3"
     ms "2.1.3"
     neotraverse "1.0.1"
-    node-html-parser "9.0.6"
+    node-html-parser "9.0.7"
     p-all "5.0.1"
     p-map "7.1.1"
     p-queue "9.3.5"
