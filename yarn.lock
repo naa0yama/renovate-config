@@ -704,12 +704,7 @@
     "@opentelemetry/resources" "3.1.0"
     "@opentelemetry/semantic-conventions" "^1.29.0"
 
-"@opentelemetry/semantic-conventions@1.44.0":
-  version "1.44.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.44.0.tgz#c99123b8f2259fc4ce98d2409aae3c4931c10d1a"
-  integrity sha512-E3JkOlMBi3N8OGGkbl7tFyqk2MAS6/lySRZBK3Mu7AzjF1fT8oIChH9ChE48SUWzDn9Kdwta+G/p5LJ4xW4CLQ==
-
-"@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0", "@opentelemetry/semantic-conventions@^1.37.0", "@opentelemetry/semantic-conventions@^1.41.1":
+"@opentelemetry/semantic-conventions@1.45.0", "@opentelemetry/semantic-conventions@^1.27.0", "@opentelemetry/semantic-conventions@^1.29.0", "@opentelemetry/semantic-conventions@^1.37.0", "@opentelemetry/semantic-conventions@^1.41.1":
   version "1.45.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.45.0.tgz#9c246898ce8d92e511f79c1d83bbc57476087bc4"
   integrity sha512-aOP45mbcOKbQVvFWfQmgoOPT8R2iwbbbgl83k4CujGV9BrJhFr3qG55MFpwFs4YLabpuW3HhzUY9eQxPlDqaZw==
@@ -891,10 +886,10 @@
   resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.1.tgz#2c77b3835ddfecb7024b0518d363f0fba07fadb7"
   integrity sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==
 
-"@renovatebot/base-image@13.166.3":
-  version "13.166.3"
-  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.166.3.tgz#81fe009d572bf178f90a6216d0bc186231b56168"
-  integrity sha512-V2ZsLdmHVCdz9hOmWGNhSSDr+w/l5FSk/toDCyyw+565kfFXbRoGkszixW1tLRCbQYQHRjJXbsLMy9Th1YKHRg==
+"@renovatebot/base-image@13.166.4":
+  version "13.166.4"
+  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.166.4.tgz#3785bab9d8b7190b9637fe4d7e0232eef72081ca"
+  integrity sha512-rLPcWwxILTjKagwejMpWTiKbKfOQk+8QANr5yymBi6gZkh5BPlqiFfVw5+YRQ8V8SgIdn82CilmvUDWPq6osvA==
   dependencies:
     "@containerbase/base" "14.66.25"
 
@@ -3759,10 +3754,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.238.1:
-  version "44.238.1"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.238.1.tgz#deaec12a774ed13788e5aff837b3bb51e7ba4a6d"
-  integrity sha512-NQfncCM5mReKvXaLBdsviFna7woWjMftamFtfap2q2Po7ZpdxxnN3+v4mzW1OH024GErv0CjEP6UMPVQVEoNsg==
+renovate@44.239.1:
+  version "44.239.1"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.239.1.tgz#3884780a0e7c424b26af2c3c8e8b92a564ab5713"
+  integrity sha512-sUTtJVAgsly93sQWwe+3CpOCWp5ncadJfnkSIDDvaLcd5boRAYt3NIvWkEKCWetzmQV9tvRqTUVNvrYJ6nQvPw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3791,11 +3786,11 @@ renovate@44.238.1:
     "@opentelemetry/resource-detector-github" "0.34.1"
     "@opentelemetry/resources" "3.1.0"
     "@opentelemetry/sdk-trace" "3.1.0"
-    "@opentelemetry/semantic-conventions" "1.44.0"
+    "@opentelemetry/semantic-conventions" "1.45.0"
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "6.3.1"
-    "@renovatebot/base-image" "13.166.3"
+    "@renovatebot/base-image" "13.166.4"
     "@renovatebot/detect-tools" "5.0.0"
     "@renovatebot/good-enough-parser" "4.0.3"
     "@renovatebot/osv-offline" "4.5.10"
