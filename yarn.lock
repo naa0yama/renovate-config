@@ -3594,10 +3594,10 @@ picomatch@^4.0.4:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.7.tgz#6313360034ccb36b3dc61ecbdff78121f90fe21f"
   integrity sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==
 
-prettier@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.10.0.tgz#b546ab979f85b850be17ed5e41ea6719e3be8681"
-  integrity sha512-mBi4765LgjO1PFjlEs7pUeK0nb1bw71c+N4/ItfeUWNdY5cV2pRKaFpbbFRYmDJMO+5ZwzGxHRqHxFZna7iv5w==
+prettier@3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.10.1.tgz#00b1c1872f9650ec22093d5bdafdca0fe6760f77"
+  integrity sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==
 
 pretty-ms@^9.3.1:
   version "9.3.1"
@@ -3746,10 +3746,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.252.8:
-  version "44.252.8"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.252.8.tgz#619ee75e9183baddc10fd5278b98f60c84906293"
-  integrity sha512-4UdKNLUgtG2xbPZdB1ugnkH7ztPMIshAOMLqepXO2pBIcQp+U8I5/BxypCH4ykubCxhVepZ0UMhDDyc1Cle6cQ==
+renovate@44.253.0:
+  version "44.253.0"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.253.0.tgz#f1031455e04e22568f021bdbedfe2ce42d0e06dc"
+  integrity sha512-d/n3VJqLn2QeapfLclbxCAonoQ+auGYSip4ofr9PXJFe+BtgSnSBli0MkTOloG04mOVGErKE+rzJ3vRgs61XHw==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3848,7 +3848,7 @@ renovate@44.252.8:
     p-queue "9.3.5"
     p-throttle "8.1.1"
     parse-link-header "2.0.0"
-    prettier "3.10.0"
+    prettier "3.10.1"
     protobufjs "8.8.1"
     punycode "2.3.1"
     remark "15.0.1"
