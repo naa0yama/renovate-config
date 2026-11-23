@@ -870,10 +870,10 @@
   resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.1.tgz#2c77b3835ddfecb7024b0518d363f0fba07fadb7"
   integrity sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==
 
-"@renovatebot/base-image@13.173.0":
-  version "13.173.0"
-  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.173.0.tgz#7e9137bd1d400a46d6b1db7c7243902a816841ee"
-  integrity sha512-4W0SrJ0u4AqXQi4ab+iC/pMfrMJNoeMMqXbjoZW+c2ELygw8o5tsb1I5eCtdrdJ+t/zM97s3eZnYYYpv2GQVMQ==
+"@renovatebot/base-image@13.173.2":
+  version "13.173.2"
+  resolved "https://registry.yarnpkg.com/@renovatebot/base-image/-/base-image-13.173.2.tgz#6c6c4d89850ca656ca8a9aa08d2eec30cfecdb9e"
+  integrity sha512-3NYwJ5eVaJDjNFZJaUIFx5+EHuD+BGqYzEIua7tQZssKPQtp3zqsz8IlClZxps8si6FbOoehbbx71OMzuRQ12g==
   dependencies:
     "@containerbase/base" "14.68.0"
 
@@ -3738,10 +3738,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.255.0:
-  version "44.255.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.255.0.tgz#2b08d6eae6f9d9ba24f966f78d6d368296ffa3b0"
-  integrity sha512-mmCh8qOiWZGW+oC8UgkDtrEwo95ymBwIpen2vf+HvCQJupQNscB9NXBXducJI58z22cIZhu2lXK78N2wZGGKHA==
+renovate@44.255.2:
+  version "44.255.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.255.2.tgz#bd117b74dbbd4cd65f5f902849784a0fd80e30f9"
+  integrity sha512-OnbdQjoRUVYlZpkETCAF5LoKG6KfLJx5QfL19V8PXoXcA2lNuItjtufGxyKus4dBwhMetDiwUbcyYvGUH3OSMA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3774,7 +3774,7 @@ renovate@44.255.0:
     "@pnpm/parse-overrides" "1001.0.4"
     "@qnighy/marshal" "0.1.3"
     "@redis/client" "6.3.1"
-    "@renovatebot/base-image" "13.173.0"
+    "@renovatebot/base-image" "13.173.2"
     "@renovatebot/detect-tools" "5.0.0"
     "@renovatebot/good-enough-parser" "4.0.3"
     "@renovatebot/osv-offline" "4.5.10"
