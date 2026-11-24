@@ -3738,10 +3738,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-renovate@44.257.6:
-  version "44.257.6"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.257.6.tgz#b8126a41f4cc171a0be7fffe72256de6ba6b8382"
-  integrity sha512-pPRUKOUQlx5UDL0ISRegEE9pxEahqiVxO0FJDS1DGSSGnb+kGx88BQK81IkU4w1eDJCWk0+7/oC3NLnPSpfSKw==
+renovate@44.257.7:
+  version "44.257.7"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-44.257.7.tgz#5ee372e9c92feaf515247fc3e9b47ee7fc8d1b74"
+  integrity sha512-Y2JW04TANbkuECpkdRAgUPXyYdbA5FVGYaY3iRfHoermLnRrkaN/+ZvKe3pbAeg+hjPx4QFONUoeTS07hk1fhA==
   dependencies:
     "@aws-sdk/client-codecommit" "3.1139.0"
     "@aws-sdk/client-ec2" "3.1139.0"
@@ -3855,7 +3855,7 @@ renovate@44.257.6:
     simple-git "4.0.2"
     slugify "1.6.9"
     source-map-support "0.5.21"
-    strip-json-comments "5.0.3"
+    strip-json-comments "5.1.0"
     tar "7.5.23"
     toml-eslint-parser "1.0.3"
     upath "3.0.8"
@@ -4171,10 +4171,10 @@ strip-final-newline@^4.0.0:
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-4.0.0.tgz#35a369ec2ac43df356e3edd5dcebb6429aa1fa5c"
   integrity sha512-aulFJcD6YK8V1G7iRB5tigAP4TsHBZZrOV8pjV++zdUwmeV8uzbY7yn6h9MswN62adStNZFuCIx4haBnRuMDaw==
 
-strip-json-comments@5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-5.0.3.tgz#b7304249dd402ee67fd518ada993ab3593458bcf"
-  integrity sha512-1tB5mhVo7U+ETBKNf92xT4hrQa3pm0MZ0PQvuDnWgAAGHDsfp4lPSpiS6psrSiet87wyGPh9ft6wmhOMQ0hDiw==
+strip-json-comments@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-5.1.0.tgz#f66b505ae80936a4654377a05a7e5d44139f7fc0"
+  integrity sha512-ErcwpJBYr8EfX/Br7JauOIGXoRE92w0hVtuS9j92UFgbATxA+WRSIZksSUDzEeItfWB/0QCEprTZT55RSINUHQ==
 
 supports-color@^7.1.0:
   version "7.2.0"
